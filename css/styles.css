@@ -1,0 +1,144 @@
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes mouse-wheel {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px); } }
+@-moz-keyframes mouse-wheel {
+  0% {
+    top: 1px; }
+  25% {
+    top: 2px; }
+  50% {
+    top: 3px; }
+  75% {
+    top: 2px; }
+  100% {
+    top: 1px; } }
+body, html {
+  font-family: 'Roboto', sans-serif;
+  height: 100%; }
+
+nav {
+  height: 0; }
+  nav img {
+    width: 110px;
+    margin-top: 20px; }
+  nav ul {
+    text-align: right;
+    margin-bottom: 0; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 30px 15px; }
+        nav ul li a:hover, nav ul li a:active {
+          color: #bdc3c7;
+          text-decoration: none;
+          -webkit-transition: 0.25s;
+          -moz-transition: 0.25s;
+          -o-transition: 0.25s;
+          transition: 0.25s; }
+          nav ul li a:hover:after, nav ul li a:active:after {
+            width: 98%; }
+        nav ul li a:after {
+          content: "";
+          width: 0%;
+          height: 2px;
+          margin: 0 auto;
+          display: block;
+          background-color: #bdc3c7;
+          -webkit-transition: 0.25s;
+          -moz-transition: 0.25s;
+          -o-transition: 0.25s;
+          transition: 0.25s; }
+
+header {
+  background: url(../img/bg.jpg) fixed no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding: 200px 0 330px;
+  text-align: center;
+  height: 100%; }
+  header .content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 50px 0 25px; }
+  header span.title {
+    border: 4px solid #fff;
+    font-size: 80px;
+    font-weight: 100;
+    padding: 10px 60px; }
+  header h3 {
+    margin-top: 40px;
+    font-weight: 400; }
+  header .mouse {
+    margin: 150px auto 0;
+    display: block;
+    width: 24px;
+    height: 42px;
+    border-radius: 14px;
+    border: 2px solid #fff; }
+  header .scroll {
+    display: block;
+    margin: 5px auto;
+    background-color: #FFF;
+    position: relative;
+    height: 4px;
+    width: 4px;
+    border-radius: 8px;
+    -webkit-animation: mouse-wheel 0.7s linear infinite;
+    -moz-animation: mouse-wheel 0.7s linear infinite;
+    -o-animation: mouse-wheel 0.7s linear infinite;
+    animation: mouse-wheel 0.7s linear infinite; }
+  header .seta {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin: 0 auto;
+    width: 16px;
+    height: 16px; }
+  header .primeira, header .segunda, header .terceira {
+    -webkit-animation: mouse-scroll 1s infinite alternate;
+    -moz-animation: mouse-scroll 1s infinite alternate;
+    -o-animation: mouse-scroll 1s infinite alternate;
+    animation: mouse-scroll 1s infinite alternate; }
+  header .primeira {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -o-animation-delay: .1s;
+    animation-delay: .1s; }
+  header .segunda {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s; }
+  header .terceira {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -o-animation-delay: .3s;
+    animation-delay: .3s; }
+
+/*# sourceMappingURL=styles.css.map */

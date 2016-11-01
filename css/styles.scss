@@ -1,0 +1,206 @@
+// Tons de Cores
+$turquesa: rgba(26, 188, 156,1.0);
+$turquesaHover: rgba(22, 160, 133,1.0);
+
+$esmeralda: rgba(46, 204, 113,1.0);
+$esmeraldaHover: rgba(39, 174, 96,1.0);
+
+$azul: rgba(52, 152, 219,1.0);
+$azulHover: rgba(41, 128, 185,1.0);
+
+$amarelo: rgba(241, 196, 15,1.0);
+$amareloHover: rgba(243, 156, 18,1.0);
+
+$vermelho: rgba(231, 76, 60,1.0);
+$vermelhoHover: rgba(192, 57, 43,1.0);
+
+// Tons de cinza
+
+$cinza1: rgba(236, 240, 241,1.0);
+$cinza2: rgba(189, 195, 199,1.0);
+$cinza3: rgba(149, 165, 166,1.0);
+$cinza4: rgba(127, 140, 141,1.0);
+$cinza5: rgba(52, 73, 94,1.0);
+$cinza6: rgba(44, 62, 80,1.0);
+
+// Mixins
+@mixin transition($s) {
+	-webkit-transition: $s;
+	-moz-transition: $s;
+	-o-transition: $s;
+	transition: $s;
+}
+
+@mixin transform($s) {
+	-webkit-transform: $s;
+	-moz-transform: $s;
+	-o-transform: $s;
+	transform: $s;
+}
+@mixin animation($s) {
+	-webkit-animation: $s;
+	-moz-animation: $s;
+	-o-animation: $s;
+	animation: $s;
+}
+
+// Animações
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes mouse-wheel
+{
+   0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+
+@-moz-keyframes mouse-wheel
+{
+  0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+
+
+
+body, html {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+nav {
+	height: 0;
+	img {
+		width: 110px;
+		margin-top: 20px;
+	}
+		
+	ul {
+		text-align: right;
+		margin-bottom: 0;
+		li {
+			display: inline;
+			a {
+				display: inline-block;
+				color: white;
+				text-decoration: none;
+				padding: 30px 15px;
+				&:hover, &:active {
+					color: $cinza2;
+					text-decoration: none;
+					@include transition(.25s);
+					// Aumentar o tamanho da barra
+					&:after {
+						width: 98%;
+					}
+				}
+				// Barra em baixo do link
+				&:after {
+					content: "";
+					width: 0%;
+					height: 2px;
+					margin: 0 auto;
+					display: block;
+					background-color: $cinza2;
+					@include transition (.25s);
+				}
+			}
+		}
+	}
+}
+
+header {
+	background: url(../img/bg.jpg) fixed no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	padding: 200px 0 330px;
+	text-align: center;
+	height: 100%;
+	.content {
+		background: rgba(0,0,0,.2);
+		padding: 50px 0 25px;
+	}
+	span.title {
+		border: 4px solid #fff;
+		font-size: 80px;
+		font-weight: 100;
+		padding: 10px 60px;
+	}
+	h3 {
+		margin-top: 40px;
+		font-weight: 400;
+	}
+	.mouse {
+		margin: 150px auto 0;
+		display: block;
+		width: 24px;
+		height: 42px;
+		border-radius: 14px;
+		border: 2px solid #fff;
+	}
+	.scroll {
+		display: block;
+		margin: 5px auto;
+		background-color: #FFF;
+		position: relative;
+		height: 4px;
+		width: 4px;
+		border-radius: 8px;
+		@include animation(mouse-wheel 0.7s linear infinite);
+	}
+	.seta {
+		display: block;
+		width: 5px;
+		height: 5px;
+		@include transform(rotate(45deg));
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		margin: 0 auto;
+		width: 16px;
+		height: 16px;
+	}
+	.primeira, .segunda, .terceira {
+		@include animation (mouse-scroll 1s infinite alternate);
+	}
+	.primeira {
+		-webkit-animation-delay: .1s;
+		-moz-animation-delay: .1s;
+		-o-animation-delay: .1s;
+		animation-delay: .1s;
+	}
+	.segunda {
+		-webkit-animation-delay: .2s;
+		-moz-animation-delay: .2s;
+		-o-animation-delay: .2s;
+		animation-delay: .2s;
+	}
+	.terceira {
+		-webkit-animation-delay: .3s;
+		-moz-animation-delay: .3s;
+		-o-animation-delay: .3s;
+		animation-delay: .3s;
+	}
+
+
+}
+
+
