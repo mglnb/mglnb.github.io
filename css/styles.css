@@ -96,7 +96,7 @@ header.animacao {
   clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0); }
 
 header {
-  background: url(../img/bg.jpg) fixed no-repeat center;
+  background: url(../img/bg2.jpg) fixed no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
