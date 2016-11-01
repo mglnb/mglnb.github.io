@@ -43,6 +43,12 @@ $cinza7: #444;
 	-o-animation: $s;
 	animation: $s;
 }
+@mixin background-size($e) {
+	-webkit-background-size: $e;
+	-moz-background-size: $e;
+	-o-background-size: $e;
+	background-size: $e;
+}
 
 // Animações
 @keyframes mouse-scroll {
@@ -225,4 +231,66 @@ header {
 
 }
 
+
+.sobre {
+	padding: 150px 0;
+	text-align: center;
+	span.quadrado {
+		display: block;
+		width: 75px;
+		height: 75px;
+		border: 1px solid $cinza2;
+		margin: 0 auto;
+		position: relative;
+		@include transition(0.3s);
+		z-index: 2;
+		margin-bottom: 20px;
+		&:hover {
+			@include transform(rotate(130deg));
+			@include transition(0.3s);
+			border-color: $cinza7;
+		}
+	}
+	span.icon {
+		display: block;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 0;
+		right: 0; 
+		left: 0;
+		bottom: 0;
+		margin: 25px auto;
+		z-index: 1;
+		&.design {
+			background: url(../img/icons/design.png) center ;
+			@include background-size(cover);
+		}
+		&.idea {
+			background: url(../img/icons/idea.png) no-repeat center;
+			@include background-size(cover);
+		}
+		&.clean {
+			background: url(../img/icons/clean.png) no-repeat center;
+			@include background-size(cover);
+		}
+		&.talk {
+			background: url(../img/icons/talk.png) no-repeat center;
+			@include background-size(cover);
+		}
+	}
+	h4 {
+
+		&:after {
+			content: "";
+			display: block;
+			margin: 15px auto 10px;
+			width: 20%;
+			height: 1px;
+			background: #333;
+		}
+	}
+
+
+}
 

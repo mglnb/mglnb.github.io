@@ -176,4 +176,73 @@ header {
     -o-animation-delay: .3s;
     animation-delay: .3s; }
 
+.sobre {
+  padding: 150px 0;
+  text-align: center; }
+  .sobre span.quadrado {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #bdc3c7;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 2;
+    margin-bottom: 20px; }
+    .sobre span.quadrado:hover {
+      -webkit-transform: rotate(130deg);
+      -moz-transform: rotate(130deg);
+      -o-transform: rotate(130deg);
+      transform: rotate(130deg);
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      border-color: #444; }
+  .sobre span.icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 25px auto;
+    z-index: 1; }
+    .sobre span.icon.design {
+      background: url(../img/icons/design.png) center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    .sobre span.icon.idea {
+      background: url(../img/icons/idea.png) no-repeat center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    .sobre span.icon.clean {
+      background: url(../img/icons/clean.png) no-repeat center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    .sobre span.icon.talk {
+      background: url(../img/icons/talk.png) no-repeat center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+  .sobre h4:after {
+    content: "";
+    display: block;
+    margin: 15px auto 10px;
+    width: 20%;
+    height: 1px;
+    background: #333; }
+
 /*# sourceMappingURL=styles.css.map */
