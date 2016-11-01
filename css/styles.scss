@@ -22,7 +22,7 @@ $cinza3: rgba(149, 165, 166,1.0);
 $cinza4: rgba(127, 140, 141,1.0);
 $cinza5: rgba(52, 73, 94,1.0);
 $cinza6: rgba(44, 62, 80,1.0);
-
+$cinza7: #444;
 // Mixins
 @mixin transition($s) {
 	-webkit-transition: $s;
@@ -47,35 +47,35 @@ $cinza6: rgba(44, 62, 80,1.0);
 // Animações
 @keyframes mouse-scroll {
 
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
 }
 
 @-webkit-keyframes mouse-wheel
 {
-   0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
 
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(6px);
+		-ms-transform: translateY(6px);
+		transform: translateY(6px);
+	}
 }
 
 @-moz-keyframes mouse-wheel
 {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+	0% { top: 1px; }
+	25% { top: 2px; }
+	50% { top: 3px;}
+	75% { top: 2px;}
+	100% { top: 1px;}
 }
 
 
@@ -84,13 +84,28 @@ body, html {
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 }
+.navbar-scroll{
+	background: $cinza7;
+	height: auto;
+	margin-top: 0;
+	border-bottom: 1px solid $cinza2;
+	img {
+		width: 90px;
+		margin-top: 13px;
+		@include transition(1s);
+	}
+}
 nav {
+	background: #333;
 	height: 0;
+	margin-top: 20px;
+	@include transition(1s);
 	img {
 		width: 110px;
-		margin-top: 20px;
+		margin-top: 12px;
+		@include transition(1s);
 	}
-		
+	z-index: 2;
 	ul {
 		text-align: right;
 		margin-bottom: 0;
@@ -100,7 +115,7 @@ nav {
 				display: inline-block;
 				color: white;
 				text-decoration: none;
-				padding: 30px 15px;
+				padding: 20px 30px 0;
 				&:hover, &:active {
 					color: $cinza2;
 					text-decoration: none;
@@ -115,7 +130,7 @@ nav {
 					content: "";
 					width: 0%;
 					height: 2px;
-					margin: 0 auto;
+					margin: 17px auto 0;
 					display: block;
 					background-color: $cinza2;
 					@include transition (.25s);
@@ -124,7 +139,10 @@ nav {
 		}
 	}
 }
-
+header.animacao {
+	-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+	clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
 header {
 	background: url(../img/bg.jpg) fixed no-repeat center;
 	-webkit-background-size: cover;
@@ -134,7 +152,11 @@ header {
 	color: #fff;
 	padding: 200px 0 330px;
 	text-align: center;
-	height: 100%;
+	height: 115%;
+	-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0%, 50% 0%, 0 0%, 0 0);
+	clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+	@include transition(1.5s);
+	z-index: 1;
 	.content {
 		background: rgba(0,0,0,.2);
 		padding: 50px 0 25px;

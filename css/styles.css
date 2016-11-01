@@ -31,11 +31,35 @@ body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%; }
 
+.navbar-scroll {
+  background: #444;
+  height: auto;
+  margin-top: 0;
+  border-bottom: 1px solid #bdc3c7; }
+  .navbar-scroll img {
+    width: 90px;
+    margin-top: 13px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+
 nav {
-  height: 0; }
+  background: #333;
+  height: 0;
+  margin-top: 20px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  z-index: 2; }
   nav img {
     width: 110px;
-    margin-top: 20px; }
+    margin-top: 12px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
   nav ul {
     text-align: right;
     margin-bottom: 0; }
@@ -45,7 +69,7 @@ nav {
         display: inline-block;
         color: white;
         text-decoration: none;
-        padding: 30px 15px; }
+        padding: 20px 30px 0; }
         nav ul li a:hover, nav ul li a:active {
           color: #bdc3c7;
           text-decoration: none;
@@ -59,13 +83,17 @@ nav {
           content: "";
           width: 0%;
           height: 2px;
-          margin: 0 auto;
+          margin: 17px auto 0;
           display: block;
           background-color: #bdc3c7;
           -webkit-transition: 0.25s;
           -moz-transition: 0.25s;
           -o-transition: 0.25s;
           transition: 0.25s; }
+
+header.animacao {
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0); }
 
 header {
   background: url(../img/bg.jpg) fixed no-repeat center;
@@ -76,7 +104,14 @@ header {
   color: #fff;
   padding: 200px 0 330px;
   text-align: center;
-  height: 100%; }
+  height: 115%;
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0%, 50% 0%, 0 0%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+  z-index: 1; }
   header .content {
     background: rgba(0, 0, 0, 0.2);
     padding: 50px 0 25px; }
