@@ -1,6 +1,5 @@
 $(document).ready(function($) {
 	$('header').addClass('animacao');
-	console.log('add')	
 
 
 	var num = 50; // tanto de scroll que vai precisar para a barra ficar fixa.
