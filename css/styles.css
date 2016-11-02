@@ -257,40 +257,42 @@ header {
     background: #7f8c8d;
     margin: 80px 0 0; }
 
-section.sobre2 h2 {
-  letter-spacing: 8px;
-  font-weight: 700;
-  margin-left: 20px; }
-  section.sobre2 h2:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 15px;
-    bottom: 0;
-    top: 22.5px;
-    right: 0;
-    height: 30px;
-    width: 4px;
-    background: #222; }
-section.sobre2 p {
-  color: #666; }
-section.sobre2 button.btn-ghost {
-  background: transparent;
-  border: 2px solid #aaa;
-  color: #666;
-  font-weight: 400;
-  letter-spacing: 3px;
-  padding: 10px 20px;
-  font-size: 1.7rem;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
-  z-index: 1; }
-  section.sobre2 button.btn-ghost:hover {
-    border-color: #34495e;
-    background: #34495e;
-    color: #eee; }
+section.sobre2 {
+  padding-bottom: 100px; }
+  section.sobre2 h2 {
+    letter-spacing: 8px;
+    font-weight: 700;
+    margin-left: 20px; }
+    section.sobre2 h2:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 15px;
+      bottom: 0;
+      top: 22.5px;
+      right: 0;
+      height: 30px;
+      width: 4px;
+      background: #222; }
+  section.sobre2 p {
+    color: #666; }
+  section.sobre2 button.btn-ghost {
+    background: transparent;
+    border: 2px solid #aaa;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    font-size: 1.7rem;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1; }
+    section.sobre2 button.btn-ghost:hover {
+      border-color: #34495e;
+      background: #34495e;
+      color: #eee; }
 
 /*# sourceMappingURL=styles.css.map */
