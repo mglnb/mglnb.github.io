@@ -328,5 +328,23 @@ section.sobre2 {
 	p {
 		color: $p;
 	}
+
+	button.btn-ghost {
+		background: transparent;
+		border: 2px solid #aaa;
+		color: $p;
+		font-weight: 400;
+		letter-spacing: 3px;
+		padding: 10px 20px;
+		font-size: 1.7rem;
+		@include transition(0.5s);
+		position: relative;
+		z-index: 1;
+		&:hover {
+			border-color: $cinza5;
+			background: $cinza5;
+			color: #eee;
+		}
+	}
 }
 

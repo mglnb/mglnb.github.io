@@ -274,5 +274,23 @@ section.sobre2 h2 {
     background: #222; }
 section.sobre2 p {
   color: #666; }
+section.sobre2 button.btn-ghost {
+  background: transparent;
+  border: 2px solid #aaa;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  font-size: 1.7rem;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1; }
+  section.sobre2 button.btn-ghost:hover {
+    border-color: #34495e;
+    background: #34495e;
+    color: #eee; }
 
 /*# sourceMappingURL=styles.css.map */
