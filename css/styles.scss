@@ -109,7 +109,7 @@ nav {
 	@include transition(1s);
 	img {
 		width: 110px;
-		margin-top: 12px;
+		margin: 12px 0 15px;
 		@include transition(1s);
 	}
 	z-index: 2;
@@ -361,6 +361,25 @@ section.sobre2 {
 		}
 		h3 {
 			font-size: 18px;
+		}
+	}
+	section.sobre2 {
+		text-align: center;
+		h2 {
+			margin-left: 0;
+			margin-top: 50px;
+		}
+		h2:before {
+			content: none;
+			display: none;
+		}
+		h2:after {
+			content: "";
+			display: block;
+			width: 30%;
+			height: 2px;
+			background: #222;
+			margin: 10px auto;
 		}
 	}
 }

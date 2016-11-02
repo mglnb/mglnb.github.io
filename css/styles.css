@@ -55,7 +55,7 @@ nav {
   z-index: 2; }
   nav img {
     width: 110px;
-    margin-top: 12px;
+    margin: 12px 0 15px;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -o-transition: 1s;
@@ -302,7 +302,23 @@ section.sobre2 {
   header span.title {
     font-size: 60px; }
   header h3 {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  section.sobre2 {
+    text-align: center; }
+    section.sobre2 h2 {
+      margin-left: 0;
+      margin-top: 50px; }
+    section.sobre2 h2:before {
+      content: none;
+      display: none; }
+    section.sobre2 h2:after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 2px;
+      background: #222;
+      margin: 10px auto; } }
 @media screen and (max-width: 680px) {
   header span.title {
     font-size: 40px; } }
