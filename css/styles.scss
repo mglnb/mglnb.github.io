@@ -23,6 +23,7 @@ $cinza4: rgba(127, 140, 141,1.0);
 $cinza5: rgba(52, 73, 94,1.0);
 $cinza6: rgba(44, 62, 80,1.0);
 $cinza7: #444;
+$p: #666;
 // Mixins
 @mixin transition($s) {
 	-webkit-transition: $s;
@@ -235,7 +236,7 @@ header {
 .sobre {
 	padding: 150px 0;
 	text-align: center;
-	color: #555;
+	color: $p;
 	span.quadrado {
 		display: block;
 		width: 75px;
@@ -301,7 +302,31 @@ header {
 		width:100%;
 		height: 1px;
 		background: $cinza4;
-		margin-top: 100px;
+		margin: 80px 0 0;
+	}
+}
+
+section.sobre2 {
+	h2 {
+		letter-spacing: 8px;
+		font-weight: 700;
+		margin-left: 20px;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left:15px;
+			bottom:0;
+			top: 22.5px;
+			right: 0;
+			height: 30px;
+			width: 4px;
+			background: #222;
+		}
+	}
+
+	p {
+		color: $p;
 	}
 }
 
