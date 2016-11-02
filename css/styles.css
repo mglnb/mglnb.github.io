@@ -257,15 +257,15 @@ header {
     background: #7f8c8d;
     margin: 80px 0 0; }
 
-section.sobre2 {
+section.minhahistoria {
   padding-bottom: 100px; }
-  section.sobre2 img {
+  section.minhahistoria img {
     width: 85%; }
-  section.sobre2 h2 {
+  section.minhahistoria h2 {
     letter-spacing: 8px;
     font-weight: 700;
     margin-left: 20px; }
-    section.sobre2 h2:before {
+    section.minhahistoria h2:before {
       content: "";
       display: block;
       position: absolute;
@@ -276,9 +276,9 @@ section.sobre2 {
       height: 30px;
       width: 4px;
       background: #222; }
-  section.sobre2 p {
+  section.minhahistoria p {
     color: #666; }
-  section.sobre2 button.btn-ghost {
+  section.minhahistoria button.btn-ghost {
     background: transparent;
     border: 2px solid #aaa;
     color: #666;
@@ -292,12 +292,45 @@ section.sobre2 {
     transition: 0.5s;
     position: relative;
     z-index: 1; }
-    section.sobre2 button.btn-ghost:hover {
+    section.minhahistoria button.btn-ghost:hover {
       border-color: #34495e;
       background: #34495e;
       color: #eee; }
 
-@media screen and (max-width: 1000px) {
+section.servicos {
+  text-align: right;
+  background: #222; }
+  section.servicos .content {
+    padding: 70px 0 70px;
+    color: #bdc3c7;
+    margin-right: 80px;
+    margin-left: 22%; }
+  section.servicos h2 {
+    letter-spacing: 8px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-bottom: 50px; }
+    section.servicos h2:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 90px;
+      right: 95px;
+      height: 30px;
+      width: 4px;
+      background: #bdc3c7; }
+  section.servicos span {
+    font-size: 24px;
+    color: #bdc3c7; }
+  section.servicos p {
+    color: #95a5a6;
+    line-height: 30px; }
+  section.servicos .bg {
+    height: 528px;
+    background: url(../img/bg2.jpg) no-repeat center;
+    background-size: cover; }
+
+@media screen and (max-width: 1200px) {
   nav ul {
     display: none; }
 
@@ -306,21 +339,39 @@ section.sobre2 {
   header h3 {
     font-size: 18px; }
 
-  section.sobre2 {
+  section.minhahistoria {
     text-align: center; }
-    section.sobre2 h2 {
+    section.minhahistoria h2 {
       margin-left: 0;
       margin-top: 50px; }
-    section.sobre2 h2:before {
+    section.minhahistoria h2:before {
       content: none;
       display: none; }
-    section.sobre2 h2:after {
+    section.minhahistoria h2:after {
       content: "";
       display: block;
       width: 30%;
       height: 2px;
       background: #222;
-      margin: 10px auto; } }
+      margin: 10px auto; }
+
+  section.servicos {
+    text-align: center; }
+    section.servicos .content {
+      margin-left: 0; }
+    section.servicos h2 {
+      margin-right: 0;
+      margin-bottom: 0; }
+    section.servicos h2:after {
+      content: none;
+      display: none; }
+    section.servicos span.first:before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 20%;
+      background: #ecf0f1;
+      margin: 10px auto 50px; } }
 @media screen and (max-width: 680px) {
   header span.title {
     font-size: 40px; } }

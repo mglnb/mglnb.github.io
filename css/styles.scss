@@ -306,7 +306,7 @@ header {
 	}
 }
 
-section.sobre2 {
+section.minhahistoria {
 	padding-bottom: 100px;
 	img {
 		width: 85%;
@@ -352,7 +352,49 @@ section.sobre2 {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+section.servicos {
+	text-align: right;
+	background: #222;
+	.content {
+		padding: 70px 0 70px;
+		color: $cinza2;
+		margin-right: 80px;
+		margin-left: 22%;
+		
+	}
+	h2 {
+		letter-spacing: 8px;
+		font-weight: 700;
+		margin-right: 20px;
+		margin-bottom: 50px;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 90px;
+			right: 95px;
+			height: 30px;
+			width: 4px;
+			background: $cinza2;
+		}
+	}
+	span {
+		font-size: 24px;
+		color: $cinza2;
+	}
+	p {
+		color: $cinza3;
+		line-height: 30px;
+	}
+	.bg {
+		height: 528px;
+		background: url(../img/bg2.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
 	nav {
 		ul {
 			display: none;
@@ -366,7 +408,7 @@ section.sobre2 {
 			font-size: 18px;
 		}
 	}
-	section.sobre2 {
+	section.minhahistoria {
 		text-align: center;
 		h2 {
 			margin-left: 0;
@@ -384,6 +426,31 @@ section.sobre2 {
 			background: #222;
 			margin: 10px auto;
 		}
+	}
+
+	section.servicos {
+		text-align: center;
+		.content {
+			margin-left: 0;
+		}
+		h2 {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		h2:after {
+			content: none;
+			display: none;
+		}
+		
+		span.first:before {
+			content: "";
+			display:block;
+			height: 1px;
+			width: 20%;
+			background: $cinza1;
+			margin: 10px auto 50px;
+		}
+
 	}
 }
 @media screen and (max-width: 680px) {
