@@ -259,6 +259,8 @@ header {
 
 section.sobre2 {
   padding-bottom: 100px; }
+  section.sobre2 img {
+    width: 85%; }
   section.sobre2 h2 {
     letter-spacing: 8px;
     font-weight: 700;
