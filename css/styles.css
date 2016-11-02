@@ -178,7 +178,8 @@ header {
 
 .sobre {
   padding: 150px 0;
-  text-align: center; }
+  text-align: center;
+  color: #555; }
   .sobre span.quadrado {
     display: block;
     width: 75px;
@@ -193,10 +194,10 @@ header {
     z-index: 2;
     margin-bottom: 20px; }
     .sobre span.quadrado:hover {
-      -webkit-transform: rotate(130deg);
-      -moz-transform: rotate(130deg);
-      -o-transform: rotate(130deg);
-      transform: rotate(130deg);
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
       -webkit-transition: 0.3s;
       -moz-transition: 0.3s;
       -o-transition: 0.3s;
@@ -237,12 +238,23 @@ header {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
-  .sobre h4:after {
+  .sobre h4 {
+    font-weight: 700; }
+    .sobre h4:after {
+      content: "";
+      display: block;
+      margin: 15px auto 10px;
+      width: 20%;
+      height: 1px;
+      background: #333; }
+  .sobre p {
+    font-weight: 400; }
+  .sobre:after {
     content: "";
     display: block;
-    margin: 15px auto 10px;
-    width: 20%;
+    width: 100%;
     height: 1px;
-    background: #333; }
+    background: #7f8c8d;
+    margin-top: 100px; }
 
 /*# sourceMappingURL=styles.css.map */
