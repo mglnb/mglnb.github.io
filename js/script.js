@@ -13,11 +13,7 @@ $(document).ready(function($) {
 	});
 
 	$('#portfolio .content ul li a').click(function(event) {
-		if ($(this).is('#todos')) {
-			$('.c1').show('slow');
-			$('.c2').show('slow');
-			$('.c3').show('slow');
-		} else if ($(this).is('#fotos')) {
+		if ($(this).is('#fotos')) {
 			$('.c1').hide('slow');
 			$('.c2').show('slow');
 			$('.c3').hide('slow');
