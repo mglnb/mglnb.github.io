@@ -23,7 +23,7 @@ $cinza4: rgba(127, 140, 141,1.0);
 $cinza5: rgba(52, 73, 94,1.0);
 $cinza6: rgba(44, 62, 80,1.0);
 $cinza7: #444;
-$p: #666;
+$p: #6a6a6a;
 // Mixins
 @mixin transition($s) {
 	-webkit-transition: $s;
@@ -91,6 +91,12 @@ body, html {
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 }
+a {
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
 .navbar-scroll{
 	background: $cinza7;
 	height: auto;
@@ -123,7 +129,7 @@ nav {
 				color: white;
 				text-decoration: none;
 				padding: 20px 30px 0;
-				&:hover, &:active {
+				&:hover, &:active,&:focus {
 					color: $cinza2;
 					text-decoration: none;
 					@include transition(.25s);
@@ -233,7 +239,7 @@ header {
 }
 
 
-.sobre {
+section#sobre {
 	padding: 150px 0;
 	text-align: center;
 	color: $p;
@@ -306,7 +312,7 @@ header {
 	}
 }
 
-section.minhahistoria {
+section#minhahistoria {
 	padding-bottom: 100px;
 	img {
 		width: 85%;
@@ -352,7 +358,7 @@ section.minhahistoria {
 	}
 }
 
-section.servicos {
+section#servicos {
 	text-align: right;
 	background: #222;
 	.content {
@@ -393,6 +399,93 @@ section.servicos {
 	}
 }
 
+section#portfolio {
+	.content {
+		text-align: center;
+		h2 {
+			letter-spacing: 6px;
+			font-weight: 700;
+			margin: 50px 0 20px;
+		}
+		span:before, span:after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 1px;
+			width: 80px;
+			background: $p;
+			margin: 0 10px 7.5px;
+		}
+		span {
+			font-size: 35px;
+		}
+		ul {
+			text-transform: uppercase;
+			margin-bottom: 25px;
+			li {
+				text-decoration: none;
+				a {
+					color: $cinza7;
+					&:hover,&:active,&:focus {
+						color: $cinza2;
+					}
+				}
+				&:after {
+					content: " / ";
+					margin: 0 15px;
+				}
+				&:last-child:after {
+					content: " ";
+				}
+			}
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		li {
+			margin: 0;
+			padding: 0;
+			display: inline;
+			@include transition(1s);
+			img {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.col-lg-2 {
+				padding: 0;
+			}
+			.c1 {
+				display: block;
+			}
+			.c2,.c3 {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1200px) {
 	nav {
@@ -408,7 +501,7 @@ section.servicos {
 			font-size: 18px;
 		}
 	}
-	section.minhahistoria {
+	section#minhahistoria {
 		text-align: center;
 		h2 {
 			margin-left: 0;
@@ -428,7 +521,7 @@ section.servicos {
 		}
 	}
 
-	section.servicos {
+	section#servicos {
 		text-align: center;
 		.content {
 			margin-left: 0;
@@ -442,7 +535,7 @@ section.servicos {
 			content: none;
 			display: none;
 		}
-		
+
 		span.first:before {
 			content: "";
 			display:block;

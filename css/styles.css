@@ -31,6 +31,10 @@ body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%; }
 
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  outline: none; }
+
 .navbar-scroll {
   background: #444;
   height: auto;
@@ -70,14 +74,14 @@ nav {
         color: white;
         text-decoration: none;
         padding: 20px 30px 0; }
-        nav ul li a:hover, nav ul li a:active {
+        nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
           color: #bdc3c7;
           text-decoration: none;
           -webkit-transition: 0.25s;
           -moz-transition: 0.25s;
           -o-transition: 0.25s;
           transition: 0.25s; }
-          nav ul li a:hover:after, nav ul li a:active:after {
+          nav ul li a:hover:after, nav ul li a:active:after, nav ul li a:focus:after {
             width: 98%; }
         nav ul li a:after {
           content: "";
@@ -176,11 +180,11 @@ header {
     -o-animation-delay: .3s;
     animation-delay: .3s; }
 
-.sobre {
+section#sobre {
   padding: 150px 0;
   text-align: center;
-  color: #666; }
-  .sobre span.quadrado {
+  color: #6a6a6a; }
+  section#sobre span.quadrado {
     display: block;
     width: 75px;
     height: 75px;
@@ -193,7 +197,7 @@ header {
     transition: 0.3s;
     z-index: 2;
     margin-bottom: 20px; }
-    .sobre span.quadrado:hover {
+    section#sobre span.quadrado:hover {
       -webkit-transform: rotate(135deg);
       -moz-transform: rotate(135deg);
       -o-transform: rotate(135deg);
@@ -203,7 +207,7 @@ header {
       -o-transition: 0.3s;
       transition: 0.3s;
       border-color: #444; }
-  .sobre span.icon {
+  section#sobre span.icon {
     display: block;
     width: 25px;
     height: 25px;
@@ -214,42 +218,42 @@ header {
     bottom: 0;
     margin: 25px auto;
     z-index: 1; }
-    .sobre span.icon.design {
+    section#sobre span.icon.design {
       background: url(../img/icons/design.png) center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
-    .sobre span.icon.idea {
+    section#sobre span.icon.idea {
       background: url(../img/icons/idea.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
-    .sobre span.icon.clean {
+    section#sobre span.icon.clean {
       background: url(../img/icons/clean.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
-    .sobre span.icon.talk {
+    section#sobre span.icon.talk {
       background: url(../img/icons/talk.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
-  .sobre h4 {
+  section#sobre h4 {
     font-weight: 700; }
-    .sobre h4:after {
+    section#sobre h4:after {
       content: "";
       display: block;
       margin: 15px auto 10px;
       width: 20%;
       height: 1px;
       background: #333; }
-  .sobre p {
+  section#sobre p {
     font-weight: 400; }
-  .sobre:after {
+  section#sobre:after {
     content: "";
     display: block;
     width: 100%;
@@ -257,15 +261,15 @@ header {
     background: #7f8c8d;
     margin: 80px 0 0; }
 
-section.minhahistoria {
+section#minhahistoria {
   padding-bottom: 100px; }
-  section.minhahistoria img {
+  section#minhahistoria img {
     width: 85%; }
-  section.minhahistoria h2 {
+  section#minhahistoria h2 {
     letter-spacing: 8px;
     font-weight: 700;
     margin-left: 20px; }
-    section.minhahistoria h2:before {
+    section#minhahistoria h2:before {
       content: "";
       display: block;
       position: absolute;
@@ -276,12 +280,12 @@ section.minhahistoria {
       height: 30px;
       width: 4px;
       background: #222; }
-  section.minhahistoria p {
-    color: #666; }
-  section.minhahistoria button.btn-ghost {
+  section#minhahistoria p {
+    color: #6a6a6a; }
+  section#minhahistoria button.btn-ghost {
     background: transparent;
     border: 2px solid #aaa;
-    color: #666;
+    color: #6a6a6a;
     font-weight: 400;
     letter-spacing: 3px;
     padding: 10px 20px;
@@ -292,25 +296,25 @@ section.minhahistoria {
     transition: 0.5s;
     position: relative;
     z-index: 1; }
-    section.minhahistoria button.btn-ghost:hover {
+    section#minhahistoria button.btn-ghost:hover {
       border-color: #34495e;
       background: #34495e;
       color: #eee; }
 
-section.servicos {
+section#servicos {
   text-align: right;
   background: #222; }
-  section.servicos .content {
+  section#servicos .content {
     padding: 70px 0 70px;
     color: #bdc3c7;
     margin-right: 80px;
     margin-left: 22%; }
-  section.servicos h2 {
+  section#servicos h2 {
     letter-spacing: 8px;
     font-weight: 700;
     margin-right: 20px;
     margin-bottom: 50px; }
-    section.servicos h2:after {
+    section#servicos h2:after {
       content: "";
       display: block;
       position: absolute;
@@ -319,16 +323,69 @@ section.servicos {
       height: 30px;
       width: 4px;
       background: #bdc3c7; }
-  section.servicos span {
+  section#servicos span {
     font-size: 24px;
     color: #bdc3c7; }
-  section.servicos p {
+  section#servicos p {
     color: #95a5a6;
     line-height: 30px; }
-  section.servicos .bg {
+  section#servicos .bg {
     height: 528px;
     background: url(../img/bg2.jpg) no-repeat center;
     background-size: cover; }
+
+section#portfolio .content {
+  text-align: center; }
+  section#portfolio .content h2 {
+    letter-spacing: 6px;
+    font-weight: 700;
+    margin: 50px 0 20px; }
+  section#portfolio .content span:before, section#portfolio .content span:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 80px;
+    background: #6a6a6a;
+    margin: 0 10px 7.5px; }
+  section#portfolio .content span {
+    font-size: 35px; }
+  section#portfolio .content ul {
+    text-transform: uppercase;
+    margin-bottom: 25px; }
+    section#portfolio .content ul li {
+      text-decoration: none; }
+      section#portfolio .content ul li a {
+        color: #444; }
+        section#portfolio .content ul li a:hover, section#portfolio .content ul li a:active, section#portfolio .content ul li a:focus {
+          color: #bdc3c7; }
+      section#portfolio .content ul li:after {
+        content: " / ";
+        margin: 0 15px; }
+      section#portfolio .content ul li:last-child:after {
+        content: " "; }
+section#portfolio ul {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  section#portfolio ul li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+    section#portfolio ul li img {
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+    section#portfolio ul li .col-lg-2 {
+      padding: 0; }
+    section#portfolio ul li .c1 {
+      display: block; }
+    section#portfolio ul li .c2, section#portfolio ul li .c3 {
+      display: none; }
 
 @media screen and (max-width: 1200px) {
   nav ul {
@@ -339,15 +396,15 @@ section.servicos {
   header h3 {
     font-size: 18px; }
 
-  section.minhahistoria {
+  section#minhahistoria {
     text-align: center; }
-    section.minhahistoria h2 {
+    section#minhahistoria h2 {
       margin-left: 0;
       margin-top: 50px; }
-    section.minhahistoria h2:before {
+    section#minhahistoria h2:before {
       content: none;
       display: none; }
-    section.minhahistoria h2:after {
+    section#minhahistoria h2:after {
       content: "";
       display: block;
       width: 30%;
@@ -355,18 +412,18 @@ section.servicos {
       background: #222;
       margin: 10px auto; }
 
-  section.servicos {
+  section#servicos {
     text-align: center; }
-    section.servicos .content {
+    section#servicos .content {
       margin-left: 0;
       margin-right: 0; }
-    section.servicos h2 {
+    section#servicos h2 {
       margin-right: 0;
       margin-bottom: 0; }
-    section.servicos h2:after {
+    section#servicos h2:after {
       content: none;
       display: none; }
-    section.servicos span.first:before {
+    section#servicos span.first:before {
       content: "";
       display: block;
       height: 1px;
