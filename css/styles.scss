@@ -501,6 +501,7 @@ section#portfolio {
 			font-size: 18px;
 		}
 	}
+
 	section#minhahistoria {
 		text-align: center;
 		h2 {
@@ -546,6 +547,11 @@ section#portfolio {
 		}
 
 	}
+	section#sobre {
+		.content {
+			margin-bottom: 20px;
+		}
+	}
 }
 @media screen and (max-width: 680px) {
 	header {
@@ -553,6 +559,7 @@ section#portfolio {
 			font-size: 40px;
 		}
 	}
+
 }
 @media screen and (max-width: 480px) {
 	header {

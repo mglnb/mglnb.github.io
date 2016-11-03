@@ -429,7 +429,10 @@ section#portfolio ul {
       height: 1px;
       width: 20%;
       background: #ecf0f1;
-      margin: 10px auto 50px; } }
+      margin: 10px auto 50px; }
+
+  section#sobre .content {
+    margin-bottom: 20px; } }
 @media screen and (max-width: 680px) {
   header span.title {
     font-size: 40px; } }
