@@ -35,6 +35,22 @@ a:hover, a:active, a:focus {
   text-decoration: none;
   outline: none; }
 
+span.hr:before, span.hr:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1px;
+  width: 80px;
+  background: #6a6a6a;
+  margin: 0 10px 7.5px; }
+
+span.hr {
+  font-size: 35px; }
+
+h2 {
+  letter-spacing: 8px;
+  font-weight: 700; }
+
 .navbar-scroll {
   background: #444;
   height: auto;
@@ -310,8 +326,6 @@ section#servicos {
     margin-right: 80px;
     margin-left: 22%; }
   section#servicos h2 {
-    letter-spacing: 8px;
-    font-weight: 700;
     margin-right: 20px;
     margin-bottom: 50px; }
     section#servicos h2:after {
@@ -340,16 +354,6 @@ section#portfolio .content {
     letter-spacing: 6px;
     font-weight: 700;
     margin: 50px 0 20px; }
-  section#portfolio .content span:before, section#portfolio .content span:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 1px;
-    width: 80px;
-    background: #6a6a6a;
-    margin: 0 10px 7.5px; }
-  section#portfolio .content span {
-    font-size: 35px; }
   section#portfolio .content ul {
     text-transform: uppercase;
     margin-bottom: 25px; }
@@ -364,6 +368,13 @@ section#portfolio .content {
         margin: 0 15px; }
       section#portfolio .content ul li:last-child:after {
         content: " "; }
+section#portfolio:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #7f8c8d;
+  margin: 80px 0 50px; }
 section#portfolio ul {
   margin: 0;
   padding: 0;
@@ -394,6 +405,44 @@ section#portfolio ul {
       display: block; }
     section#portfolio ul li .sites {
       display: none; }
+
+section#contato {
+  text-align: center; }
+  section#contato form {
+    width: 100%;
+    margin: auto; }
+    section#contato form .inputgroup {
+      position: relative;
+      margin-bottom: 32px; }
+      section#contato form .inputgroup input[type="text"], section#contato form .inputgroup input[type="email"], section#contato form .inputgroup textarea {
+        font-size: 16px;
+        color: #444;
+        width: 100%;
+        outline: none;
+        padding: 15px;
+        border: none;
+        border-bottom: 1px solid #444; }
+        section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active, section#contato form .inputgroup input[type="email"]:focus, section#contato form .inputgroup input[type="email"]:active, section#contato form .inputgroup textarea:focus, section#contato form .inputgroup textarea:active {
+          outline: none;
+          border-bottom-color: #bdc3c7; }
+        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup textarea:focus ~ label {
+          top: -12px;
+          font-size: 12px;
+          line-height: 12px; }
+      section#contato form .inputgroup label {
+        color: #444;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease;
+        margin-left: 15px;
+        font-size: 16px;
+        line-height: 16px;
+        position: absolute;
+        top: 16px;
+        left: 0; }
+  section#contato form, section#contato .content {
+    text-align: left; }
 
 @media screen and (max-width: 1200px) {
   nav ul {

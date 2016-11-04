@@ -97,6 +97,24 @@ a {
 		outline: none;
 	}
 }
+
+span.hr:before, span.hr:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 1px;
+	width: 80px;
+	background: $p;
+	margin: 0 10px 7.5px;
+}
+span.hr {
+	font-size: 35px;
+}
+h2 {
+	letter-spacing: 8px;
+	font-weight: 700;
+}
+
 .navbar-scroll{
 	background: $cinza7;
 	height: auto;
@@ -369,8 +387,6 @@ section#servicos {
 		
 	}
 	h2 {
-		letter-spacing: 8px;
-		font-weight: 700;
 		margin-right: 20px;
 		margin-bottom: 50px;
 		&:after {
@@ -407,18 +423,7 @@ section#portfolio {
 			font-weight: 700;
 			margin: 50px 0 20px;
 		}
-		span:before, span:after {
-			content: "";
-			display: inline-block;
-			vertical-align: middle;
-			height: 1px;
-			width: 80px;
-			background: $p;
-			margin: 0 10px 7.5px;
-		}
-		span {
-			font-size: 35px;
-		}
+
 		ul {
 			text-transform: uppercase;
 			margin-bottom: 25px;
@@ -439,6 +444,14 @@ section#portfolio {
 				}
 			}
 		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		width:100%;
+		height: 1px;
+		background: $cinza4;
+		margin: 80px 0 50px;
 	}
 
 	ul {
@@ -478,7 +491,56 @@ section#portfolio {
 }
 
 
+section#contato {
+	text-align: center;
+	
+	form {
+		width: 100%;
+		margin: auto;
+		.inputgroup {
+			position: relative;
+			margin-bottom: 32px;
+			input[type="text"], input[type="email"], textarea {
+				font-size: 16px;
+				color: $cinza7;
+				width: 100%;
+				outline: none;
+				padding: 15px;
+				border: none;
+				border-bottom: 1px solid $cinza7;
+				&:focus, &:active {
+					outline: none;
+					border-bottom-color: $cinza2;
+				}
 
+				&:focus ~ label {
+					top: -12px;
+					font-size: 12px;
+					line-height: 12px;
+				}
+			}
+			label {
+				color: $cinza7;
+				@include transition(.3s ease);
+				margin-left: 15px;
+				font-size: 16px;
+				line-height: 16px;
+				position: absolute;
+				top: 16px;
+				left: 0;
+				&.active {
+
+				}
+			}
+		}
+
+	}	
+
+	form,.content {
+		text-align: left;
+	}
+
+}
 
 
 
