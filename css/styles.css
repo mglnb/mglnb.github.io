@@ -411,6 +411,18 @@ section#contato {
   section#contato form {
     width: 100%;
     margin: auto; }
+    section#contato form label {
+      color: #444;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      -o-transition: 0.3s ease;
+      transition: 0.3s ease;
+      margin-left: 15px;
+      font-size: 16px;
+      line-height: 16px;
+      position: absolute;
+      top: 16px;
+      left: 0; }
     section#contato form .inputgroup {
       position: relative;
       margin-bottom: 32px; }
@@ -425,22 +437,10 @@ section#contato {
         section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active, section#contato form .inputgroup input[type="email"]:focus, section#contato form .inputgroup input[type="email"]:active, section#contato form .inputgroup textarea:focus, section#contato form .inputgroup textarea:active {
           outline: none;
           border-bottom-color: #bdc3c7; }
-        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup textarea:focus ~ label {
+        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup input[type="email"] ~ .active, section#contato form .inputgroup textarea:focus ~ label, section#contato form .inputgroup textarea ~ .active {
           top: -12px;
           font-size: 12px;
           line-height: 12px; }
-      section#contato form .inputgroup label {
-        color: #444;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        transition: 0.3s ease;
-        margin-left: 15px;
-        font-size: 16px;
-        line-height: 16px;
-        position: absolute;
-        top: 16px;
-        left: 0; }
   section#contato form, section#contato .content {
     text-align: left; }
 

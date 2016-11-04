@@ -497,6 +497,16 @@ section#contato {
 	form {
 		width: 100%;
 		margin: auto;
+		label {
+			color: $cinza7;
+			@include transition(.3s ease);
+			margin-left: 15px;
+			font-size: 16px;
+			line-height: 16px;
+			position: absolute;
+			top: 16px;
+			left: 0;
+		}
 		.inputgroup {
 			position: relative;
 			margin-bottom: 32px;
@@ -513,25 +523,14 @@ section#contato {
 					border-bottom-color: $cinza2;
 				}
 
-				&:focus ~ label {
+				&:focus ~ label, &~.active {
 					top: -12px;
 					font-size: 12px;
 					line-height: 12px;
 				}
-			}
-			label {
-				color: $cinza7;
-				@include transition(.3s ease);
-				margin-left: 15px;
-				font-size: 16px;
-				line-height: 16px;
-				position: absolute;
-				top: 16px;
-				left: 0;
-				&.active {
 
-				}
 			}
+
 		}
 
 	}	
