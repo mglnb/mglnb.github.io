@@ -14,18 +14,32 @@ $(document).ready(function($) {
 
 	$('#portfolio .content ul li a').click(function(event) {
 		if ($(this).is('#fotos')) {
-			$('.c1').hide('slow');
-			$('.c2').show('slow');
-			$('.c3').hide('slow');
+			$('.sites').hide('slow');
+			$('.fotos').show('slow');
 		} else if ($(this).is('#sites')) {
-			$('.c1').show('slow');
-			$('.c2').hide('slow');
-			$('.c3').hide('slow');
-		} else if ($(this).is('#logos')) {
-			$('.c1').hide('slow');
-			$('.c2').hide('slow');
-			$('.c3').show('slow');
+			$('.sites').show('slow');
+			$('.fotos').hide('slow');
 		}
 	});
+
+	$('.formulario input').keyup(function() {
+		var msg = $(this).val();
+		console.log(msg);
+		if (msg != "") {
+			$(this).next().addClass('active');
+		} else {
+			$(this).next().removeClass('active');
+		}	
+	});
+	$('.formulario textarea').keyup(function() {
+		var msg = $(this).val();
+		console.log(msg);
+		if (msg != "") {
+			$(this).next().addClass('active');
+		} else {
+			$(this).next().removeClass('active');
+		}	
+	});
+
 
 });
