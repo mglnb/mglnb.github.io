@@ -382,9 +382,17 @@ section#portfolio ul {
       padding: 0; }
     section#portfolio ul li .col-lg-2 {
       padding: 0; }
-    section#portfolio ul li .c1 {
+    section#portfolio ul li .fotos, section#portfolio ul li .sites {
+      filter: grayscale(100%); }
+      section#portfolio ul li .fotos:hover, section#portfolio ul li .sites:hover {
+        filter: grayscale(0%);
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+    section#portfolio ul li .fotos {
       display: block; }
-    section#portfolio ul li .c2, section#portfolio ul li .c3 {
+    section#portfolio ul li .sites {
       display: none; }
 
 @media screen and (max-width: 1200px) {

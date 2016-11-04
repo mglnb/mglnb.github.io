@@ -458,10 +458,19 @@ section#portfolio {
 			.col-lg-2 {
 				padding: 0;
 			}
-			.c1 {
+			.fotos,.sites{
+				filter: grayscale(100%);
+				&:hover {
+					filter: grayscale(0%);
+					@include transition(.5s);
+				}
+
+			}
+
+			.fotos {
 				display: block;
 			}
-			.c2,.c3 {
+			.sites{
 				display: none;
 			}
 		}
