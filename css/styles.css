@@ -451,6 +451,30 @@ border-bottom-color: $cinza2; */ }
   section#contato .content p {
     color: #6a6a6a; }
 
+footer {
+  background: #3a3a3a;
+  color: #bdc3c7;
+  padding: 40px 0; }
+  footer input {
+    background: #222;
+    box-shadow: none;
+    border: none;
+    padding: 10px 2px;
+    width: 50%;
+    margin: 0;
+    margin-right: -3px;
+    font-size: 12px; }
+    footer input:active, footer input:focus {
+      outline: none; }
+  footer .btn-ghost {
+    font-size: 10px;
+    color: #bdc3c7;
+    border: none;
+    padding: 12px 15px;
+    background: #444; }
+    footer .btn-ghost:active, footer .btn-ghost:focus {
+      outline: none; }
+
 @media screen and (max-width: 1200px) {
   nav ul {
     display: none; }
