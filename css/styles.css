@@ -35,6 +35,25 @@ a:hover, a:active, a:focus {
   text-decoration: none;
   outline: none; }
 
+button.btn-ghost {
+  background: transparent;
+  border: 2px solid #aaa;
+  color: #6a6a6a;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  font-size: 1.7rem;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1; }
+  button.btn-ghost:hover {
+    border-color: #34495e;
+    background: #34495e;
+    color: #eee; }
+
 span.hr:before, span.hr:after {
   content: "";
   display: inline-block;
@@ -298,24 +317,6 @@ section#minhahistoria {
       background: #222; }
   section#minhahistoria p {
     color: #6a6a6a; }
-  section#minhahistoria button.btn-ghost {
-    background: transparent;
-    border: 2px solid #aaa;
-    color: #6a6a6a;
-    font-weight: 400;
-    letter-spacing: 3px;
-    padding: 10px 20px;
-    font-size: 1.7rem;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    position: relative;
-    z-index: 1; }
-    section#minhahistoria button.btn-ghost:hover {
-      border-color: #34495e;
-      background: #34495e;
-      color: #eee; }
 
 section#servicos {
   text-align: right;
@@ -407,7 +408,8 @@ section#portfolio ul {
       display: none; }
 
 section#contato {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 50px; }
   section#contato form {
     width: 100%;
     margin: auto; }
@@ -417,7 +419,6 @@ section#contato {
       -moz-transition: 0.3s ease;
       -o-transition: 0.3s ease;
       transition: 0.3s ease;
-      margin-left: 15px;
       font-size: 16px;
       line-height: 16px;
       position: absolute;
@@ -431,18 +432,24 @@ section#contato {
         color: #444;
         width: 100%;
         outline: none;
-        padding: 15px;
+        padding: 15px 0;
         border: none;
         border-bottom: 1px solid #444; }
         section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active, section#contato form .inputgroup input[type="email"]:focus, section#contato form .inputgroup input[type="email"]:active, section#contato form .inputgroup textarea:focus, section#contato form .inputgroup textarea:active {
           outline: none;
-          border-bottom-color: #bdc3c7; }
+              /* 
+border-bottom-color: $cinza2; */ }
         section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup input[type="email"] ~ .active, section#contato form .inputgroup textarea:focus ~ label, section#contato form .inputgroup textarea ~ .active {
           top: -12px;
           font-size: 12px;
           line-height: 12px; }
   section#contato form, section#contato .content {
-    text-align: left; }
+    text-align: center; }
+  section#contato .content h3 {
+    color: #444;
+    margin: 25px 0; }
+  section#contato .content p {
+    color: #6a6a6a; }
 
 @media screen and (max-width: 1200px) {
   nav ul {

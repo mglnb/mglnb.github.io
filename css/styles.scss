@@ -97,7 +97,23 @@ a {
 		outline: none;
 	}
 }
-
+button.btn-ghost {
+	background: transparent;
+	border: 2px solid #aaa;
+	color: $p;
+	font-weight: 400;
+	letter-spacing: 3px;
+	padding: 10px 20px;
+	font-size: 1.7rem;
+	@include transition(0.5s);
+	position: relative;
+	z-index: 1;
+	&:hover {
+		border-color: $cinza5;
+		background: $cinza5;
+		color: #eee;
+	}
+}
 span.hr:before, span.hr:after {
 	content: "";
 	display: inline-block;
@@ -357,23 +373,7 @@ section#minhahistoria {
 		color: $p;
 	}
 
-	button.btn-ghost {
-		background: transparent;
-		border: 2px solid #aaa;
-		color: $p;
-		font-weight: 400;
-		letter-spacing: 3px;
-		padding: 10px 20px;
-		font-size: 1.7rem;
-		@include transition(0.5s);
-		position: relative;
-		z-index: 1;
-		&:hover {
-			border-color: $cinza5;
-			background: $cinza5;
-			color: #eee;
-		}
-	}
+
 }
 
 section#servicos {
@@ -493,14 +493,13 @@ section#portfolio {
 
 section#contato {
 	text-align: center;
-	
+	padding-bottom: 50px;
 	form {
 		width: 100%;
 		margin: auto;
 		label {
 			color: $cinza7;
 			@include transition(.3s ease);
-			margin-left: 15px;
 			font-size: 16px;
 			line-height: 16px;
 			position: absolute;
@@ -515,12 +514,12 @@ section#contato {
 				color: $cinza7;
 				width: 100%;
 				outline: none;
-				padding: 15px;
+				padding: 15px 0;
 				border: none;
 				border-bottom: 1px solid $cinza7;
 				&:focus, &:active {
-					outline: none;
-					border-bottom-color: $cinza2;
+					outline: none;/* 
+					border-bottom-color: $cinza2; */
 				}
 
 				&:focus ~ label, &~.active {
@@ -536,7 +535,17 @@ section#contato {
 	}	
 
 	form,.content {
-		text-align: left;
+		text-align: center;
+	}
+	.content {
+		h3 {
+			color: $cinza7;
+			margin: 25px 0;
+		}
+		p {
+			color: $p;
+
+		}
 	}
 
 }
