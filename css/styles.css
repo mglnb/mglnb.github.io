@@ -454,7 +454,7 @@ border-bottom-color: $cinza2; */ }
 footer {
   background: #3a3a3a;
   color: #bdc3c7;
-  padding: 40px 0; }
+  padding: 40px 0 0; }
   footer input {
     background: #222;
     box-shadow: none;
@@ -474,6 +474,20 @@ footer {
     background: #444; }
     footer .btn-ghost:active, footer .btn-ghost:focus {
       outline: none; }
+  footer .social-copy {
+    background: #1a1a1a;
+    padding: 30px 0;
+    margin: 40px 0 0;
+    text-align: center; }
+    footer .social-copy .icons {
+      padding-bottom: 20px; }
+      footer .social-copy .icons img {
+        width: 64px;
+        height: auto;
+        margin-left: 10px; }
+    footer .social-copy p {
+      font-size: 10px;
+      color: #5a5a5a; }
 
 @media screen and (max-width: 1200px) {
   nav ul {
