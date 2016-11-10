@@ -130,10 +130,6 @@ nav {
           -o-transition: 0.25s;
           transition: 0.25s; }
 
-header.animacao {
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0); }
-
 header {
   background: url(../img/bg2.jpg) fixed no-repeat center;
   -webkit-background-size: cover;
@@ -144,7 +140,7 @@ header {
   padding: 200px 0 330px;
   text-align: center;
   height: 115%;
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 0%, 50% 0%, 0 0%, 0 0);
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   -webkit-transition: 1.5s;
   -moz-transition: 1.5s;
@@ -440,9 +436,7 @@ section#contato {
         border: none;
         border-bottom: 1px solid #444; }
         section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active, section#contato form .inputgroup input[type="email"]:focus, section#contato form .inputgroup input[type="email"]:active, section#contato form .inputgroup textarea:focus, section#contato form .inputgroup textarea:active {
-          outline: none;
-              /* 
-border-bottom-color: $cinza2; */ }
+          outline: none; }
         section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup input[type="email"] ~ .active, section#contato form .inputgroup textarea:focus ~ label, section#contato form .inputgroup textarea ~ .active {
           top: -12px;
           font-size: 12px;
@@ -554,10 +548,15 @@ footer {
 
   footer .social-copy {
     -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
-    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%); } }
+    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%); }
+    footer .social-copy .icons img {
+      width: 48px; } }
 @media screen and (max-width: 480px) {
   header span.title {
     font-size: 30px;
-    padding: 10px 20px; } }
+    padding: 10px 20px; }
+
+  footer .social-copy .icons img {
+    width: 40px; } }
 
 /*# sourceMappingURL=styles.css.map */

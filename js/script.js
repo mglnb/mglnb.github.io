@@ -1,7 +1,4 @@
 $(document).ready(function($) {
-	$('header').addClass('animacao');
-
-
 
 	$(window).bind('scroll', function () {
 		if ($(window).scrollTop() > 50) {
