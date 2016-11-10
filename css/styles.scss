@@ -476,7 +476,6 @@ section#portfolio {
 					-webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
 					clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
 					filter: grayscale(100%);
-
 					@include transition(.5s);	
 					&:hover {
 						filter: grayscale(0%);
@@ -702,6 +701,14 @@ footer {
 		}
 	}
 
+
+
+	footer {
+		.social-copy {
+			-webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+			clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);	
+		}
+	}
 }
 @media screen and (max-width: 480px) {
 	header {

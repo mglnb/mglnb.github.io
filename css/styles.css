@@ -550,7 +550,11 @@ footer {
     margin-bottom: 20px; } }
 @media screen and (max-width: 680px) {
   header span.title {
-    font-size: 40px; } }
+    font-size: 40px; }
+
+  footer .social-copy {
+    -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%); } }
 @media screen and (max-width: 480px) {
   header span.title {
     font-size: 30px;
