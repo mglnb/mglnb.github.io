@@ -12,6 +12,16 @@ $(document).ready(function($) {
 	   }
 	});
 
+	$('nav a').click(function() {
+		var target = $(this.hash);
+		$('html,body').animate({
+			scrollTop: target.offset().top - 60
+		}, 1000);
+	});
+
+
+
+
 	$('#portfolio .content ul li a').click(function(event) {
 		if ($(this).is('#fotos')) {
 			$('.sites').hide('slow');
