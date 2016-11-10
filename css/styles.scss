@@ -472,11 +472,21 @@ section#portfolio {
 				padding: 0;
 			}
 			.fotos,.sites{
-				filter: grayscale(100%);
-				&:hover {
-					filter: grayscale(0%);
-					@include transition(.5s);
+				& img {
+					-webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+					clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+					filter: grayscale(100%);
+
+					@include transition(.5s);	
+					&:hover {
+						filter: grayscale(0%);
+						-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+						clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+					}
 				}
+				
+				
+				
 
 			}
 
@@ -585,7 +595,7 @@ footer {
 				filter: invert(70%);
 				@include transition(.5s);
 				&:hover{
-				filter: invert(98%);
+					filter: invert(98%);
 					
 				}
 			}

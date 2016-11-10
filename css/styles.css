@@ -394,14 +394,18 @@ section#portfolio ul {
       padding: 0; }
     section#portfolio ul li .col-lg-2 {
       padding: 0; }
-    section#portfolio ul li .fotos, section#portfolio ul li .sites {
-      filter: grayscale(100%); }
-      section#portfolio ul li .fotos:hover, section#portfolio ul li .sites:hover {
+    section#portfolio ul li .fotos img, section#portfolio ul li .sites img {
+      -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+      clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+      filter: grayscale(100%);
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      section#portfolio ul li .fotos img:hover, section#portfolio ul li .sites img:hover {
         filter: grayscale(0%);
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s; }
+        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0); }
     section#portfolio ul li .fotos {
       display: block; }
     section#portfolio ul li .sites {
