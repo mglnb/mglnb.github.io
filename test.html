@@ -12,8 +12,11 @@ function hide(el) {
 	id(el).style.display = 'none';//escondendo tudo
 }
 window.onload = function() {
+	setInterval(function() {
+
 	id('all').style.display = 'block';//liberando qndo terminar
 	hide('loading');
+	}, 5000);
 }
 </script>
 <style>
@@ -21,7 +24,6 @@ window.onload = function() {
 	display: block;
 	width: 200px;
 }
-.content { margin: 0 auto; }
 #all {
 	width: 1280px; overflow: hidden;
 }
@@ -43,4 +45,5 @@ window.onload = function() {
 </script>
 
 </body>
+.content { margin: 0 auto; }
 </html>

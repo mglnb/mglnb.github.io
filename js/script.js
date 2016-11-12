@@ -1,5 +1,5 @@
-$(document).ready(function($) {
 
+$(document).ready(function($) {
 	$(window).bind('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.navbar-fixed-top').addClass('navbar-scroll');
@@ -9,12 +9,14 @@ $(document).ready(function($) {
 	   }
 	});
 
+
 	$('nav a').click(function() {
 		var target = $(this.hash);
 		$('html,body').animate({
 			scrollTop: target.offset().top - 60
 		}, 1000);
 	});
+
 
 
 
@@ -31,7 +33,6 @@ $(document).ready(function($) {
 
 	$('.formulario input').keyup(function() {
 		var msg = $(this).val();
-		console.log(msg);
 		if (msg != "") {
 			$(this).next().addClass('active');
 		} else {
@@ -40,7 +41,6 @@ $(document).ready(function($) {
 	});
 	$('.formulario textarea').keyup(function() {
 		var msg = $(this).val();
-		console.log(msg);
 		if (msg != "") {
 			$(this).next().addClass('active');
 		} else {

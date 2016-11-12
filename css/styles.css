@@ -496,6 +496,9 @@ footer {
       font-size: 10px;
       color: #5a5a5a; }
 
+.all ~ .pace-running {
+  display: none; }
+
 @media screen and (max-width: 1200px) {
   nav ul {
     display: none; }
