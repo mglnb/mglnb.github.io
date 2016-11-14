@@ -1,5 +1,10 @@
-
 $(document).ready(function($) {
+	
+	$('.all').hide('1000');
+	$('.all').fadeIn('slow');
+
+
+
 	$(window).bind('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.navbar-fixed-top').addClass('navbar-scroll');

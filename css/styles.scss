@@ -304,7 +304,7 @@ header {
 	h2.title {
 		margin: 0 50px;
 		border: 2px solid #fff;
-		font-size: 80px;
+		font-size: 60px;
 		font-weight: 100;
 		padding: 10px 60px;
 		display:block;
@@ -654,7 +654,7 @@ section#contato {
 footer {
 	background: #3a3a3a;
 	color: $cinza2;
-	padding: 40px 0 0;
+	padding: 60px 0 0;
 	input {
 		background: #222;
 		box-shadow: none;
@@ -694,11 +694,12 @@ footer {
 					
 				}
 			}
-			padding-bottom: 20px;
+			margin-top: 10px;
+			padding-bottom: 10px;
 		}
 		background: #1a1a1a;
-		padding: 30px 0;
-		margin: 40px 0 0; 
+		padding: 20px 0;
+		margin: 60px 0 0; 
 		text-align: center;
 		p {
 			font-size: 10px;
@@ -807,7 +808,8 @@ footer {
 	header {
 		h2.title {
 			font-size: 30px;
-			padding: 10px 20px;
+		padding: 10px 5px;
+		margin: 0 10px;
 		}
 	}
 	footer{
