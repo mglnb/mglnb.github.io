@@ -5,13 +5,13 @@ window.onload = function(){
 function preload(el, interval){
 	var op = 1;
 	var timer = setInterval(function () {
-		if (op <= 0.1){
+		if (op <= 0.05){
 			clearInterval(timer);
 			el.style.display = 'none';
 			el.className = '';
 		}
 		el.style.opacity = op;
-		op -= op * 0.1;
+		op -= op * 0.10;
 	}, interval);
 }
 
