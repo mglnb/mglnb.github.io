@@ -1,10 +1,21 @@
+window.onload = function(){
+	var div = document.getElementById('load');
+	preload(div, 50);
+};
+function preload(el, interval){
+	var op = 1;
+	var timer = setInterval(function () {
+		if (op <= 0.1){
+			clearInterval(timer);
+			el.style.display = 'none';
+			el.className = '';
+		}
+		el.style.opacity = op;
+		op -= op * 0.1;
+	}, interval);
+}
+
 $(document).ready(function($) {
-	
-	$('.all').hide('1000');
-	$('.all').fadeIn('slow');
-
-
-
 	$(window).bind('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.navbar-fixed-top').addClass('navbar-scroll');
