@@ -73,7 +73,6 @@ header {
     @include transition(1.5s);
     z-index: 1;
     .content {
-        background: rgba(0, 0, 0, .2);
         padding: 50px 0 25px;
     }
     h2.title {
