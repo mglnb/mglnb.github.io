@@ -66,8 +66,14 @@
   position: relative; }
 
 .container {
-  width: 980px;
+  width: 80%;
   margin: 0 auto; }
+  @media screen and (max-width: 768px) and (max-width: 1200px) {
+    .container {
+      width: 90%; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
 
 .grid-lg-1 {
   width: 8.33333%; }
