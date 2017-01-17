@@ -2,6 +2,12 @@ footer {
     background: #3a3a3a;
     color: $cinza2;
     padding: 60px 0 0;
+    .inscrever,.posts, .saiba {
+        @extend .grid-lg-4;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
+    }
     input {
         background: #222;
         box-shadow: none;
@@ -31,6 +37,9 @@ footer {
         @include responsive(md) {
             -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
             clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+        }
+        .social {
+            @extend .grid-lg-12;
         }
         .icons {
             img {

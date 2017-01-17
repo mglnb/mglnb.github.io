@@ -1,4 +1,7 @@
 section#portfolio {
+    .navport {
+        @extend .grid-lg-12;
+    }
 	.content {
 		text-align: center;
 		h2 {
@@ -46,14 +49,20 @@ section#portfolio {
 			padding: 0;
 			display: inline;
 			@include transition(1s);
+            div {
+                @extend .grid-lg-2;
+                @include responsive(md) {
+                    @extend .grid-md-4;
+                }
+                margin: 0;
+			padding: 0;
+            }
 			img {
 				width: 100%;
 				margin: 0;
 				padding: 0;
 			}
-			.col-lg-2 {
-				padding: 0;
-			}
+	
 			.fotos,.sites{
 				& img {
 					-webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);

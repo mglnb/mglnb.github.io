@@ -3,8 +3,20 @@ section#minhahistoria {
     @include responsive(lg) {
         text-align: center;
     }
-    img {
-        width: 85%;
+    .imac {
+        @extend .grid-lg-7;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
+        img {
+            width: 85%;
+        }
+    }
+    .historia {
+        @extend .grid-lg-5;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
     }
     h2 {
         letter-spacing: 8px;

@@ -60,7 +60,7 @@
   .row:after, section#sobre .content:after {
     clear: both; }
 
-.grid-lg-1, .grid-lg-2, .grid-lg-3, section#sobre .content, .grid-lg-4, .grid-lg-5, .grid-lg-6, .grid-lg-7, .grid-lg-8, .grid-lg-9, .grid-lg-10, .grid-lg-11, .grid-lg-12 {
+.grid-lg-1, .grid-lg-2, section#portfolio ul li div, .grid-lg-3, nav .logo, section#sobre .content, .grid-lg-4, footer .inscrever, footer .posts, footer .saiba, .grid-lg-5, section#minhahistoria .historia, .grid-lg-6, section#servicos .descricao, section#servicos .bg, section#contato .dados, section#contato .form, .grid-lg-7, section#minhahistoria .imac, .grid-lg-8, .grid-lg-9, nav .ulnav, .grid-lg-10, .grid-lg-11, .grid-lg-12, section#portfolio .navport, section#contato .titulo, footer .social-copy .social {
   float: left;
   padding: 0 10px;
   min-height: 1px;
@@ -69,28 +69,28 @@
 .grid-lg-1 {
   width: 8.33333%; }
 
-.grid-lg-2 {
+.grid-lg-2, section#portfolio ul li div {
   width: 16.66667%; }
 
-.grid-lg-3, section#sobre .content {
+.grid-lg-3, nav .logo, section#sobre .content {
   width: 25%; }
 
-.grid-lg-4 {
+.grid-lg-4, footer .inscrever, footer .posts, footer .saiba {
   width: 33.33333%; }
 
-.grid-lg-5 {
+.grid-lg-5, section#minhahistoria .historia {
   width: 41.66667%; }
 
-.grid-lg-6 {
+.grid-lg-6, section#servicos .descricao, section#servicos .bg, section#contato .dados, section#contato .form {
   width: 50%; }
 
-.grid-lg-7 {
+.grid-lg-7, section#minhahistoria .imac {
   width: 58.33333%; }
 
 .grid-lg-8 {
   width: 66.66667%; }
 
-.grid-lg-9 {
+.grid-lg-9, nav .ulnav {
   width: 75%; }
 
 .grid-lg-10 {
@@ -99,11 +99,11 @@
 .grid-lg-11 {
   width: 91.66667%; }
 
-.grid-lg-12 {
+.grid-lg-12, section#portfolio .navport, section#contato .titulo, footer .social-copy .social {
   width: 100%; }
 
 @media screen and (max-width: 768px) and (max-width: 1200px) {
-  .grid-md-1, .grid-md-2, .grid-md-3, .grid-md-4, .grid-md-5, .grid-md-6, .grid-md-7, .grid-md-8, .grid-md-9, .grid-md-10, .grid-md-11, .grid-md-12 {
+  .grid-md-1, .grid-md-2, .grid-md-3, .grid-md-4, section#portfolio ul li div, .grid-md-5, .grid-md-6, .grid-md-7, .grid-md-8, .grid-md-9, .grid-md-10, .grid-md-11, .grid-md-12 {
     float: left;
     padding: 0 10px;
     min-height: 1px; }
@@ -117,7 +117,7 @@
   .grid-md-3 {
     width: 25%; }
 
-  .grid-md-4 {
+  .grid-md-4, section#portfolio ul li div {
     width: 33.33333%; }
 
   .grid-md-5 {
@@ -144,7 +144,7 @@
   .grid-md-12 {
     width: 100%; } }
 @media screen and (max-width: 768px) {
-  .grid-sm-1, .grid-sm-2, .grid-sm-3, .grid-sm-4, .grid-sm-5, .grid-sm-6, .grid-sm-7, .grid-sm-8, .grid-sm-9, .grid-sm-10, .grid-sm-11, .grid-sm-12, section#sobre .content {
+  .grid-sm-1, .grid-sm-2, .grid-sm-3, .grid-sm-4, .grid-sm-5, .grid-sm-6, .grid-sm-7, .grid-sm-8, .grid-sm-9, .grid-sm-10, .grid-sm-11, .grid-sm-12, section#sobre .content, section#minhahistoria .imac, section#minhahistoria .historia, section#servicos .descricao, section#servicos .bg, section#contato .dados, section#contato .form, footer .inscrever, footer .posts, footer .saiba {
     float: left;
     padding: 0 10px;
     min-height: 1px; }
@@ -182,7 +182,7 @@
   .grid-sm-11 {
     width: 91.66667%; }
 
-  .grid-sm-12, section#sobre .content {
+  .grid-sm-12, section#sobre .content, section#minhahistoria .imac, section#minhahistoria .historia, section#servicos .descricao, section#servicos .bg, section#contato .dados, section#contato .form, footer .inscrever, footer .posts, footer .saiba {
     width: 100%; } }
 #load {
   width: 100vw;
@@ -585,7 +585,7 @@ section#minhahistoria {
   @media screen and (max-width: 1200px) {
     section#minhahistoria {
       text-align: center; } }
-  section#minhahistoria img {
+  section#minhahistoria .imac img {
     width: 85%; }
   section#minhahistoria h2 {
     letter-spacing: 8px;
@@ -711,11 +711,12 @@ section#portfolio ul {
     -moz-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
+    section#portfolio ul li div {
+      margin: 0;
+      padding: 0; }
     section#portfolio ul li img {
       width: 100%;
       margin: 0;
-      padding: 0; }
-    section#portfolio ul li .col-lg-2 {
       padding: 0; }
     section#portfolio ul li .fotos img, section#portfolio ul li .sites img {
       -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);

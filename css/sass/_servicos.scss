@@ -4,6 +4,12 @@ section#servicos {
     @include responsive(lg) {
         text-align: center;
     }
+    .descricao {
+        @extend .grid-lg-6;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
+    }
     .content {
         padding: 70px 0 70px;
         color: $cinza2;
@@ -55,5 +61,9 @@ section#servicos {
         height: 500px;
         background: url(../img/bg2.jpg) no-repeat center;
         background-size: cover;
+        @extend .grid-lg-6;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
     }
 }

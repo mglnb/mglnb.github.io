@@ -1,6 +1,21 @@
 section#contato {
 	text-align: center;
 	padding-bottom: 50px;
+    .titulo {
+        @extend .grid-lg-12;
+    }
+    .dados {
+        @extend .grid-lg-6;
+        @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
+    }
+    .form {
+        @extend .grid-lg-6;
+                @include responsive(sm) {
+            @extend .grid-sm-12;
+        }
+    }
 	form {
 		width: 100%;
 		margin: auto;

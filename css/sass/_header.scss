@@ -3,10 +3,17 @@ nav {
     height: 0;
     margin-top: 20px;
     @include transition(1s);
+    .logo {
+        @extend .grid-lg-3;
+    }
     img {
         width: 110px;
         margin: 12px 0 15px;
         @include transition(1s);
+        
+    }
+    .ulnav {
+        @extend .grid-lg-9;
     }
     z-index: 2;
     ul {
