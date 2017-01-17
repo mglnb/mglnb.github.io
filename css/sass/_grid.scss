@@ -27,11 +27,17 @@
 $gutter: 20px;
 $container: 980px;
 $columns: 12;
+
 %grid {
     float: left;
     padding: 0 ($gutter / 2);
     min-height: 1px;
     position: relative;
+}
+
+.container {
+	width: $container;
+	margin: 0 auto;
 }
 
 @for $i from 1 through $columns {

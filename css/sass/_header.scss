@@ -2,7 +2,10 @@ nav {
     background: #333;
     height: 0;
     margin-top: 20px;
+	margin-bottom: 0;
     @include transition(1s);
+	position: fixed;
+	width: 100%;
     .logo {
         @extend .grid-lg-3;
     }
@@ -15,11 +18,11 @@ nav {
     .ulnav {
         @extend .grid-lg-9;
     }
-    z-index: 2;
+    z-index: 9;
     ul {
         text-align: right;
-        margin-bottom: 0;
-        @include responsive(lg) {
+        margin-top: 6px;
+        @include responsive(sm) {
             display: none;
         }
         li {

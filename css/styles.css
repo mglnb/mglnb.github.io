@@ -1,6 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css";
 @import "https://fonts.googleapis.com/css?family=Roboto:100,400,700";
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 @keyframes titleh3 {
   0% {
     -webkit-transform: scale(0, 0);
@@ -65,6 +64,10 @@
   padding: 0 10px;
   min-height: 1px;
   position: relative; }
+
+.container {
+  width: 980px;
+  margin: 0 auto; }
 
 .grid-lg-1 {
   width: 8.33333%; }
@@ -301,8 +304,9 @@ button.btn-ghost {
   color: #6a6a6a;
   font-weight: 400;
   letter-spacing: 3px;
-  padding: 10px 20px;
-  font-size: 1.7rem;
+  padding: 10px 30px;
+  border-radius: 22.5px;
+  font-size: 1.2em;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -323,9 +327,6 @@ span.hr:before, span.hr:after {
   background: #6a6a6a;
   margin: 0 10px 7.5px; }
 
-span.hr {
-  font-size: 35px; }
-
 h2 {
   letter-spacing: 8px;
   font-weight: 700; }
@@ -337,7 +338,8 @@ h2 {
   border-bottom: 1px solid #bdc3c7; }
   .navbar-scroll img {
     width: 90px;
-    margin-top: 13px;
+    margin-top: 15px;
+    margin-bottom: 0;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -o-transition: 1s;
@@ -347,11 +349,14 @@ nav {
   background: #333;
   height: 0;
   margin-top: 20px;
+  margin-bottom: 0;
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  z-index: 2; }
+  position: fixed;
+  width: 100%;
+  z-index: 9; }
   nav img {
     width: 110px;
     margin: 12px 0 15px;
@@ -361,8 +366,8 @@ nav {
     transition: 1s; }
   nav ul {
     text-align: right;
-    margin-bottom: 0; }
-    @media screen and (max-width: 1200px) {
+    margin-top: 6px; }
+    @media screen and (max-width: 768px) {
       nav ul {
         display: none; } }
     nav ul li {
@@ -571,7 +576,9 @@ section#sobre {
       height: 1px;
       background: #333; }
   section#sobre p {
-    font-weight: 400; }
+    font-weight: 400;
+    font-size: .8em;
+    line-height: 15px; }
   section#sobre:after {
     content: "";
     display: block;
@@ -590,7 +597,10 @@ section#minhahistoria {
   section#minhahistoria h2 {
     letter-spacing: 8px;
     font-weight: 700;
-    margin-left: 20px; }
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 1.8em;
+    margin-bottom: 30px; }
     @media screen and (max-width: 1200px) {
       section#minhahistoria h2 {
         margin-left: 0;
@@ -620,7 +630,10 @@ section#minhahistoria {
           content: none; } }
 
 p {
-  color: #6a6a6a; }
+  color: #6a6a6a;
+  font-size: .9em;
+  line-height: 15px;
+  margin-bottom: 20px; }
 
 section#servicos {
   text-align: right;
@@ -661,16 +674,20 @@ section#servicos {
           background: #ecf0f1;
           margin: 20px auto 20px;
           float: none; } }
-    section#servicos h2 span {
-      font-size: 24px;
-      color: #bdc3c7; }
-    section#servicos h2 p {
-      color: #95a5a6;
-      line-height: 30px; }
+  section#servicos span {
+    font-size: 1.2em;
+    color: #bdc3c7; }
+  section#servicos p {
+    margin-top: 10px;
+    color: #95a5a6;
+    line-height: 20px; }
   section#servicos .bg {
     height: 500px;
     background: url(../img/bg2.jpg) no-repeat center;
     background-size: cover; }
+    @media screen and (max-width: 768px) {
+      section#servicos .bg {
+        display: none; } }
 
 section#portfolio .content {
   text-align: center; }
@@ -684,7 +701,8 @@ section#portfolio .content {
     section#portfolio .content ul li {
       text-decoration: none; }
       section#portfolio .content ul li a {
-        color: #444; }
+        color: #444;
+        text-decoration: none; }
         section#portfolio .content ul li a:hover, section#portfolio .content ul li a:active, section#portfolio .content ul li a:focus {
           color: #bdc3c7; }
       section#portfolio .content ul li:after {
@@ -715,10 +733,13 @@ section#portfolio ul {
       margin: 0;
       padding: 0; }
     section#portfolio ul li img {
-      width: 100%;
+      max-width: 100%;
       margin: 0;
       padding: 0; }
-    section#portfolio ul li .fotos img, section#portfolio ul li .sites img {
+    section#portfolio ul li .fotos img,
+    section#portfolio ul li .sites img {
+      max-width: 100%;
+      width: 100%;
       -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
       clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
       filter: grayscale(100%);
@@ -726,10 +747,10 @@ section#portfolio ul {
       -moz-transition: 0.5s;
       -o-transition: 0.5s;
       transition: 0.5s; }
-      section#portfolio ul li .fotos img:hover, section#portfolio ul li .sites img:hover {
+      section#portfolio ul li .fotos img:hover,
+      section#portfolio ul li .sites img:hover {
         filter: grayscale(0%);
-        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
-        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0); }
+        transform: scale(1.2); }
     section#portfolio ul li .fotos {
       display: block; }
     section#portfolio ul li .sites {
@@ -738,6 +759,12 @@ section#portfolio ul {
 section#contato {
   text-align: center;
   padding-bottom: 50px; }
+  section#contato span.hr {
+    font-size: 35px; }
+  section#contato .titulo {
+    margin-bottom: 20px; }
+    section#contato .titulo h2 {
+      margin: 10px 0 20px 0; }
   section#contato form {
     width: 100%;
     margin: auto; }
@@ -755,7 +782,9 @@ section#contato {
     section#contato form .inputgroup {
       position: relative;
       margin-bottom: 32px; }
-      section#contato form .inputgroup input[type="text"], section#contato form .inputgroup input[type="email"], section#contato form .inputgroup textarea {
+      section#contato form .inputgroup input[type="text"],
+      section#contato form .inputgroup input[type="email"],
+      section#contato form .inputgroup textarea {
         font-size: 16px;
         color: #444;
         width: 100%;
@@ -763,13 +792,22 @@ section#contato {
         padding: 15px 0;
         border: none;
         border-bottom: 1px solid #444; }
-        section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active, section#contato form .inputgroup input[type="email"]:focus, section#contato form .inputgroup input[type="email"]:active, section#contato form .inputgroup textarea:focus, section#contato form .inputgroup textarea:active {
+        section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active,
+        section#contato form .inputgroup input[type="email"]:focus,
+        section#contato form .inputgroup input[type="email"]:active,
+        section#contato form .inputgroup textarea:focus,
+        section#contato form .inputgroup textarea:active {
           outline: none; }
-        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active, section#contato form .inputgroup input[type="email"]:focus ~ label, section#contato form .inputgroup input[type="email"] ~ .active, section#contato form .inputgroup textarea:focus ~ label, section#contato form .inputgroup textarea ~ .active {
+        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active,
+        section#contato form .inputgroup input[type="email"]:focus ~ label,
+        section#contato form .inputgroup input[type="email"] ~ .active,
+        section#contato form .inputgroup textarea:focus ~ label,
+        section#contato form .inputgroup textarea ~ .active {
           top: -12px;
           font-size: 12px;
           line-height: 12px; }
-  section#contato form, section#contato .content {
+  section#contato form,
+  section#contato .content {
     text-align: center; }
   section#contato .content h3 {
     color: #444;
@@ -781,6 +819,10 @@ footer {
   background: #3a3a3a;
   color: #bdc3c7;
   padding: 60px 0 0; }
+  footer .inscrever h3, footer .posts h3, footer .saiba h3 {
+    margin-bottom: 15px; }
+  footer .inscrever .title, footer .posts .title, footer .saiba .title {
+    margin-bottom: 10px; }
   footer input {
     background: #222;
     box-shadow: none;
@@ -797,7 +839,9 @@ footer {
     color: #bdc3c7;
     border: none;
     padding: 12px 15px;
-    background: #444; }
+    background: #444;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
     footer .btn-ghost:active, footer .btn-ghost:focus {
       outline: none; }
   footer .social-copy {

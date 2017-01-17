@@ -14,8 +14,9 @@ button.btn-ghost {
 	color: $p;
 	font-weight: 400;
 	letter-spacing: 3px;
-	padding: 10px 20px;
-	font-size: 1.7rem;
+	padding: 10px 30px;
+	border-radius: 22.5px;
+	font-size: 1.2em;
 	@include transition(0.5s);
 	position: relative;
 	z-index: 1;
@@ -34,9 +35,7 @@ span.hr:before, span.hr:after {
 	background: $p;
 	margin: 0 10px 7.5px;
 }
-span.hr {
-	font-size: 35px;
-}
+
 h2 {
 	letter-spacing: 8px;
 	font-weight: 700;
@@ -49,7 +48,8 @@ h2 {
 	border-bottom: 1px solid $cinza2;
 	img {
 		width: 90px;
-		margin-top: 13px;
+		margin-top: 15px;
+		margin-bottom: 0;
 		@include transition(1s);
 	}
 }

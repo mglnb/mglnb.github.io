@@ -1,21 +1,28 @@
 section#contato {
 	text-align: center;
 	padding-bottom: 50px;
-    .titulo {
-        @extend .grid-lg-12;
-    }
-    .dados {
-        @extend .grid-lg-6;
-        @include responsive(sm) {
-            @extend .grid-sm-12;
-        }
-    }
-    .form {
-        @extend .grid-lg-6;
-                @include responsive(sm) {
-            @extend .grid-sm-12;
-        }
-    }
+	span.hr {
+		font-size: 35px;
+	}
+	.titulo {
+		@extend .grid-lg-12;
+		margin-bottom: 20px;
+		h2 {
+			margin: 10px 0 20px 0;
+		}
+	}
+	.dados {
+		@extend .grid-lg-6;
+		@include responsive(sm) {
+			@extend .grid-sm-12;
+		}
+	}
+	.form {
+		@extend .grid-lg-6;
+		@include responsive(sm) {
+			@extend .grid-sm-12;
+		}
+	}
 	form {
 		width: 100%;
 		margin: auto;
@@ -31,7 +38,9 @@ section#contato {
 		.inputgroup {
 			position: relative;
 			margin-bottom: 32px;
-			input[type="text"], input[type="email"], textarea {
+			input[type="text"],
+			input[type="email"],
+			textarea {
 				font-size: 16px;
 				color: $cinza7;
 				width: 100%;
@@ -39,20 +48,21 @@ section#contato {
 				padding: 15px 0;
 				border: none;
 				border-bottom: 1px solid $cinza7;
-				&:focus, &:active {
-					outline: none; 
+				&:focus,
+				&:active {
+					outline: none;
 				}
-
-				&:focus ~ label, &~.active {
+				&:focus ~ label,
+				&~.active {
 					top: -12px;
 					font-size: 12px;
 					line-height: 12px;
 				}
 			}
 		}
-	}	
-
-	form,.content {
+	}
+	form,
+	.content {
 		text-align: center;
 	}
 	.content {
@@ -64,5 +74,4 @@ section#contato {
 			color: $p;
 		}
 	}
-
 }

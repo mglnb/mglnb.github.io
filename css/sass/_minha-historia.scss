@@ -22,6 +22,9 @@ section#minhahistoria {
         letter-spacing: 8px;
         font-weight: 700;
         margin-left: 20px;
+		 margin-top: 20px;
+		 font-size: 1.8em;
+		 margin-bottom: 30px;
         @include responsive(lg) {
             margin-left: 0;
             margin-top: 0;
@@ -57,4 +60,7 @@ section#minhahistoria {
 
 p {
     color: $p;
+	font-size: .9em;
+	line-height: 15px;
+	margin-bottom: 20px;
 }
