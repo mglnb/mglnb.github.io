@@ -1,0 +1,66 @@
+footer {
+    background: #3a3a3a;
+    color: $cinza2;
+    padding: 60px 0 0;
+    input {
+        background: #222;
+        box-shadow: none;
+        border: none;
+        padding: 10px 2px;
+        width: 50%;
+        margin: 0;
+        margin-right: -3px;
+        font-size: 12px;
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+    .btn-ghost {
+        font-size: 10px;
+        color: $cinza2;
+        border: none;
+        padding: 12px 15px;
+        background: #444;
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+    .social-copy {
+        @include responsive(md) {
+            -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+            clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
+        }
+        .icons {
+            img {
+                width: 64px;
+                height: auto;
+                margin-left: 10px;
+                filter: invert(50%);
+                @include transition(.5s);
+                @include responsive(md) {
+                    width: 48px;
+                }
+                @include responsive(sm) {
+                    width: 40px;
+                }
+                &:hover {
+                    filter: invert(98%);
+                }
+            }
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+        background: #1a1a1a;
+        padding: 20px 0;
+        margin: 60px 0 0;
+        text-align: center;
+        p {
+            font-size: 10px;
+            color: #5a5a5a;
+        }
+        -webkit-clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%);
+        clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%);
+    }
+}

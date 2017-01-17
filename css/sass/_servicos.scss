@@ -1,0 +1,59 @@
+section#servicos {
+    text-align: right;
+    background: #222;
+    @include responsive(lg) {
+        text-align: center;
+    }
+    .content {
+        padding: 70px 0 70px;
+        color: $cinza2;
+        margin-right: 80px;
+        margin-left: 22%;
+        @include responsive(lg) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    h2 {
+        margin-right: 20px;
+        margin-bottom: 50px;
+        @include responsive(lg) {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        &:after {
+            content: "";
+            display: block;
+            background: $cinza2;
+            height: 33px;
+            width: 3px;
+            float: right;
+            margin-right: -18px;
+            @include responsive(lg) {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 15%;
+                background: $cinza1;
+                margin: 20px auto 20px;
+                float: none;
+            }
+        }
+        span {
+            &.first:before {
+                @include responsive(lg) {}
+            }
+            font-size: 24px;
+            color: $cinza2;
+        }
+        p {
+            color: $cinza3;
+            line-height: 30px;
+        }
+    }
+    .bg {
+        height: 500px;
+        background: url(../img/bg2.jpg) no-repeat center;
+        background-size: cover;
+    }
+}

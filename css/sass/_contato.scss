@@ -1,0 +1,53 @@
+section#contato {
+	text-align: center;
+	padding-bottom: 50px;
+	form {
+		width: 100%;
+		margin: auto;
+		label {
+			color: $cinza7;
+			@include transition(.3s ease);
+			font-size: 16px;
+			line-height: 16px;
+			position: absolute;
+			top: 16px;
+			left: 0;
+		}
+		.inputgroup {
+			position: relative;
+			margin-bottom: 32px;
+			input[type="text"], input[type="email"], textarea {
+				font-size: 16px;
+				color: $cinza7;
+				width: 100%;
+				outline: none;
+				padding: 15px 0;
+				border: none;
+				border-bottom: 1px solid $cinza7;
+				&:focus, &:active {
+					outline: none; 
+				}
+
+				&:focus ~ label, &~.active {
+					top: -12px;
+					font-size: 12px;
+					line-height: 12px;
+				}
+			}
+		}
+	}	
+
+	form,.content {
+		text-align: center;
+	}
+	.content {
+		h3 {
+			color: $cinza7;
+			margin: 25px 0;
+		}
+		p {
+			color: $p;
+		}
+	}
+
+}

@@ -1,0 +1,55 @@
+body, html {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+a {
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+button.btn-ghost {
+	background: transparent;
+	border: 2px solid #aaa;
+	color: $p;
+	font-weight: 400;
+	letter-spacing: 3px;
+	padding: 10px 20px;
+	font-size: 1.7rem;
+	@include transition(0.5s);
+	position: relative;
+	z-index: 1;
+	&:hover {
+		border-color: $cinza5;
+		background: $cinza5;
+		color: #eee;
+	}
+}
+span.hr:before, span.hr:after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 1px;
+	width: 80px;
+	background: $p;
+	margin: 0 10px 7.5px;
+}
+span.hr {
+	font-size: 35px;
+}
+h2 {
+	letter-spacing: 8px;
+	font-weight: 700;
+}
+
+.navbar-scroll{
+	background: $cinza7;
+	height: auto;
+	margin-top: 0;
+	border-bottom: 1px solid $cinza2;
+	img {
+		width: 90px;
+		margin-top: 13px;
+		@include transition(1s);
+	}
+}

@@ -1,0 +1,148 @@
+nav {
+    background: #333;
+    height: 0;
+    margin-top: 20px;
+    @include transition(1s);
+    img {
+        width: 110px;
+        margin: 12px 0 15px;
+        @include transition(1s);
+    }
+    z-index: 2;
+    ul {
+        text-align: right;
+        margin-bottom: 0;
+        @include responsive(lg) {
+            display: none;
+        }
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+                padding: 20px 30px 0;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $cinza2;
+                    text-decoration: none;
+                    @include transition(.25s);
+                    // Aumentar o tamanho da barra
+                    &:after {
+                        width: 98%;
+                    }
+                }
+                // Barra em baixo do link
+                &:after {
+                    content: "";
+                    width: 0%;
+                    height: 2px;
+                    margin: 17px auto 0;
+                    display: block;
+                    background-color: $cinza2;
+                    @include transition (.25s);
+                }
+            }
+        }
+    }
+}
+
+header {
+    background: url(../img/bg2.jpg) fixed no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    padding: 200px 0 330px;
+    text-align: center;
+    height: 115%;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+    @include transition(1.5s);
+    z-index: 1;
+    .content {
+        background: rgba(0, 0, 0, .2);
+        padding: 50px 0 25px;
+    }
+    h2.title {
+        margin: 0 50px;
+        border: 2px solid #fff;
+        font-size: 60px;
+        font-weight: 100;
+        padding: 10px 60px;
+        display: block;
+        @include responsive(lg) {
+            font-size: 60px;
+        }
+        @include responsive(md) {
+            font-size: 40px;
+        }
+        @include responsive(sm) {
+            font-size: 30px;
+            padding: 10px 5px;
+            margin: 0 10px;
+        }
+    }
+    h3 {
+        margin-top: 40px;
+        font-weight: 400;
+        @include animation(titleh3 0.7s);
+        @include responsive(lg) {
+            font-size: 18px;
+        }
+    }
+    .mouse {
+        margin: 150px auto 0;
+        display: block;
+        width: 24px;
+        height: 42px;
+        border-radius: 14px;
+        border: 2px solid #fff;
+    }
+    .scroll {
+        display: block;
+        margin: 5px auto;
+        background-color: #FFF;
+        position: relative;
+        height: 4px;
+        width: 4px;
+        border-radius: 8px;
+        @include animation(mouse-wheel 0.7s linear infinite);
+    }
+    .seta {
+        display: block;
+        width: 5px;
+        height: 5px;
+        @include transform(rotate(45deg));
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        margin: 0 auto;
+        width: 16px;
+        height: 16px;
+    }
+    .primeira,
+    .segunda,
+    .terceira {
+        @include animation (mouse-scroll 1s infinite alternate);
+    }
+    .primeira {
+        -webkit-animation-delay: .1s;
+        -moz-animation-delay: .1s;
+        -o-animation-delay: .1s;
+        animation-delay: .1s;
+    }
+    .segunda {
+        -webkit-animation-delay: .2s;
+        -moz-animation-delay: .2s;
+        -o-animation-delay: .2s;
+        animation-delay: .2s;
+    }
+    .terceira {
+        -webkit-animation-delay: .3s;
+        -moz-animation-delay: .3s;
+        -o-animation-delay: .3s;
+        animation-delay: .3s;
+    }
+}

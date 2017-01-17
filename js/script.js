@@ -1,6 +1,6 @@
 window.onload = function(){
 	var div = document.getElementById('load');
-	preload(div, 50);
+	preload(div, 30);
 };
 function preload(el, interval){
 	var op = 1;
