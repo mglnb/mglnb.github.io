@@ -83,6 +83,7 @@ header {
         font-weight: 100;
         padding: 10px 60px;
         display: block;
+		 border-radius: 44.5px;
         @include responsive(lg) {
             font-size: 60px;
         }

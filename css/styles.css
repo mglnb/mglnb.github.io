@@ -424,7 +424,8 @@ header {
     font-size: 60px;
     font-weight: 100;
     padding: 10px 60px;
-    display: block; }
+    display: block;
+    border-radius: 44.5px; }
     @media screen and (max-width: 1200px) {
       header h2.title {
         font-size: 60px; } }
