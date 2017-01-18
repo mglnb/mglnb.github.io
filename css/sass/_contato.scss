@@ -5,22 +5,22 @@ section#contato {
 		font-size: 35px;
 	}
 	.titulo {
-		@extend .grid-lg-12;
+		@include grid(12);
 		margin-bottom: 20px;
 		h2 {
 			margin: 10px 0 20px 0;
 		}
 	}
 	.dados {
-		@extend .grid-lg-6;
-		@include responsive(sm) {
-			@extend .grid-sm-12;
+		@include grid(6);
+		@include d(s) {
+			@include grid(12);
 		}
 	}
 	.form {
-		@extend .grid-lg-6;
-		@include responsive(sm) {
-			@extend .grid-sm-12;
+		@include grid(6);
+		@include d(s) {
+			@include grid(12);
 		}
 	}
 	form {

@@ -1,75 +1,116 @@
-*,
-*:after,
-*:before {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+// Variaveis do grid
+$cols: 12;
+$gutter: 20px;
+
+
+// Box-sizing
+*, *::after, *::before {
 	box-sizing: border-box;
 }
-%clearfix {
-	*zoom: 1;
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
+
+
+// Função do grid
+
+@function grid($col, $offset: false) {
+	$width: 100% / $cols * $col;
+	$result: calc(#{$width} - #{$gutter});
+	@if $offset == offset {
+		$gutter: $gutter / 2;
+		$result: calc(#{$width} + #{$gutter});
 	}
-	&:after {
+	@return $result;
+}
+
+@mixin grid($i) {
+    width: grid($i);
+    @include grid-structure;
+}
+
+
+
+// Mixin estrutura do grid
+
+@mixin grid-structure {
+	float: left;
+	min-height: 1px;
+	margin-left: $gutter / 2;
+	margin-right: $gutter / 2;
+    position: relative;
+	@include d(s) {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+
+
+// Gera as classes de offset
+
+@mixin offset($i) {
+    margin-left: grid($i, offset);
+	@extend %offset;
+    @include grid-structure;
+}
+
+
+@include d(s) {
+	%offset {
+		margin-left: 0px;
+	}
+}
+
+// Mixin de clearfix
+
+@mixin clearfix {
+	&::after, &::before {
+		content: '';
+		display: table;
 		clear: both;
 	}
 }
-.row {
-	@extend %clearfix;
-}
-$gutter: 20px;
-$container: 80%;
-$container-md: 90%;
-$container-sm: 100%;
-$columns: 12;
-%grid {
-	float: left;
-	padding: 0 ($gutter / 2);
-	min-height: 1px;
+
+@mixin container {
+	max-width: $l-device;
+	margin: 0px auto;
 	position: relative;
+	@include d(m) {
+		max-width: $m-device;
+	}
+	@include d(s) {
+		max-width: $s-device;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	@include clearfix;
+}
+
+@mixin container-fluid {
+	max-width: 100%;
+	margin: 0px auto;
+	position: relative;
+	@include clearfix;
+}
+
+.container-fluid {
+	@include container-fluid;
 }
 .container {
-	width: $container;
-	margin: 0 auto;
-	@include responsive(md) {
-	width: $container-md;
-	}@include responsive(sm) {
-	width: $container-sm;
-	}
+	@include container;
 }
-@for $i from 1 through $columns {
-	.grid-lg-#{$i} {
-		width: 100% / $columns * $i;
-		@extend %grid;
+
+@mixin row {
+	position: relative;
+	margin-left: -$gutter/2;
+	margin-right: -$gutter/2;
+	@include d(s) {
+		margin-left: 0px;
+		margin-right: 0px;
 	}
+	@include clearfix;
 }
-@include responsive(md) {
-	%grid1 {
-		float: left;
-		padding: 0 ($gutter / 2);
-		min-height: 1px;
-	}
-	@for $i from 1 through $columns {
-		.grid-md-#{$i} {
-			width: 100% / $columns * $i;
-			@extend %grid1;
-		}
-	}
-}
-@include responsive(sm) {
-	%grid2 {
-		float: left;
-		padding: 0 ($gutter / 2);
-		min-height: 1px;
-	}
-	@for $i from 1 through $columns {
-		.grid-sm-#{$i} {
-			width: 100% / $columns * $i;
-			@extend %grid2;
-		}
-	}
+
+.row {
+	@include row;
 }

@@ -1,6 +1,6 @@
 section#portfolio {
 	.navport {
-		@extend .grid-lg-12;
+		@include grid(12);
 	}
 	.content {
 		text-align: center;
@@ -51,9 +51,9 @@ section#portfolio {
 			display: inline;
 			@include transition(1s);
 			div {
-				@extend .grid-lg-2;
-				@include responsive(md) {
-					@extend .grid-md-4;
+				@include grid(2);
+				@include d(m) {
+					@include grid(4);
 				}
 				margin: 0;
 				padding: 0;

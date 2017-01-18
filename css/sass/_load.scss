@@ -8,7 +8,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     padding: 0 80px 40px 0;
-    @include responsive(md) {
+    @include d(m) {
         align-items: center;
         justify-content: center;
         padding: 0;

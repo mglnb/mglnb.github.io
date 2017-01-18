@@ -7,7 +7,7 @@ nav {
 	position: fixed;
 	width: 100%;
     .logo {
-        @extend .grid-lg-3;
+        @include grid(3);
     }
     img {
         width: 110px;
@@ -16,13 +16,15 @@ nav {
         
     }
     .ulnav {
-        @extend .grid-lg-9;
+        @include grid(9);
     }
     z-index: 9;
     ul {
         text-align: right;
         margin-top: 6px;
-        @include responsive(sm) {
+        margin-bottom: 0;
+        
+        @include d(s) {
             display: none;
         }
         li {
@@ -83,13 +85,13 @@ header {
         padding: 10px 60px;
         display: block;
 		 border-radius: 44.5px;
-        @include responsive(lg) {
+        @include d(l) {
             font-size: 60px;
         }
-        @include responsive(md) {
+        @include d(m) {
             font-size: 40px;
         }
-        @include responsive(sm) {
+        @include d(s) {
             font-size: 30px;
             padding: 10px 5px;
             margin: 0 10px;
@@ -99,7 +101,7 @@ header {
         margin-top: 40px;
         font-weight: 400;
         @include animation(titleh3 0.7s);
-        @include responsive(lg) {
+        @include d(l) {
             font-size: 18px;
         }
     }

@@ -1,21 +1,21 @@
 section#minhahistoria {
     padding-bottom: 100px;
-    @include responsive(lg) {
+    @include d(s) {
         text-align: center;
     }
     .imac {
-        @extend .grid-lg-7;
-        @include responsive(sm) {
-            @extend .grid-sm-12;
+        @include grid(7);
+        @include d(s) {
+            @include grid(12);
         }
         img {
             width: 85%;
         }
     }
     .historia {
-        @extend .grid-lg-5;
-        @include responsive(sm) {
-            @extend .grid-sm-12;
+        @include grid(5);
+        @include d(s) {
+            @include grid(12);
         }
     }
     h2 {
@@ -25,12 +25,12 @@ section#minhahistoria {
 		 margin-top: 20px;
 		 font-size: 1.8em;
 		 margin-bottom: 30px;
-        @include responsive(lg) {
+        @include d(s) {
             margin-left: 0;
             margin-top: 0;
         }
         &:after {
-            @include responsive(lg) {
+            @include d(s) {
                 content: "";
                 display: block;
                 width: 30%;
@@ -43,14 +43,14 @@ section#minhahistoria {
             content: "";
             display: block;
             position: absolute;
-            left: 15px;
+            left: 0px;
             bottom: 0;
             top: 22.5px;
             right: 0;
             height: 30px;
             width: 4px;
             background: #222;
-            @include responsive(lg) {
+            @include d(s) {
                 display: none;
                 content: none;
             }

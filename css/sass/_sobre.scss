@@ -3,14 +3,13 @@ section#sobre {
     text-align: center;
     color: $p;
     .content {
-        @extend .grid-lg-3;
-        @include responsive(lg) {
+        @include grid(3);
+        @include d(l) {
             margin-bottom: 20px;
         }
-        @include responsive(sm) {
-            @extend .grid-sm-12;
+        @include d(s) {
+            @include grid(12);
         }
-        @extend %clearfix;
     }
     span.quadrado {
         display: block;
