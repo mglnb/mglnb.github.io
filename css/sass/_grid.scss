@@ -81,7 +81,7 @@ $gutter: 20px;
 	@include d(s) {
 		max-width: $s-device;
 		padding-left: 10px;
-		padding-right: 10px;
+		padding-right: 10px; 
 	}
 	@include clearfix;
 }
