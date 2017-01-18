@@ -5,7 +5,9 @@ section#servicos {
 		text-align: center;
 	}
 	.descricao {
-		@include grid(6);
+        @include offset(2);
+		@include grid(4);
+        padding-right: 40px;
 		@include d(s) {
 			@include grid(12);
 		}

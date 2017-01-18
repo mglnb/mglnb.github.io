@@ -13,10 +13,10 @@ $gutter: 20px;
 
 @function grid($col, $offset: false) {
 	$width: 100% / $cols * $col;
-	$result: calc(#{$width});
+	$result: $width;
 	@if $offset == offset {
 		$gutter: $gutter / 2;
-		$result: calc(#{$width});
+		$result: $width;
 	}
 	@return $result;
 }
