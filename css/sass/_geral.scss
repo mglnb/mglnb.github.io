@@ -1,6 +1,8 @@
+
 body, html {
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
+    margin: 0;
 }
 a {
 	&:hover, &:active, &:focus {
@@ -11,7 +13,7 @@ a {
 button.btn-ghost {
 	background: transparent;
 	border: 2px solid #aaa;
-	color: $p;
+	color: $cor-texto-escuro;
 	font-weight: 400;
 	letter-spacing: 3px;
 	padding: 10px 30px;
@@ -21,8 +23,8 @@ button.btn-ghost {
 	position: relative;
 	z-index: 1;
 	&:hover {
-		border-color: $cinza5;
-		background: $cinza5;
+		border-color: $cor-secundaria;
+		background: $cor-secundaria;
 		color: #eee;
 	}
 }
@@ -32,7 +34,7 @@ span.hr:before, span.hr:after {
 	vertical-align: middle;
 	height: 1px;
 	width: 80px;
-	background: $p;
+	background: $cor-texto-escuro;
 	margin: 0 10px 7.5px;
 }
 
@@ -42,10 +44,10 @@ h2 {
 }
 
 .navbar-scroll{
-	background: $cinza7;
+	background: $cor-terciaria;
 	height: auto;
 	margin-top: 0;
-	border-bottom: 1px solid $cinza2;
+	border-bottom: 1px solid $cor-texto-claro1;
 	img {
 		width: 90px;
 		margin-top: 15px;

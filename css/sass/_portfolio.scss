@@ -15,12 +15,12 @@ section#portfolio {
             li {
                 text-decoration: none;
                 a {
-                    color: $cinza7;
+                    color: $cor-terciaria;
                     text-decoration: none;
                     &:hover,
                     &:active,
                     &:focus {
-                        color: $cinza2;
+                        color: $cor-texto-claro1;
                     }
                 }
                 &:after {
@@ -38,7 +38,7 @@ section#portfolio {
         display: block;
         width: 100%;
         height: 1px;
-        background: $cinza4;
+        background: $cor-secundaria;
         margin: 80px 0 50px;
     }
     ul {

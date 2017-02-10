@@ -21,6 +21,7 @@ section#minhahistoria {
     h2 {
         letter-spacing: 8px;
         font-weight: 700;
+        color: $cor-titulo-escuro;
         margin-left: 20px;
 		 margin-top: 20px;
 		 font-size: 1.8em;
@@ -35,23 +36,23 @@ section#minhahistoria {
                 display: block;
                 width: 30%;
                 height: 2px;
-                background: #222;
+                background: $cor-titulo-escuro;
                 margin: 10px auto;
             }
         }
         &:before {
             content: "";
             display: block;
-            position: absolute;
-            left: 0px;
+            position: absolute; 
+            left: 10px;
             bottom: 0;
             top: 22.5px;
             right: 0;
             height: 30px;
             width: 4px;
-            background: #222;
+            background: $cor-titulo-escuro;
             @include d(s) {
-                display: none;
+                display: none; 
                 content: none;
             }
         }
@@ -59,7 +60,7 @@ section#minhahistoria {
 }
 
 p {
-    color: $p;
+    color: $cor-texto-escuro;
 	font-size: .9em;
 	line-height: 15px;
 	margin-bottom: 20px;

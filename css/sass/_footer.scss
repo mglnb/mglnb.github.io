@@ -1,7 +1,10 @@
 footer {
-    background: #3a3a3a;
-    color: $cinza2;
+    background: $cor-terciaria;
+    color: $cor-texto-claro2;
     padding: 60px 0 0;
+    p {
+        color: $cor-texto-claro1;
+    }
     .inscrever,.posts, .saiba {
         @include grid(4);
         @include d(s) {
@@ -15,10 +18,11 @@ footer {
 		 }
     }
     input {
-        background: #222;
+        background: $cor-bg-escuro;
         box-shadow: none;
         border: none;
-        padding: 10px 2px;
+        color: $cor-texto-claro1;
+        padding: 10px;
         width: 50%;
         margin: 0;
         margin-right: -3px;
@@ -30,12 +34,14 @@ footer {
     }
     .btn-ghost {
         font-size: 10px;
-        color: $cinza2;
+        color: $cor-texto-escuro;
+        font-weight: 400;
         border: none;
-        padding: 12px 15px;
-        background: #444;
-		 	border-bottom-left-radius: 0;
-		 border-top-left-radius: 0;
+        margin-left: -1px;
+        padding: 11px 15px;
+        background: $cor-texto-claro2;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
         &:active,
         &:focus {
             outline: none;
@@ -69,13 +75,13 @@ footer {
             margin-top: 20px;
             padding-bottom: 10px;
         }
-        background: #1a1a1a;
+        background: $cor-bg-escuro;
         padding: 20px 0;
         margin: 60px 0 0;
         text-align: center;
         p {
             font-size: 10px;
-            color: #5a5a5a;
+            color: $cor-texto-claro1;
         }
         -webkit-clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%);
         clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%);
