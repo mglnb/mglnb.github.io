@@ -8,8 +8,8 @@ nav {
     width: 100vw;
     z-index: 9;
     .logo {
-	display: inline;
-}
+        display: inline;
+    }
     img {
         width: 110px;
         margin: 12px 50px 15px;
@@ -41,10 +41,10 @@ nav {
         z-index: -1;
     }
     .nav-animacao {
-    position: fixed;
+        position: fixed;
         right: -100vw;
         @include transition(.5s);
-}
+    }
     ul {
         height: 75vh;
         display: flex;
@@ -54,14 +54,32 @@ nav {
         padding: 0;
         @include transition(.5s);
         z-index: 2000;
+        @include d(s) {
+                    width: 100vw;
+        height: 100vh;
+
+           flex-direction: column;
+        }
         li {
             display: inline;
             max-width: 20vw;
             width: 20vw;
-            border-right: .2px solid rgba(230,230,230,.6);
-            border-left: .2px solid rgba(230,230,230,.6);
+            border-right: .2px solid rgba(230, 230, 230, .6);
+            border-left: .2px solid rgba(230, 230, 230, .6);
             text-align: center;
+            @include d(s) {
+                max-width:auto;
+                width: auto;
+                display: block;
+                border-right: none;
+                border-left: none;
+                flex-grow: 1;
+            }
             a {
+                @include d(s) {
+                    display: block;
+                    padding: 0 0;
+                }
                 display: inline-block;
                 color: $cor-titulo-escuro;
                 text-decoration: none;
