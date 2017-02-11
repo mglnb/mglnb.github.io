@@ -1,4 +1,4 @@
-#load {
+.load {
     width: 100vw;
     height: 100vh;
     z-index: 99999;
@@ -8,15 +8,20 @@
     align-items: flex-end;
     justify-content: flex-end;
     padding: 0 80px 40px 0;
-    @include d(m) {
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
+            @include d(s) {
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
     .loader {
         width: 130px;
         height: 170px;
         position: relative;
+        @include d(s) {
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
         &::before,
         &::after {
             content: "";

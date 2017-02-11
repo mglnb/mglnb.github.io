@@ -134,7 +134,7 @@ table {
     display: table;
     clear: both; }
 
-#load {
+.load {
   width: 100vw;
   height: 100vh;
   z-index: 99999;
@@ -144,16 +144,21 @@ table {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 0 80px 40px 0; }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    #load {
+  @media screen and (max-width: 767px) {
+    .load {
       align-items: center;
       justify-content: center;
       padding: 0; } }
-  #load .loader {
+  .load .loader {
     width: 130px;
     height: 170px;
     position: relative; }
-    #load .loader::before, #load .loader::after {
+    @media screen and (max-width: 767px) {
+      .load .loader {
+        align-items: center;
+        justify-content: center;
+        padding: 0; } }
+    .load .loader::before, .load .loader::after {
       content: "";
       width: 0;
       height: 0;
@@ -166,10 +171,10 @@ table {
       border-bottom: 20px solid #1b2a33;
       transform: scale(0);
       transition: all 0.2s ease; }
-    #load .loader::after {
+    .load .loader::after {
       border-right: 15px solid transparent;
       border-bottom: 20px solid #162229; }
-    #load .loader .carregando {
+    .load .loader .carregando {
       width: 120%;
       text-align: center;
       position: absolute;
@@ -178,7 +183,7 @@ table {
       font-size: 12px;
       letter-spacing: 4px;
       color: white; }
-    #load .loader .binario {
+    .load .loader .binario {
       width: 100%;
       height: 140px;
       display: block;
@@ -188,25 +193,25 @@ table {
       left: 15px;
       z-index: 2;
       overflow: hidden; }
-      #load .loader .binario::before, #load .loader .binario::after {
+      .load .loader .binario::before, .load .loader .binario::after {
         font-size: 24px;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0; }
-      #load .loader .binario:nth-child(1)::before {
+      .load .loader .binario:nth-child(1)::before {
         content: "0";
         animation: a 1.1s linear infinite; }
-      #load .loader .binario:nth-child(1)::after {
+      .load .loader .binario:nth-child(1)::after {
         content: "0";
         animation: b 1.3s linear infinite; }
-      #load .loader .binario:nth-child(2)::before {
+      .load .loader .binario:nth-child(2)::before {
         content: "1";
         animation: c 0.9s linear infinite; }
-      #load .loader .binario:nth-child(2)::after {
+      .load .loader .binario:nth-child(2)::after {
         content: "1";
         animation: d 0.7s linear infinite; }
-    #load .loader.JS_on::before, #load .loader.JS_on::after {
+    .load .loader.JS_on::before, .load .loader.JS_on::after {
       transform: scale(1); }
 
 @keyframes a {
