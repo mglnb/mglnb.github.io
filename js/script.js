@@ -18,19 +18,17 @@ function preload(el, interval) {
 
 function menuOff() {
     $('.ulnav').removeClass('.active');
-    $('.ulnav').css('width', '0vw');
-    $('.nav-animacao').css('right', '-100vw');
+    $('.ulnav').css('right', '-200vw');
+    $('.nav-animacao').css('right', '-200vw');
     $('nav img').css('filter', 'invert(0)');
 }
 
 function menuOn() {
     $('.ulnav').addClass('.active');
-    $('.ulnav').css('width', '100vw');
+    $('.ulnav').css('right', '0');
     $('.nav-animacao').css('right', '0');
     $('nav img').css('filter', 'invert(45%)');
 }
-
-
 $(document).ready(function ($) {
     $('.hamburguer').click(function () {
         if ($('.ulnav').hasClass('.active')) {
@@ -43,14 +41,14 @@ $(document).ready(function ($) {
     $('nav ul li').click(function () {
         menuOff();
     });
-    
-    
+    // Scroll suave no navbar
     $('nav a').click(function () {
         var target = $(this.hash);
         $('html,body').animate({
             scrollTop: target.offset().top - 60
         }, 1000);
     });
+    // Esconder e mostrar as fotos do portfolio
     $('#portfolio .content ul li a').click(function (event) {
         if ($(this).is('#fotos')) {
             $('.sites').hide('slow');
@@ -61,6 +59,7 @@ $(document).ready(function ($) {
             $('.fotos').hide('slow');
         }
     });
+    // Efeito Material Design no formulario
     $('.formulario input').keyup(function () {
         var msg = $(this).val();
         if (msg != "") {
