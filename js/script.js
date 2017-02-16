@@ -2,7 +2,7 @@ window.onload = function () {
     var div = document.getElementById('load');
     preload(div, 30);
 };
-
+// Declarações de funções
 function preload(el, interval) {
     var op = 1;
     var timer = setInterval(function () {
@@ -21,14 +21,17 @@ function menuOff() {
     $('.ulnav').css('right', '-200vw');
     $('.nav-animacao').css('right', '-200vw');
     $('nav img').css('filter', 'invert(0)');
+    $('.social-copy').removeClass('.footernav');
 }
 
 function menuOn() {
     $('.ulnav').addClass('.active');
-    $('.ulnav').css('right', '0');
+    $('.ulnav').css('right', '0 ');
     $('.nav-animacao').css('right', '0');
     $('nav img').css('filter', 'invert(45%)');
+    $('.social-copy').addClass('.footernav');
 }
+// Quando o site for carregado
 $(document).ready(function ($) {
     $('.hamburguer').click(function () {
         if ($('.ulnav').hasClass('.active')) {
