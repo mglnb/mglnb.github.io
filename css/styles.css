@@ -2,8 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css";
-@import "https://fonts.googleapis.com/css?family=Roboto:100,400,700";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,400,700';
+/* line 6, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,24 +26,30 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
+/* line 27, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+/* line 31, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 body {
   line-height: 1; }
 
+/* line 34, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 ol, ul {
   list-style: none; }
 
+/* line 37, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 blockquote, q {
   quotes: none; }
 
+/* line 40, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
 
+/* line 45, E:/Dropbox/Dropbox/MNB Blog/css/styles.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -60,6 +67,7 @@ table {
     -o-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 0.5; } }
+
 @keyframes mouse-scroll {
   0% {
     opacity: 0; }
@@ -67,6 +75,7 @@ table {
     opacity: .5; }
   100% {
     opacity: 1; } }
+
 @-webkit-keyframes mouse-wheel {
   0% {
     opacity: 1;
@@ -78,6 +87,7 @@ table {
     -webkit-transform: translateY(6px);
     -ms-transform: translateY(6px);
     transform: translateY(6px); } }
+
 @-moz-keyframes mouse-wheel {
   0% {
     top: 1px; }
@@ -89,51 +99,65 @@ table {
     top: 2px; }
   100% {
     top: 1px; } }
+
+/* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
 *, *::after, *::before {
   box-sizing: border-box; }
 
 @media screen and (max-width: 767px) {
+  /* line 57, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
   section#servicos .descricao {
     margin-left: 0px; } }
+
+/* line 94, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
 .container-fluid {
   max-width: 100%;
   margin: 0px auto;
   position: relative; }
+  /* line 65, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
   .container-fluid::after, .container-fluid::before {
     content: '';
     display: table;
     clear: both; }
 
+/* line 97, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
 .container {
   max-width: 1200px;
   margin: 0px auto;
   position: relative; }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    /* line 97, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
     .container {
       max-width: 768px; } }
   @media screen and (max-width: 767px) {
+    /* line 97, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
     .container {
       max-width: 480px;
       padding-left: 10px;
       padding-right: 10px; } }
+  /* line 65, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
   .container::after, .container::before {
     content: '';
     display: table;
     clear: both; }
 
+/* line 112, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
 .row {
   position: relative;
   margin-left: 10px;
   margin-right: 10px; }
   @media screen and (max-width: 767px) {
+    /* line 112, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
     .row {
       margin-left: 0px;
       margin-right: 0px; } }
+  /* line 65, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
   .row::after, .row::before {
     content: '';
     display: table;
     clear: both; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
 .load {
   width: 100vw;
   height: 100vh;
@@ -145,19 +169,23 @@ table {
   justify-content: flex-end;
   padding: 0 80px 40px 0; }
   @media screen and (max-width: 767px) {
+    /* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load {
       align-items: center;
       justify-content: center;
       padding: 0; } }
+  /* line 16, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
   .load .loader {
     width: 130px;
     height: 170px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 16, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader {
         align-items: center;
         justify-content: center;
         padding: 0; } }
+    /* line 25, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load .loader::before, .load .loader::after {
       content: "";
       width: 0;
@@ -171,9 +199,11 @@ table {
       border-bottom: 20px solid #1b2a33;
       transform: scale(0);
       transition: all 0.2s ease; }
+    /* line 40, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load .loader::after {
       border-right: 15px solid transparent;
       border-bottom: 20px solid #162229; }
+    /* line 44, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load .loader .carregando {
       width: 120%;
       text-align: center;
@@ -183,6 +213,7 @@ table {
       font-size: 12px;
       letter-spacing: 4px;
       color: white; }
+    /* line 54, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load .loader .binario {
       width: 100%;
       height: 140px;
@@ -193,24 +224,30 @@ table {
       left: 15px;
       z-index: 2;
       overflow: hidden; }
+      /* line 64, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader .binario::before, .load .loader .binario::after {
         font-size: 24px;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0; }
+      /* line 73, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader .binario:nth-child(1)::before {
         content: "0";
         animation: a 1.1s linear infinite; }
+      /* line 77, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader .binario:nth-child(1)::after {
         content: "0";
         animation: b 1.3s linear infinite; }
+      /* line 83, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader .binario:nth-child(2)::before {
         content: "1";
         animation: c 0.9s linear infinite; }
+      /* line 87, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
       .load .loader .binario:nth-child(2)::after {
         content: "1";
         animation: d 0.7s linear infinite; }
+    /* line 95, E:/Dropbox/Dropbox/MNB Blog/css/sass/_load.scss */
     .load .loader.JS_on::before, .load .loader.JS_on::after {
       transform: scale(1); }
 
@@ -221,6 +258,7 @@ table {
   100% {
     transform: translate(30px, 150px) rotate(-50deg);
     opacity: 1; } }
+
 @keyframes b {
   0% {
     transform: translate(50px, 0) rotate(-40deg);
@@ -228,6 +266,7 @@ table {
   100% {
     transform: translate(40px, 150px) rotate(80deg);
     opacity: 1; } }
+
 @keyframes c {
   0% {
     transform: translate(70px, 0) rotate(10deg);
@@ -235,6 +274,7 @@ table {
   100% {
     transform: translate(60px, 150px) rotate(70deg);
     opacity: 1; } }
+
 @keyframes d {
   0% {
     transform: translate(30px, 0) rotate(-50deg);
@@ -242,15 +282,19 @@ table {
   100% {
     transform: translate(45px, 150px) rotate(30deg);
     opacity: 1; } }
+
+/* line 2, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0; }
 
+/* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 a:hover, a:active, a:focus {
   text-decoration: none;
   outline: none; }
 
+/* line 13, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 button.btn-ghost {
   background: transparent;
   border: 2px solid #aaa;
@@ -266,11 +310,13 @@ button.btn-ghost {
   transition: 0.5s;
   position: relative;
   z-index: 1; }
+  /* line 25, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
   button.btn-ghost:hover {
     border-color: #7F8C8D;
     background: #7F8C8D;
     color: #eee; }
 
+/* line 31, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 span.hr:before, span.hr:after {
   content: "";
   display: inline-block;
@@ -280,15 +326,18 @@ span.hr:before, span.hr:after {
   background: #6a6a6a;
   margin: 0 10px 7.5px; }
 
+/* line 41, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 h2 {
   letter-spacing: 8px;
   font-weight: 700; }
 
+/* line 46, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
 .navbar-scroll {
   background: #444;
   height: auto;
   margin-top: 0;
   border-bottom: 1px solid #BDC3C7; }
+  /* line 51, E:/Dropbox/Dropbox/MNB Blog/css/sass/_geral.scss */
   .navbar-scroll img {
     width: 90px;
     margin-top: 15px;
@@ -298,6 +347,7 @@ h2 {
     -o-transition: 1s;
     transition: 1s; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
 nav {
   background: #444;
   height: 0;
@@ -310,8 +360,10 @@ nav {
   position: fixed;
   width: 100vw;
   z-index: 9; }
+  /* line 10, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav .logo {
     display: inline; }
+  /* line 13, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav img {
     width: 110px;
     margin: 12px 50px 15px;
@@ -319,6 +371,7 @@ nav {
     -moz-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
+  /* line 18, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav .hamburguer {
     width: 40px;
     position: absolute;
@@ -326,12 +379,14 @@ nav {
     top: 15px;
     cursor: pointer;
     z-index: 9; }
+    /* line 25, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
     nav .hamburguer span {
       display: block;
       height: 2px;
       width: 100%;
       background: #BDC3C7;
       margin-bottom: 10px; }
+  /* line 33, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav .ulnav {
     width: 100vw;
     height: 100vh;
@@ -344,6 +399,7 @@ nav {
     -o-transition: 0.4s;
     transition: 0.4s;
     z-index: -1; }
+  /* line 43, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav .nav-animacao {
     position: fixed;
     right: -200vw;
@@ -351,6 +407,7 @@ nav {
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s; }
+  /* line 48, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   nav ul {
     height: 75vh;
     display: flex;
@@ -364,9 +421,11 @@ nav {
     transition: 0.5s;
     z-index: 2000; }
     @media screen and (max-width: 767px) {
+      /* line 48, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       nav ul {
         width: 100vw;
         flex-direction: column; } }
+    /* line 61, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
     nav ul li {
       display: inline;
       max-width: 20vw;
@@ -376,11 +435,13 @@ nav {
       text-align: center;
       display: block; }
       @media screen and (max-width: 767px) {
+        /* line 61, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
         nav ul li {
           max-width: 100vw;
           width: auto;
           border-right: none;
           border-left: none; } }
+      /* line 75, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       nav ul li a {
         display: inline-block;
         color: #222;
@@ -389,9 +450,11 @@ nav {
         padding: 100vh 0;
         letter-spacing: 10px; }
         @media screen and (max-width: 767px) {
+          /* line 75, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
           nav ul li a {
             padding: 15px 0;
             font-size: 18px; } }
+        /* line 86, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
         nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
           color: #6a6a6a;
           text-decoration: none;
@@ -399,8 +462,10 @@ nav {
           -moz-transition: 0.25s;
           -o-transition: 0.25s;
           transition: 0.25s; }
+          /* line 93, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
           nav ul li a:hover:after, nav ul li a:active:after, nav ul li a:focus:after {
             width: 98%; }
+        /* line 98, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
         nav ul li a:after {
           content: "";
           width: 0%;
@@ -413,6 +478,7 @@ nav {
           -o-transition: 0.25s;
           transition: 0.25s; }
 
+/* line 112, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
 header {
   background: url(../img/bg2.jpg) fixed no-repeat center;
   -webkit-background-size: cover;
@@ -430,8 +496,10 @@ header {
   -o-transition: 1.5s;
   transition: 1.5s;
   z-index: 1; }
+  /* line 126, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .content {
     padding: 50px 0 25px; }
+  /* line 129, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header h2.title {
     margin: 0 50px;
     border: 2px solid #fff;
@@ -441,16 +509,20 @@ header {
     display: block;
     border-radius: 44.5px; }
     @media screen and (min-width: 1200px) {
+      /* line 129, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       header h2.title {
         font-size: 60px; } }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
+      /* line 129, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       header h2.title {
         font-size: 40px; } }
     @media screen and (max-width: 767px) {
+      /* line 129, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       header h2.title {
         font-size: 30px;
         padding: 10px 5px;
         margin: 0 10px; } }
+  /* line 149, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header h3 {
     margin-top: 40px;
     font-weight: 400;
@@ -459,8 +531,10 @@ header {
     -o-animation: titleh3 0.7s;
     animation: titleh3 0.7s; }
     @media screen and (min-width: 1200px) {
+      /* line 149, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       header h3 {
         font-size: 18px; } }
+  /* line 157, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .mouse {
     margin: 150px auto 0;
     display: block;
@@ -468,6 +542,7 @@ header {
     height: 42px;
     border-radius: 14px;
     border: 2px solid #fff; }
+  /* line 165, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .scroll {
     display: block;
     margin: 5px auto;
@@ -480,6 +555,7 @@ header {
     -moz-animation: mouse-wheel 0.7s linear infinite;
     -o-animation: mouse-wheel 0.7s linear infinite;
     animation: mouse-wheel 0.7s linear infinite; }
+  /* line 175, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .seta {
     display: block;
     width: 5px;
@@ -493,6 +569,7 @@ header {
     margin: 0 auto;
     width: 16px;
     height: 16px; }
+  /* line 186, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .primeira,
   header .segunda,
   header .terceira {
@@ -500,26 +577,31 @@ header {
     -moz-animation: mouse-scroll 1s infinite alternate;
     -o-animation: mouse-scroll 1s infinite alternate;
     animation: mouse-scroll 1s infinite alternate; }
+  /* line 191, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .primeira {
     -webkit-animation-delay: .1s;
     -moz-animation-delay: .1s;
     -o-animation-delay: .1s;
     animation-delay: .1s; }
+  /* line 197, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .segunda {
     -webkit-animation-delay: .2s;
     -moz-animation-delay: .2s;
     -o-animation-delay: .2s;
     animation-delay: .2s; }
+  /* line 203, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .terceira {
     -webkit-animation-delay: .3s;
     -moz-animation-delay: .3s;
     -o-animation-delay: .3s;
     animation-delay: .3s; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
 section#sobre {
   padding: 150px 0;
   text-align: center;
   color: #6a6a6a; }
+  /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre .content {
     width: 25%;
     float: left;
@@ -528,15 +610,18 @@ section#sobre {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
       section#sobre .content {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (min-width: 1200px) {
+      /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
       section#sobre .content {
         margin-bottom: 20px; } }
     @media screen and (max-width: 767px) {
+      /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
       section#sobre .content {
         width: 100%;
         float: left;
@@ -545,12 +630,13 @@ section#sobre {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre .content {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+  /* line 14, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre span.quadrado {
     display: block;
     width: 75px;
@@ -564,6 +650,7 @@ section#sobre {
     transition: 0.3s;
     z-index: 2;
     margin-bottom: 20px; }
+    /* line 24, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre span.quadrado:hover {
       -webkit-transform: rotate(135deg);
       -moz-transform: rotate(135deg);
@@ -574,6 +661,7 @@ section#sobre {
       -o-transition: 0.3s;
       transition: 0.3s;
       border-color: #444; }
+  /* line 30, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre span.icon {
     display: block;
     width: 25px;
@@ -585,32 +673,38 @@ section#sobre {
     bottom: 0;
     margin: 25px auto;
     z-index: 1; }
+    /* line 41, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre span.icon.design {
       background: url(../img/icons/design.png) center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
+    /* line 45, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre span.icon.idea {
       background: url(../img/icons/idea.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
+    /* line 49, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre span.icon.clean {
       background: url(../img/icons/clean.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
+    /* line 53, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre span.icon.talk {
       background: url(../img/icons/talk.png) no-repeat center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
+  /* line 58, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre h4 {
     font-weight: 700; }
+    /* line 60, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
     section#sobre h4:after {
       content: "";
       display: block;
@@ -618,10 +712,12 @@ section#sobre {
       width: 20%;
       height: 1px;
       background: #444; }
+  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre p {
     font-weight: 400;
     font-size: .8em;
     line-height: 15px; }
+  /* line 74, E:/Dropbox/Dropbox/MNB Blog/css/sass/_sobre.scss */
   section#sobre:after {
     content: "";
     display: block;
@@ -630,11 +726,14 @@ section#sobre {
     background: #7F8C8D;
     margin: 80px 0 0; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
 section#minhahistoria {
   padding-bottom: 100px; }
   @media screen and (max-width: 767px) {
+    /* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
     section#minhahistoria {
       text-align: center; } }
+  /* line 6, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
   section#minhahistoria .imac {
     width: 58.33333%;
     float: left;
@@ -643,12 +742,14 @@ section#minhahistoria {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 6, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria .imac {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 6, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria .imac {
         width: 100%;
         float: left;
@@ -657,14 +758,16 @@ section#minhahistoria {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 6, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
     section#minhahistoria .imac {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+    /* line 11, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
     section#minhahistoria .imac img {
       width: 85%; }
+  /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
   section#minhahistoria .historia {
     width: 41.66667%;
     float: left;
@@ -673,12 +776,14 @@ section#minhahistoria {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria .historia {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria .historia {
         width: 100%;
         float: left;
@@ -687,12 +792,13 @@ section#minhahistoria {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
     section#minhahistoria .historia {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+  /* line 21, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
   section#minhahistoria h2 {
     letter-spacing: 8px;
     font-weight: 700;
@@ -702,10 +808,12 @@ section#minhahistoria {
     font-size: 1.8em;
     margin-bottom: 30px; }
     @media screen and (max-width: 767px) {
+      /* line 21, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria h2 {
         margin-left: 0;
         margin-top: 0; } }
     @media screen and (max-width: 767px) {
+      /* line 33, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
       section#minhahistoria h2:after {
         content: "";
         display: block;
@@ -713,6 +821,7 @@ section#minhahistoria {
         height: 2px;
         background: #222;
         margin: 10px auto; } }
+    /* line 43, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
     section#minhahistoria h2:before {
       content: "";
       display: block;
@@ -725,22 +834,27 @@ section#minhahistoria {
       width: 4px;
       background: #222; }
       @media screen and (max-width: 767px) {
+        /* line 43, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
         section#minhahistoria h2:before {
           display: none;
           content: none; } }
 
+/* line 62, E:/Dropbox/Dropbox/MNB Blog/css/sass/_minha-historia.scss */
 p {
   color: #6a6a6a;
   font-size: .9em;
   line-height: 15px;
   margin-bottom: 20px; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
 section#servicos {
   text-align: right;
   background: #1a1a1a; }
   @media screen and (max-width: 767px) {
+    /* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
     section#servicos {
       text-align: center; } }
+  /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos .descricao {
     margin-left: 16.66667%;
     float: left;
@@ -756,18 +870,21 @@ section#servicos {
     position: relative;
     padding-right: 40px; }
     @media screen and (max-width: 767px) {
+      /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .descricao {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .descricao {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
+      /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .descricao {
         width: 50%;
         float: left;
@@ -778,13 +895,14 @@ section#servicos {
         margin-left: 0;
         padding-right: 40px; } }
   @media screen and (min-width: 768px) and (max-width: 1199px) and (max-width: 767px) {
+    /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
     section#servicos .descricao {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
     @media screen and (max-width: 767px) {
+      /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .descricao {
         width: 100%;
         float: left;
@@ -793,28 +911,38 @@ section#servicos {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
     section#servicos .descricao {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+  /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos .content {
     padding: 70px 0 70px;
     color: #BDC3C7;
     margin-right: 80px; }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
+      /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .content {
         margin-left: 0;
         margin-right: 0; } }
+    @media screen and (max-width: 767px) {
+      /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
+      section#servicos .content {
+        margin-left: 0;
+        margin-right: 0; } }
+  /* line 33, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos h2 {
     margin-right: 20px;
     margin-bottom: 50px;
     font-size: 1.8em; }
     @media screen and (max-width: 767px) {
+      /* line 33, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos h2 {
         margin-right: 0;
         margin-bottom: 0; } }
+    /* line 41, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
     section#servicos h2:after {
       content: "";
       display: block;
@@ -824,6 +952,7 @@ section#servicos {
       float: right;
       margin-right: -18px; }
       @media screen and (max-width: 767px) {
+        /* line 41, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
         section#servicos h2:after {
           content: "";
           display: block;
@@ -832,13 +961,16 @@ section#servicos {
           background: #BDC3C7;
           margin: 20px auto 20px;
           float: none; } }
+  /* line 60, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos span {
     font-size: 1.2em;
     color: #e6e6e6; }
+  /* line 64, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos p {
     margin-top: 10px;
     color: #BDC3C7;
     line-height: 20px; }
+  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
   section#servicos .bg {
     height: 500px;
     background: url(../img/bg2.jpg) no-repeat center;
@@ -850,12 +982,14 @@ section#servicos {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .bg {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
       section#servicos .bg {
         width: 100%;
         float: left;
@@ -865,12 +999,14 @@ section#servicos {
         position: relative;
         display: none; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_servicos.scss */
     section#servicos .bg {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
 
+/* line 2, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 section#portfolio .navport {
   width: 100%;
   float: left;
@@ -879,32 +1015,44 @@ section#portfolio .navport {
   padding-right: 10px;
   position: relative; }
   @media screen and (max-width: 767px) {
+    /* line 2, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio .navport {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
+
+/* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 section#portfolio .content {
   text-align: center; }
+  /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .content h2 {
     letter-spacing: 6px;
     font-weight: 700;
     margin: 50px 0 20px; }
+  /* line 12, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .content ul {
     text-transform: uppercase;
     margin-bottom: 25px; }
+    /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio .content ul li {
       text-decoration: none; }
+      /* line 17, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
       section#portfolio .content ul li a {
         color: #444;
         text-decoration: none; }
+        /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
         section#portfolio .content ul li a:hover, section#portfolio .content ul li a:active, section#portfolio .content ul li a:focus {
           color: #BDC3C7; }
+      /* line 26, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
       section#portfolio .content ul li:after {
         content: " / ";
         margin: 0 15px; }
+      /* line 30, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
       section#portfolio .content ul li:last-child:after {
         content: " "; }
+
+/* line 36, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 section#portfolio:after {
   content: "";
   display: block;
@@ -912,10 +1060,13 @@ section#portfolio:after {
   height: 1px;
   background: #7F8C8D;
   margin: 80px 0 50px; }
+
+/* line 44, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 section#portfolio ul {
   margin: 0;
   padding: 0;
   width: 100%; }
+  /* line 48, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio ul li {
     margin: 0;
     padding: 0;
@@ -924,8 +1075,10 @@ section#portfolio ul {
     -moz-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
+    /* line 53, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio ul li img {
       padding: 0; }
+    /* line 56, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio ul li .fotos,
     section#portfolio ul li .sites {
       width: 16.66667%;
@@ -936,6 +1089,7 @@ section#portfolio ul {
       position: relative;
       padding: 0; }
       @media screen and (max-width: 767px) {
+        /* line 56, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
         section#portfolio ul li .fotos,
         section#portfolio ul li .sites {
           width: 100%;
@@ -943,6 +1097,7 @@ section#portfolio ul {
           margin-left: 0px;
           margin-right: 0px; } }
       @media screen and (min-width: 768px) and (max-width: 1199px) {
+        /* line 56, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
         section#portfolio ul li .fotos,
         section#portfolio ul li .sites {
           width: 33.33333%;
@@ -953,18 +1108,20 @@ section#portfolio ul {
           position: relative;
           padding: 0; } }
   @media screen and (min-width: 768px) and (max-width: 1199px) and (max-width: 767px) {
+    /* line 56, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio ul li .fotos,
     section#portfolio ul li .sites {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
       @media screen and (max-width: 767px) {
+        /* line 56, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
         section#portfolio ul li .fotos,
         section#portfolio ul li .sites {
           width: 33.33333%;
           float: left; } }
+      /* line 67, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
       section#portfolio ul li .fotos img,
       section#portfolio ul li .sites img {
         width: 100%;
@@ -975,20 +1132,26 @@ section#portfolio ul {
         -moz-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s; }
+        /* line 73, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
         section#portfolio ul li .fotos img:hover,
         section#portfolio ul li .sites img:hover {
           filter: grayscale(0%);
           transform: scale(1.2); }
+    /* line 79, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio ul li .fotos {
       display: block; }
+    /* line 82, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio ul li .sites {
       display: none; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
 section#contato {
   text-align: center;
   padding-bottom: 50px; }
+  /* line 4, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato span.hr {
     font-size: 35px; }
+  /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato .titulo {
     width: 100%;
     float: left;
@@ -998,13 +1161,16 @@ section#contato {
     position: relative;
     margin-bottom: 20px; }
     @media screen and (max-width: 767px) {
+      /* line 7, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato .titulo {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
+    /* line 10, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
     section#contato .titulo h2 {
       margin: 10px 0 20px 0; }
+  /* line 14, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato .dados {
     width: 50%;
     float: left;
@@ -1013,12 +1179,14 @@ section#contato {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 14, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato .dados {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 14, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato .dados {
         width: 100%;
         float: left;
@@ -1027,12 +1195,13 @@ section#contato {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 14, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
     section#contato .dados {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+  /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato .form {
     width: 50%;
     float: left;
@@ -1041,12 +1210,14 @@ section#contato {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato .form {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato .form {
         width: 100%;
         float: left;
@@ -1055,15 +1226,17 @@ section#contato {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 20, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
     section#contato .form {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+  /* line 26, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato form {
     width: 100%;
     margin: auto; }
+    /* line 29, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
     section#contato form label {
       color: #444;
       -webkit-transition: 0.3s ease;
@@ -1075,9 +1248,11 @@ section#contato {
       position: absolute;
       top: 16px;
       left: 0; }
+    /* line 38, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
     section#contato form .inputgroup {
       position: relative;
       margin-bottom: 32px; }
+      /* line 41, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
       section#contato form .inputgroup input[type="text"],
       section#contato form .inputgroup input[type="email"],
       section#contato form .inputgroup textarea {
@@ -1088,13 +1263,16 @@ section#contato {
         padding: 15px 0;
         border: none;
         border-bottom: 1px solid #444; }
+        /* line 51, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
         section#contato form .inputgroup input[type="text"]:focus, section#contato form .inputgroup input[type="text"]:active,
         section#contato form .inputgroup input[type="email"]:focus,
         section#contato form .inputgroup input[type="email"]:active,
         section#contato form .inputgroup textarea:focus,
         section#contato form .inputgroup textarea:active {
           outline: none; }
-        section#contato form .inputgroup input[type="text"]:focus ~ label, section#contato form .inputgroup input[type="text"] ~ .active,
+        /* line 55, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
+        section#contato form .inputgroup input[type="text"]:focus ~ label,
+        section#contato form .inputgroup input[type="text"] ~ .active,
         section#contato form .inputgroup input[type="email"]:focus ~ label,
         section#contato form .inputgroup input[type="email"] ~ .active,
         section#contato form .inputgroup textarea:focus ~ label,
@@ -1102,21 +1280,27 @@ section#contato {
           top: -12px;
           font-size: 12px;
           line-height: 12px; }
+  /* line 64, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato form,
   section#contato .content {
     text-align: center; }
+  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato .content h3 {
     color: #444;
     margin: 25px 0; }
+  /* line 73, E:/Dropbox/Dropbox/MNB Blog/css/sass/_contato.scss */
   section#contato .content p {
     color: #6a6a6a; }
 
+/* line 1, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
 footer {
   background: #444;
   color: #e6e6e6;
   padding: 60px 0 0; }
+  /* line 5, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
   footer p {
     color: #BDC3C7; }
+  /* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
   footer .inscrever,
   footer .posts,
   footer .saiba {
@@ -1127,6 +1311,7 @@ footer {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
+      /* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
       footer .inscrever,
       footer .posts,
       footer .saiba {
@@ -1135,6 +1320,7 @@ footer {
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
+      /* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
       footer .inscrever,
       footer .posts,
       footer .saiba {
@@ -1145,6 +1331,7 @@ footer {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
+    /* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .inscrever,
     footer .posts,
     footer .saiba {
@@ -1152,15 +1339,17 @@ footer {
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
-
+    /* line 15, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .inscrever h3,
     footer .posts h3,
     footer .saiba h3 {
       margin-bottom: 15px; }
+    /* line 18, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .inscrever .title,
     footer .posts .title,
     footer .saiba .title {
       margin-bottom: 10px; }
+  /* line 22, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
   footer input {
     background: #1a1a1a;
     box-shadow: none;
@@ -1171,8 +1360,10 @@ footer {
     margin: 0;
     margin-right: -3px;
     font-size: 12px; }
+    /* line 32, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer input:active, footer input:focus {
       outline: none; }
+  /* line 37, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
   footer .btn-ghost {
     font-size: 10px;
     color: #6a6a6a;
@@ -1183,8 +1374,10 @@ footer {
     background: #e6e6e6;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
+    /* line 47, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .btn-ghost:active, footer .btn-ghost:focus {
       outline: none; }
+  /* line 52, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
   footer .social-copy {
     background: #1a1a1a;
     padding: 20px 0;
@@ -1193,9 +1386,11 @@ footer {
     -webkit-clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%);
     clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 50% 100%, 0 100%, 0 40%); }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
+      /* line 52, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
       footer .social-copy {
         -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%);
         clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 50% 100%, 0 100%, 0 15%); } }
+    /* line 58, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .social-copy .social {
       width: 100%;
       float: left;
@@ -1204,14 +1399,17 @@ footer {
       padding-right: 10px;
       position: relative; }
       @media screen and (max-width: 767px) {
+        /* line 58, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
         footer .social-copy .social {
           width: 100%;
           float: none;
           margin-left: 0px;
           margin-right: 0px; } }
+    /* line 61, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .social-copy .icons {
       margin-top: 20px;
       padding-bottom: 10px; }
+      /* line 62, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
       footer .social-copy .icons img {
         width: 64px;
         height: auto;
@@ -1222,13 +1420,17 @@ footer {
         -o-transition: 0.5s;
         transition: 0.5s; }
         @media screen and (min-width: 768px) and (max-width: 1199px) {
+          /* line 62, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
           footer .social-copy .icons img {
             width: 48px; } }
         @media screen and (max-width: 767px) {
+          /* line 62, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
           footer .social-copy .icons img {
             width: 40px; } }
+        /* line 74, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
         footer .social-copy .icons img:hover {
           filter: invert(98%); }
+    /* line 85, E:/Dropbox/Dropbox/MNB Blog/css/sass/_footer.scss */
     footer .social-copy p {
       font-size: 10px;
       color: #BDC3C7; }

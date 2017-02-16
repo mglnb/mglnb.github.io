@@ -9,10 +9,9 @@ section#servicos {
         @include grid(4);
         padding-right: 40px;
         @include d(m) {
-             @include grid(6);
-             margin-left: 0;
-                    padding-right: 40px;
-
+            @include grid(6);
+            margin-left: 0;
+            padding-right: 40px;
         }
         @include d(s) {
             @include grid(12);
@@ -23,6 +22,10 @@ section#servicos {
         color: $cor-texto-claro1;
         margin-right: 80px;
         @include d(m) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @include d(s) {
             margin-left: 0;
             margin-right: 0;
         }
