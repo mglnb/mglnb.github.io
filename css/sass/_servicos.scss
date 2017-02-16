@@ -1,70 +1,76 @@
 section#servicos {
-	text-align: right;
-	background: $cor-bg-escuro;
-	@include d(s) {
-		text-align: center;
-	}
-	.descricao {
+    text-align: right;
+    background: $cor-bg-escuro;
+    @include d(s) {
+        text-align: center;
+    }
+    .descricao {
         @include offset(2);
-		@include grid(4);
+        @include grid(4);
         padding-right: 40px;
-		@include d(s) {
-			@include grid(12);
-		}
-	}
-	.content {
-		padding: 70px 0 70px;
-		color: $cor-texto-claro1;
-		margin-right: 80px;
-		margin-left: 22%;
-		@include d(l) {
-			margin-left: 0;
-			margin-right: 0;
-		}  
-	}
-	h2 {
-		margin-right: 20px;
-		margin-bottom: 50px;
-		@include d(s) {
-			margin-right: 0;
-			margin-bottom: 0;
-		}
-		&:after {
-			content: "";
-			display: block;
-			background: $cor-texto-claro1;
-			height: 30px;
-			width: 3px;
-			float: right;
-			margin-right: -18px;
-			@include d(s) {
-				content: "";
-				display: block;
-				height: 2px;
-				width: 15%;
-				background: $cor-texto-claro1;
-				margin: 20px auto 20px;
-				float: none;
-			}
-		}
-	}
-	span {
-		font-size: 1.2em;
-		color: $cor-texto-claro2;
-	}
-	p {
-		margin-top: 10px;
-		color: $cor-texto-claro1;
-		line-height: 20px;
-	}
-	.bg {
-		height: 500px;
-		background: url(../img/bg2.jpg) no-repeat center;
-		background-size: cover;
-		@include grid(6);
-		@include d(s) {
-			@include grid(12);
-			display: none;
-		}
-	}
+        @include d(m) {
+             @include grid(6);
+             margin-left: 0;
+                    padding-right: 40px;
+
+        }
+        @include d(s) {
+            @include grid(12);
+        }
+    }
+    .content {
+        padding: 70px 0 70px;
+        color: $cor-texto-claro1;
+        margin-right: 80px;
+        @include d(m) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    h2 {
+        margin-right: 20px;
+        margin-bottom: 50px;
+        font-size: 1.8em;
+        @include d(s) {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        &:after {
+            content: "";
+            display: block;
+            background: $cor-texto-claro1;
+            height: 30px;
+            width: 3px;
+            float: right;
+            margin-right: -18px;
+            @include d(s) {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 15%;
+                background: $cor-texto-claro1;
+                margin: 20px auto 20px;
+                float: none;
+            }
+        }
+    }
+    span {
+        font-size: 1.2em;
+        color: $cor-texto-claro2;
+    }
+    p {
+        margin-top: 10px;
+        color: $cor-texto-claro1;
+        line-height: 20px;
+    }
+    .bg {
+        height: 500px;
+        background: url(../img/bg2.jpg) no-repeat center;
+        background-size: cover;
+        @include grid(6);
+        @include d(s) {
+            @include grid(12);
+            display: none;
+        }
+    }
 }

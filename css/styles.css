@@ -123,8 +123,8 @@ table {
 
 .row {
   position: relative;
-  margin-left: -10px;
-  margin-right: -10px; }
+  margin-left: 10px;
+  margin-right: 10px; }
   @media screen and (max-width: 767px) {
     .row {
       margin-left: 0px;
@@ -767,6 +767,23 @@ section#servicos {
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      section#servicos .descricao {
+        width: 50%;
+        float: left;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        margin-left: 0;
+        padding-right: 40px; } }
+  @media screen and (min-width: 768px) and (max-width: 1199px) and (max-width: 767px) {
+    section#servicos .descricao {
+      width: 100%;
+      float: none;
+      margin-left: 0px;
+      margin-right: 0px; } }
+
     @media screen and (max-width: 767px) {
       section#servicos .descricao {
         width: 100%;
@@ -785,15 +802,15 @@ section#servicos {
   section#servicos .content {
     padding: 70px 0 70px;
     color: #BDC3C7;
-    margin-right: 80px;
-    margin-left: 22%; }
-    @media screen and (min-width: 1200px) {
+    margin-right: 80px; }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       section#servicos .content {
         margin-left: 0;
         margin-right: 0; } }
   section#servicos h2 {
     margin-right: 20px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    font-size: 1.8em; }
     @media screen and (max-width: 767px) {
       section#servicos h2 {
         margin-right: 0;
@@ -1100,7 +1117,9 @@ footer {
   padding: 60px 0 0; }
   footer p {
     color: #BDC3C7; }
-  footer .inscrever, footer .posts, footer .saiba {
+  footer .inscrever,
+  footer .posts,
+  footer .saiba {
     width: 33.33333%;
     float: left;
     min-height: 1px;
@@ -1108,13 +1127,17 @@ footer {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
-      footer .inscrever, footer .posts, footer .saiba {
+      footer .inscrever,
+      footer .posts,
+      footer .saiba {
         width: 100%;
         float: none;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 767px) {
-      footer .inscrever, footer .posts, footer .saiba {
+      footer .inscrever,
+      footer .posts,
+      footer .saiba {
         width: 100%;
         float: left;
         min-height: 1px;
@@ -1122,15 +1145,21 @@ footer {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
-    footer .inscrever, footer .posts, footer .saiba {
+    footer .inscrever,
+    footer .posts,
+    footer .saiba {
       width: 100%;
       float: none;
       margin-left: 0px;
       margin-right: 0px; } }
 
-    footer .inscrever h3, footer .posts h3, footer .saiba h3 {
+    footer .inscrever h3,
+    footer .posts h3,
+    footer .saiba h3 {
       margin-bottom: 15px; }
-    footer .inscrever .title, footer .posts .title, footer .saiba .title {
+    footer .inscrever .title,
+    footer .posts .title,
+    footer .saiba .title {
       margin-bottom: 10px; }
   footer input {
     background: #1a1a1a;
