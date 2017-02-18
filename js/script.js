@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var div = document.getElementById('load');
     preload(div, 30);
@@ -32,8 +31,33 @@ function menuOn() {
     $('nav img').css('filter', 'invert(45%)');
     $('.social-copy').addClass('.footernav');
 }
+
+function getSectionInicio(el) {
+    return $(el).offset().top;
+}
+
+function getSectionFim(el) {
+    return $(el).offset().top + $(el).innerHeight();
+}
 // Quando o site for carregado
 $(document).ready(function ($) {
+    $(window).scroll(function () {
+        var posicaoScroll = $(document).scrollTop();
+        console.log(getSectionInicio('header') + " / " + posicaoScroll);
+        if (getSectionInicio('header') <= posicaoScroll && getSectionFim('header') >= posicaoScroll) {
+            $('.logo img').css('filter', 'invert(100%)');
+        }
+        else if (getSectionInicio('#sobre') <= posicaoScroll && getSectionFim('#sobre') >= posicaoScroll) {
+            $('.logo img').css('filter', 'invert(0%)');
+        }
+        else if (getSectionInicio('#servicos') <= posicaoScroll && getSectionFim('#servicos') >= posicaoScroll) {
+            $('.logo img').css('filter', 'invert(100%)');
+        }
+        else {
+            $('.logo img').css('filter', 'invert(0%)');
+        }
+    });
+    // Ativação do menu Hamburguer
     $('.hamburguer').click(function () {
         if ($('.ulnav').hasClass('.active')) {
             menuOff();
