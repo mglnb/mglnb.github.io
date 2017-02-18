@@ -41,9 +41,9 @@ function getSectionFim(el) {
 }
 // Quando o site for carregado
 $(document).ready(function ($) {
+    // Alteração da cor do logo ao mudar o background
     $(window).scroll(function () {
         var posicaoScroll = $(document).scrollTop();
-        console.log(getSectionInicio('header') + " / " + posicaoScroll);
         if (getSectionInicio('header') <= posicaoScroll && getSectionFim('header') >= posicaoScroll) {
             $('.logo img').css('filter', 'invert(100%)');
         }
@@ -51,6 +51,8 @@ $(document).ready(function ($) {
             $('.logo img').css('filter', 'invert(0%)');
         }
         else if (getSectionInicio('#servicos') <= posicaoScroll && getSectionFim('#servicos') >= posicaoScroll) {
+            $('.logo img').css('filter', 'invert(100%)');
+        }else if (getSectionInicio('footer') <= posicaoScroll && getSectionFim('footer') >= posicaoScroll) {
             $('.logo img').css('filter', 'invert(100%)');
         }
         else {
