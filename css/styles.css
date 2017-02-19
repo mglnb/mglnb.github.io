@@ -533,7 +533,9 @@ section#sobre {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (min-width: 1200px) {
       section#sobre .content {
         margin-bottom: 20px; } }
@@ -550,7 +552,9 @@ section#sobre {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
   section#sobre span.quadrado {
     display: block;
@@ -648,7 +652,9 @@ section#minhahistoria {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       section#minhahistoria .imac {
         width: 100%;
@@ -662,7 +668,9 @@ section#minhahistoria {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
     section#minhahistoria .imac img {
       width: 85%; }
@@ -678,7 +686,9 @@ section#minhahistoria {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       section#minhahistoria .historia {
         width: 100%;
@@ -692,7 +702,9 @@ section#minhahistoria {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
   section#minhahistoria h2 {
     letter-spacing: 8px;
@@ -761,13 +773,17 @@ section#servicos {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       section#servicos .descricao {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       section#servicos .descricao {
         width: 50%;
@@ -783,7 +799,9 @@ section#servicos {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
     @media screen and (max-width: 767px) {
       section#servicos .descricao {
@@ -798,7 +816,9 @@ section#servicos {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
   section#servicos .content {
     padding: 70px 0 70px;
@@ -859,7 +879,9 @@ section#servicos {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       section#servicos .bg {
         width: 100%;
@@ -874,7 +896,9 @@ section#servicos {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
 section#portfolio .navport {
   width: 100%;
@@ -888,7 +912,9 @@ section#portfolio .navport {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 section#portfolio .content {
   text-align: center; }
   section#portfolio .content h2 {
@@ -930,7 +956,8 @@ section#portfolio ul {
     -o-transition: 1s;
     transition: 1s; }
     section#portfolio ul li img {
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
     section#portfolio ul li .fotos,
     section#portfolio ul li .sites {
       width: 16.66667%;
@@ -946,7 +973,9 @@ section#portfolio ul {
           width: 100%;
           float: none;
           margin-left: 0px;
-          margin-right: 0px; } }
+          margin-right: 0px;
+          margin-top: 40px;
+          margin-bottom: 40px; } }
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         section#portfolio ul li .fotos,
         section#portfolio ul li .sites {
@@ -963,13 +992,16 @@ section#portfolio ul {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
       @media screen and (max-width: 767px) {
         section#portfolio ul li .fotos,
         section#portfolio ul li .sites {
           width: 33.33333%;
-          float: left; } }
+          float: left;
+          margin: 0; } }
       section#portfolio ul li .fotos img,
       section#portfolio ul li .sites img {
         width: 100%;
@@ -1007,65 +1039,27 @@ section#contato {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     section#contato .titulo h2 {
       margin: 10px 0 20px 0; }
-  section#contato .dados {
-    width: 50%;
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative; }
-    @media screen and (max-width: 767px) {
-      section#contato .dados {
-        width: 100%;
-        float: none;
-        margin-left: 0px;
-        margin-right: 0px; } }
-    @media screen and (max-width: 767px) {
-      section#contato .dados {
-        width: 100%;
-        float: left;
-        min-height: 1px;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative; } }
-  @media screen and (max-width: 767px) and (max-width: 767px) {
-    section#contato .dados {
-      width: 100%;
-      float: none;
-      margin-left: 0px;
-      margin-right: 0px; } }
-
   section#contato .form {
-    width: 50%;
+    width: 100%;
     float: left;
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    position: relative; }
+    position: relative;
+    padding: 0 15vw; }
     @media screen and (max-width: 767px) {
       section#contato .form {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
-    @media screen and (max-width: 767px) {
-      section#contato .form {
-        width: 100%;
-        float: left;
-        min-height: 1px;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: relative; } }
-  @media screen and (max-width: 767px) and (max-width: 767px) {
-    section#contato .form {
-      width: 100%;
-      float: none;
-      margin-left: 0px;
-      margin-right: 0px; } }
-
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
   section#contato form {
     width: 100%;
     margin: auto; }
@@ -1110,11 +1104,16 @@ section#contato {
   section#contato form,
   section#contato .content {
     text-align: center; }
+  @media screen and (min-width: 1200px) {
+    section#contato .content {
+      text-align: left;
+      padding: 50px 0; } }
   section#contato .content h3 {
     color: #444;
     margin: 25px 0; }
   section#contato .content p {
-    color: #6a6a6a; }
+    color: #6a6a6a;
+    padding: 0px; }
 
 footer {
   background: #444;
@@ -1138,7 +1137,9 @@ footer {
         width: 100%;
         float: none;
         margin-left: 0px;
-        margin-right: 0px; } }
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 40px; } }
     @media screen and (max-width: 767px) {
       footer .inscrever,
       footer .posts,
@@ -1156,7 +1157,9 @@ footer {
       width: 100%;
       float: none;
       margin-left: 0px;
-      margin-right: 0px; } }
+      margin-right: 0px;
+      margin-top: 40px;
+      margin-bottom: 40px; } }
 
     footer .inscrever h3,
     footer .posts h3,
@@ -1213,7 +1216,9 @@ footer {
           width: 100%;
           float: none;
           margin-left: 0px;
-          margin-right: 0px; } }
+          margin-right: 0px;
+          margin-top: 40px;
+          margin-bottom: 40px; } }
     footer .social-copy .icons {
       margin-top: 20px;
       padding-bottom: 10px; }

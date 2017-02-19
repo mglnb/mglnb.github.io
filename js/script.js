@@ -33,11 +33,11 @@ function menuOn() {
 }
 
 function getSectionInicio(el) {
-    return $(el).offset().top;
+    return $(el).offset().top - 50;
 }
 
 function getSectionFim(el) {
-    return $(el).offset().top + $(el).innerHeight();
+    return $(el).offset().top + $(el).innerHeight() -50;
 }
 // Quando o site for carregado
 $(document).ready(function ($) {
