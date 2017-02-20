@@ -17,7 +17,7 @@ function preload(el, interval) {
 }
 
 function menuOff() {
-    $('.ulnav').removeClass('active');
+    $('.nav-animacao').removeClass('active');
 //    $('.ulnav').css('right', '-200vw');
     
 //    $('.nav-animacao').css('right', '-200vw');
@@ -29,7 +29,7 @@ function menuOff() {
 }
 
 function menuOn() {
-    $('.ulnav').addClass('active');
+    $('.nav-animacao').addClass('active');
 //    $('.ulnav').css('right', '0 ');
     
 //    $('.nav-animacao').css('right', '0');
@@ -68,7 +68,7 @@ $(document).ready(function ($) {
     });
     // Ativação do menu Hamburguer
     $('.hamburguer').click(function () {
-        if ($('.ulnav').hasClass('active')) {
+        if ($('.nav-animacao').hasClass('active')) {
             menuOff();
         }
         else {

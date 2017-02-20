@@ -16,6 +16,8 @@ nav {
         height: auto;
         @include transition(.3s);
         fill: #c4c4c4;
+        position: fixed;
+        z-index: 2000;
     }
     .hamburguer {
         width: 40px;
@@ -35,28 +37,33 @@ nav {
     .ulnav {
         width: 100vw;
         height: 100vh;
-        display: none;
         position: fixed;
         top: 0;
         right: 0;
         background: #fff;
-        @include transition(.4s);
+        @include transition(.3s);
         z-index: -1;
+        transform: scale(0, 0);
     }
-    .ulnav.active {
-        display: block;
+    .nav-animacao.active {
+        transform: scale(1, 1);
+        ul li {
+            transform: scale(1, 1);
+        }
     }
     .nav-animacao {
         position: fixed;
         transform: scale(0, 0);
+        background: #FFF;
+        top: 0;
         right: 0;
-        @include transition(.4s);
-    }
-    .ulnav.active ~ .nav-animacao {
-        transform: scale(1, 1);
+        @include transition(.3s);
+        ul li {
+            transform: scale(0, 0);
+        }
     }
     ul {
-        height: 75vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
