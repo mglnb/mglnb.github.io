@@ -17,18 +17,25 @@ function preload(el, interval) {
 }
 
 function menuOff() {
-    $('.ulnav').removeClass('.active');
-    $('.ulnav').css('right', '-200vw');
-    $('.nav-animacao').css('right', '-200vw');
+    $('.ulnav').removeClass('active');
+//    $('.ulnav').css('right', '-200vw');
+    
+//    $('.nav-animacao').css('right', '-200vw');
+        $('nav ul li').removeClass('ativo');
+
     $('nav img').css('filter', 'invert(0)');
+    
     $('.social-copy').removeClass('.footernav');
 }
 
 function menuOn() {
-    $('.ulnav').addClass('.active');
-    $('.ulnav').css('right', '0 ');
-    $('.nav-animacao').css('right', '0');
+    $('.ulnav').addClass('active');
+//    $('.ulnav').css('right', '0 ');
+    
+//    $('.nav-animacao').css('right', '0');
+    $('nav ul li').addClass('ativo');
     $('nav img').css('filter', 'invert(45%)');
+    
     $('.social-copy').addClass('.footernav');
 }
 
@@ -61,7 +68,7 @@ $(document).ready(function ($) {
     });
     // Ativação do menu Hamburguer
     $('.hamburguer').click(function () {
-        if ($('.ulnav').hasClass('.active')) {
+        if ($('.ulnav').hasClass('active')) {
             menuOff();
         }
         else {

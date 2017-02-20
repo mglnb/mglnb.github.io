@@ -1,5 +1,3 @@
-
-
 nav {
     background: $cor-terciaria;
     height: 0;
@@ -37,17 +35,25 @@ nav {
     .ulnav {
         width: 100vw;
         height: 100vh;
-        right: -200vw;
+        display: none;
         position: fixed;
         top: 0;
+        right: 0;
         background: #fff;
         @include transition(.4s);
         z-index: -1;
     }
+    .ulnav.active {
+        display: block;
+    }
     .nav-animacao {
         position: fixed;
-        right: -200vw;
+        transform: scale(0, 0);
+        right: 0;
         @include transition(.4s);
+    }
+    .ulnav.active ~ .nav-animacao {
+        transform: scale(1, 1);
     }
     ul {
         height: 75vh;
@@ -70,6 +76,12 @@ nav {
             border-left: .2px solid rgba(230, 230, 230, .6);
             text-align: center;
             display: block;
+            &:nth-child(odd).ativo {
+                @include animation (bounceInTop 1s);
+            }
+            &:nth-child(even).ativo {
+                @include animation (bounceInDown 1s);
+            }
             @include d(s) {
                 max-width: 100vw;
                 width: auto;
