@@ -34,17 +34,6 @@ nav {
             margin-bottom: 10px;
         }
     }
-    .ulnav {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background: #fff;
-        @include transition(.3s);
-        z-index: -1;
-        transform: scale(0, 0);
-    }
     .nav-animacao.active {
         transform: scale(1, 1);
         ul li {
@@ -104,7 +93,7 @@ nav {
                 color: $cor-titulo-escuro;
                 text-decoration: none;
                 font-size: 18px;
-                padding: 100vh 0;
+                padding: 48vh 0 ;
                 letter-spacing: 10px;
                 &:hover,
                 &:active,
