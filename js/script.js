@@ -18,24 +18,21 @@ function preload(el, interval) {
 
 function menuOff() {
     $('.nav-animacao').removeClass('active');
-//    $('.ulnav').css('right', '-200vw');
-    
-//    $('.nav-animacao').css('right', '-200vw');
-        $('nav ul li').removeClass('ativo');
-
+    //    $('.ulnav').css('right', '-200vw');
+    //    $('.nav-animacao').css('right', '-200vw');
+    $('nav ul li').removeClass('ativo');
+    $('.hamburguer').removeClass('active');
     $('nav img').css('filter', 'invert(0)');
-    
     $('.social-copy').removeClass('.footernav');
 }
 
 function menuOn() {
     $('.nav-animacao').addClass('active');
-//    $('.ulnav').css('right', '0 ');
-    
-//    $('.nav-animacao').css('right', '0');
+    //    $('.ulnav').css('right', '0 ');
+    $('.hamburguer').addClass('active');
+    //    $('.nav-animacao').css('right', '0');
     $('nav ul li').addClass('ativo');
     $('nav img').css('filter', 'invert(45%)');
-    
     $('.social-copy').addClass('.footernav');
 }
 
@@ -44,7 +41,7 @@ function getSectionInicio(el) {
 }
 
 function getSectionFim(el) {
-    return $(el).offset().top + $(el).innerHeight() -50;
+    return $(el).offset().top + $(el).innerHeight() - 50;
 }
 // Quando o site for carregado
 $(document).ready(function ($) {
@@ -59,7 +56,8 @@ $(document).ready(function ($) {
         }
         else if (getSectionInicio('#servicos') <= posicaoScroll && getSectionFim('#servicos') >= posicaoScroll) {
             $('.logo svg').css('fill', '#c4c4c4');
-        }else if (getSectionInicio('footer') <= posicaoScroll && getSectionFim('footer') >= posicaoScroll) {
+        }
+        else if (getSectionInicio('footer') <= posicaoScroll && getSectionFim('footer') >= posicaoScroll) {
             $('.logo svg').css('fill', '#c4c4c4');
         }
         else {
