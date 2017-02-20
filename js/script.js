@@ -45,18 +45,18 @@ $(document).ready(function ($) {
     $(window).scroll(function () {
         var posicaoScroll = $(document).scrollTop();
         if (getSectionInicio('header') <= posicaoScroll && getSectionFim('header') >= posicaoScroll) {
-            $('.logo img').css('filter', 'invert(100%)');
+            $('.logo svg').css('fill', '#c4c4c4');
         }
         else if (getSectionInicio('#sobre') <= posicaoScroll && getSectionFim('#sobre') >= posicaoScroll) {
-            $('.logo img').css('filter', 'invert(0%)');
+            $('.logo svg').css('fill', '#2a2a2a');
         }
         else if (getSectionInicio('#servicos') <= posicaoScroll && getSectionFim('#servicos') >= posicaoScroll) {
-            $('.logo img').css('filter', 'invert(100%)');
+            $('.logo svg').css('fill', '#c4c4c4');
         }else if (getSectionInicio('footer') <= posicaoScroll && getSectionFim('footer') >= posicaoScroll) {
-            $('.logo img').css('filter', 'invert(100%)');
+            $('.logo svg').css('fill', '#c4c4c4');
         }
         else {
-            $('.logo img').css('filter', 'invert(0%)');
+            $('.logo svg').css('fill', '#2a2a2a');
         }
     });
     // Ativação do menu Hamburguer

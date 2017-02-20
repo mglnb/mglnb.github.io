@@ -1,3 +1,5 @@
+
+
 nav {
     background: $cor-terciaria;
     height: 0;
@@ -10,11 +12,12 @@ nav {
     .logo {
         display: inline;
     }
-    img {
-        width: 110px;
+    svg {
+        width: 140px;
         margin: 12px 50px 15px;
-        filter: invert(100%); 
+        height: auto;
         @include transition(.3s);
+        fill: #c4c4c4;
     }
     .hamburguer {
         width: 40px;
