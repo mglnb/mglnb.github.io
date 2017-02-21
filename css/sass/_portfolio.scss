@@ -55,7 +55,7 @@ section#portfolio {
         .site {
             flex-grow: 1;
             opacity: .3;
-            transition: flex-grow .3s ease-in-out, opacity .3s ease-in-out;
+            @include transition(flex-grow .3s ease-in-out, opacity .3s ease-in-out);
             filter: grayscale(90%);
             &:hover {
                 flex-grow: 2;
