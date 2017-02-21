@@ -14,6 +14,7 @@ section#portfolio {
             margin-bottom: 25px;
             li {
                 text-decoration: none;
+                display: inline-block;
                 a {
                     color: $cor-terciaria;
                     text-decoration: none;
@@ -33,6 +34,11 @@ section#portfolio {
             }
         }
     }
+    .hr {
+        text-align: center;
+    display: block;
+        margin-bottom: 30px;
+    }
     &:after {
         content: "";
         display: block;
@@ -41,49 +47,36 @@ section#portfolio {
         background: $cor-secundaria;
         margin: 80px 0 50px;
     }
-    ul {
-        margin: 0;
-        padding: 0;
+    .portfolio {
+        display: flex;
+        height: 450px;
         width: 100%;
-        li {
-            margin: 0;
-            padding: 0;
-            display: inline;
-            @include transition(1s);
-            img {
-                padding: 0;
-                margin: 0;
-            }
-            .fotos,
-            .sites {
-                @include grid(2);
-                @include d(m) {
-                    @include grid(4);
-                    padding: 0;
-                }@include d(s) {
-                    width: grid(4);
-                    float: left;
-                    margin: 0;
-                }
-                padding: 0;
-                & img {
-                    width: 100%;
-                    -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
-                    clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
-                    filter: grayscale(100%);
-                    @include transition(.5s);
-                    &:hover {
-                        filter: grayscale(0%);
-                        transform: scale(1.2);
-                    }
-                }
-            }
-            .fotos {
-                display: block;
-            }
-            .sites {
-                display: none;
+        .fotos,
+        .site {
+            flex-grow: 1;
+            opacity: .3;
+            transition: flex-grow .3s ease-in-out, opacity .3s ease-in-out;
+            filter: grayscale(90%);
+            &:hover {
+                flex-grow: 2;
+                opacity: 1;
+                filter: grayscale(0);
             }
         }
+        .fotos {
+            display: flex;
+        }
+        .site {
+            display: none;
+            background: center center no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@for $i from 1 through 6 {
+    .fotos:nth-of-type(#{$i}) {
+        background: url('../img/fotografias/#{$i}.jpg') center center no-repeat;
+        background-size: cover;
     }
 }

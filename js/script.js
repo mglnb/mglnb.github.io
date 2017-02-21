@@ -86,11 +86,11 @@ $(document).ready(function ($) {
     // Esconder e mostrar as fotos do portfolio
     $('#portfolio .content ul li a').click(function (event) {
         if ($(this).is('#fotos')) {
-            $('.sites').hide('slow');
+            $('.site').hide('slow');
             $('.fotos').show('slow');
         }
         else if ($(this).is('#sites')) {
-            $('.sites').show('slow');
+            $('.site').show('slow');
             $('.fotos').hide('slow');
         }
     });
