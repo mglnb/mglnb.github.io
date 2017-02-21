@@ -1216,7 +1216,10 @@ section#portfolio .portfolio {
   section#portfolio .portfolio .site {
     flex-grow: 1;
     opacity: .3;
-    transition: flex-grow .3s ease-in-out, opacity .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     filter: grayscale(90%); }
     /* line 60, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
     section#portfolio .portfolio .fotos:hover,
@@ -1224,41 +1227,46 @@ section#portfolio .portfolio {
       flex-grow: 2;
       opacity: 1;
       filter: grayscale(0); }
-  /* line 66, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+      @media screen and (max-width: 767px) {
+        /* line 60, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+        section#portfolio .portfolio .fotos:hover,
+        section#portfolio .portfolio .site:hover {
+          flex-grow: 11; } }
+  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .portfolio .fotos {
     display: flex; }
-  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+  /* line 72, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .portfolio .site {
     display: none;
     background: center center no-repeat;
     background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(1) {
   background: url("../img/fotografias/1.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(2) {
   background: url("../img/fotografias/2.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(3) {
   background: url("../img/fotografias/3.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(4) {
   background: url("../img/fotografias/4.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(5) {
   background: url("../img/fotografias/5.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(6) {
   background: url("../img/fotografias/6.jpg") center center no-repeat;
   background-size: cover; }
