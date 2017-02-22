@@ -107,6 +107,19 @@ table {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+@keyframes hamburguer {
+  0% {
+    transform: scale(1, 1); }
+  20% {
+    transform: scale(1.2, 1); }
+  40% {
+    transform: scale(1.15, 1.15); }
+  60% {
+    transform: scale(1, 1.2); }
+  80% {
+    transform: scale(1.05, 1.05); }
+  100% {
+    transform: scale(1, 1); } }
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -362,6 +375,8 @@ nav {
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     cursor: pointer; }
+    nav .hamburguer:hover {
+      animation: hamburguer .5s; }
     nav .hamburguer.active span:nth-child(1), nav .hamburguer.active span:nth-child(6) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -477,6 +492,7 @@ nav {
           border-right: none;
           border-left: none; } }
       nav ul li a {
+        cursor: pointer;
         display: inline-block;
         color: #222;
         text-decoration: none;

@@ -78,9 +78,10 @@ $(document).ready(function ($) {
     });
     // Scroll suave no navbar
     $('nav a').click(function () {
-        var target = $(this.hash);
+        var target = $(this).attr('class');
+		 console.log("." + target);
         $('html,body').animate({
-            scrollTop: target.offset().top - 60
+            scrollTop: $("#" + target).offset().top - 60
         }, 1000);
     });
     // Esconder e mostrar as fotos do portfolio

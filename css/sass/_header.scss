@@ -36,6 +36,9 @@ nav {
         @include transform(rotate(0deg));
         @include transition(.5s ease-in-out);
         cursor: pointer;
+		 &:hover {
+			 animation: hamburguer .5s;
+		 }
         &.active {
             span {
                  
@@ -163,6 +166,7 @@ nav {
                     padding: 15px 0;
                     font-size: 18px;
                 }
+					cursor: pointer;
                 display: inline-block;
                 color: $cor-titulo-escuro;
                 text-decoration: none;
