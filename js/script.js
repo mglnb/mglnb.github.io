@@ -86,13 +86,22 @@ $(document).ready(function ($) {
     // Esconder e mostrar as fotos do portfolio
     $('#portfolio .content ul li a').click(function (event) {
         if ($(this).is('#fotos')) {
-            $('.site').hide('slow');
-            $('.fotos').show('slow');
+            $('.site').removeClass('active');
+            $('.site').addClass('hide');
+            $('.fotos').addClass('active');
+            $('.fotos').removeClass('hide');
         }
         else if ($(this).is('#sites')) {
-            $('.site').show('slow');
-            $('.fotos').hide('slow');
+            $('.site').addClass('active');
+            $('.site').removeClass('hide');
+            $('.fotos').removeClass('active'); 
+            $('.fotos').addClass('hide');
         }
+    });
+    // Interação swipe no portfolio
+    $('#portfolio #fotos, #portfolio #sites').on('swipeleft', function () {
+        console.log('swipeleft');
+        $(this).parent().addClass('active');
     });
     // Efeito Material Design no formulario
     $('.formulario input').keyup(function () {
@@ -114,3 +123,14 @@ $(document).ready(function ($) {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+

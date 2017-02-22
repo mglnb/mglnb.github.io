@@ -102,19 +102,23 @@ table {
 
 @keyframes bounceInTop {
   0% {
-    transform: translateY(-40px); }
+    transform: translateY(-40px);
+    opacity: 0; }
   50% {
     transform: translateY(10px); }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0);
+    opacity: 1; } }
 
 @keyframes bounceInDown {
   0% {
-    transform: translateY(40px); }
+    transform: translateY(40px);
+    opacity: 0; }
   50% {
     transform: translateY(-10px); }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0);
+    opacity: 1; } }
 
 /* line 8, E:/Dropbox/Dropbox/MNB Blog/css/sass/_grid.scss */
 *, *::after, *::before {
@@ -613,6 +617,7 @@ header {
     padding: 50px 0 25px; }
   /* line 215, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header h2.title {
+    animation: bounceInTop 1.5s;
     margin: 0 50px;
     border: 2px solid #fff;
     font-size: 60px;
@@ -634,7 +639,7 @@ header {
         font-size: 30px;
         padding: 10px 5px;
         margin: 0 10px; } }
-  /* line 235, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 236, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header h3 {
     margin-top: 40px;
     font-weight: 400;
@@ -643,10 +648,10 @@ header {
     -o-animation: titleh3 0.7s;
     animation: titleh3 0.7s; }
     @media screen and (min-width: 1200px) {
-      /* line 235, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+      /* line 236, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
       header h3 {
         font-size: 18px; } }
-  /* line 243, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 244, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .mouse {
     margin: 150px auto 0;
     display: block;
@@ -654,7 +659,7 @@ header {
     height: 42px;
     border-radius: 14px;
     border: 2px solid #fff; }
-  /* line 251, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 252, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .scroll {
     display: block;
     margin: 5px auto;
@@ -667,7 +672,7 @@ header {
     -moz-animation: mouse-wheel 0.7s linear infinite;
     -o-animation: mouse-wheel 0.7s linear infinite;
     animation: mouse-wheel 0.7s linear infinite; }
-  /* line 261, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 262, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .seta {
     display: block;
     width: 5px;
@@ -681,7 +686,7 @@ header {
     margin: 0 auto;
     width: 16px;
     height: 16px; }
-  /* line 272, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 273, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .primeira,
   header .segunda,
   header .terceira {
@@ -689,19 +694,19 @@ header {
     -moz-animation: mouse-scroll 1s infinite alternate;
     -o-animation: mouse-scroll 1s infinite alternate;
     animation: mouse-scroll 1s infinite alternate; }
-  /* line 277, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 278, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .primeira {
     -webkit-animation-delay: .1s;
     -moz-animation-delay: .1s;
     -o-animation-delay: .1s;
     animation-delay: .1s; }
-  /* line 283, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 284, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .segunda {
     -webkit-animation-delay: .2s;
     -moz-animation-delay: .2s;
     -o-animation-delay: .2s;
     animation-delay: .2s; }
-  /* line 289, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
+  /* line 290, E:/Dropbox/Dropbox/MNB Blog/css/sass/_header.scss */
   header .terceira {
     -webkit-animation-delay: .3s;
     -moz-animation-delay: .3s;
@@ -1232,41 +1237,67 @@ section#portfolio .portfolio {
         section#portfolio .portfolio .fotos:hover,
         section#portfolio .portfolio .site:hover {
           flex-grow: 11; } }
-  /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+    /* line 68, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+    section#portfolio .portfolio .fotos.active,
+    section#portfolio .portfolio .site.active {
+      flex-grow: 1; }
+      /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+      section#portfolio .portfolio .fotos.active:hover,
+      section#portfolio .portfolio .site.active:hover {
+        flex-grow: 2; }
+        @media screen and (max-width: 767px) {
+          /* line 69, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+          section#portfolio .portfolio .fotos.active:hover,
+          section#portfolio .portfolio .site.active:hover {
+            flex-grow: 11; } }
+    /* line 77, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+    section#portfolio .portfolio .fotos.hide,
+    section#portfolio .portfolio .site.hide {
+      flex-grow: 0; }
+      /* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+      section#portfolio .portfolio .fotos.hide:hover,
+      section#portfolio .portfolio .site.hide:hover {
+        flex-grow: 2; }
+        @media screen and (max-width: 767px) {
+          /* line 78, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+          section#portfolio .portfolio .fotos.hide:hover,
+          section#portfolio .portfolio .site.hide:hover {
+            flex-grow: 11; } }
+  /* line 87, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .portfolio .fotos {
     display: flex; }
-  /* line 72, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+  /* line 90, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
   section#portfolio .portfolio .site {
-    display: none;
+    flex-grow: 0;
     background: center center no-repeat;
     background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(1) {
   background: url("../img/fotografias/1.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(2) {
   background: url("../img/fotografias/2.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(3) {
   background: url("../img/fotografias/3.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(4) {
   background: url("../img/fotografias/4.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(5) {
   background: url("../img/fotografias/5.jpg") center center no-repeat;
   background-size: cover; }
 
-/* line 81, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
+/* line 99, E:/Dropbox/Dropbox/MNB Blog/css/sass/_portfolio.scss */
 .fotos:nth-of-type(6) {
   background: url("../img/fotografias/6.jpg") center center no-repeat;
   background-size: cover; }

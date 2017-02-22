@@ -36,7 +36,7 @@ section#portfolio {
     }
     .hr {
         text-align: center;
-    display: block;
+        display: block;
         margin-bottom: 30px;
     }
     &:after {
@@ -59,18 +59,36 @@ section#portfolio {
             filter: grayscale(90%);
             &:hover {
                 @include d(s) {
-                    flex-grow: 11; 
+                    flex-grow: 11;
                 }
                 flex-grow: 2;
                 opacity: 1;
                 filter: grayscale(0);
+            }
+            &.active {
+                &:hover {
+                    @include d(s) {
+                        flex-grow: 11;
+                    }
+                    flex-grow: 2;
+                }
+                flex-grow: 1;
+            }
+            &.hide {
+                &:hover {
+                    @include d(s) {
+                        flex-grow: 11;
+                    }
+                    flex-grow: 2;
+                }
+                flex-grow: 0;
             }
         }
         .fotos {
             display: flex;
         }
         .site {
-            display: none;
+            flex-grow: 0;
             background: center center no-repeat;
             background-size: cover;
         }
