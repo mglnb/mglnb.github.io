@@ -38,7 +38,7 @@ nav {
         cursor: pointer;
         &.active {
             span {
-                
+                 
                 &:nth-child(1),
                 &:nth-child(6) {
                     @include transform(rotate(45deg));
@@ -203,6 +203,9 @@ header {
     background-size: cover;
     color: #fff;
     padding: 200px 0 330px;
+	@include d(s) {
+		padding: 25vh 0 0;
+	}
     text-align: center;
     height: 115%;
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -243,6 +246,9 @@ header {
     }
     .mouse {
         margin: 150px auto 0;
+		 @include d(s) {
+			 margin: 75px auto 0;
+		 }
         display: block;
         width: 24px;
         height: 42px;
