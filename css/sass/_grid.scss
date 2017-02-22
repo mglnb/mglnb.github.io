@@ -91,6 +91,9 @@ $gutter: 20px;
 	max-width: 100%;
 	margin: 0px auto;
 	position: relative;
+	.row {
+		margin: 0;
+	}
 	@include clearfix;
 }
 

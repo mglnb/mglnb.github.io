@@ -41,6 +41,9 @@
             border: none;
             margin-left: -1px;
             padding: 11px 15px;
+			  @include d(m) {
+				  letter-spacing: normal;
+			  }
             background: $cor-texto-claro2;
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;

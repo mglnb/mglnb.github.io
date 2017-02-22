@@ -130,6 +130,8 @@ table {
   max-width: 100%;
   margin: 0px auto;
   position: relative; }
+  .container-fluid .row {
+    margin: 0; }
   .container-fluid::after, .container-fluid::before {
     content: '';
     display: table;
@@ -1057,7 +1059,8 @@ section#portfolio .content {
 section#portfolio .hr {
   text-align: center;
   display: block;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 35px; }
 section#portfolio:after {
   content: "";
   display: block;
@@ -1308,6 +1311,9 @@ footer {
     background: #e6e6e6;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      footer .btn-ghost {
+        letter-spacing: normal; } }
     footer .btn-ghost:active, footer .btn-ghost:focus {
       outline: none; }
   footer .social-copy {
