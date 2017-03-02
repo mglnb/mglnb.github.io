@@ -1,8 +1,12 @@
+// Loader
 window.onload = function () {
 	var div = document.getElementById('load');
 	preload(div, 30);
 };
-// Declarações de funções
+
+//Declarações de funções
+
+// Função para opacidade sumir com o load quando for carregado
 function preload(el, interval) {
 	var op = 1;
 	var timer = setInterval(function () {
@@ -16,6 +20,7 @@ function preload(el, interval) {
 	}, interval);
 }
 
+// Ao fechar o menu
 function menuOff() {
 	$('.nav-animacao').removeClass('active');
 	//    $('.ulnav').css('right', '-200vw');
@@ -26,6 +31,7 @@ function menuOff() {
 	$('.social-copy').removeClass('.footernav');
 }
 
+// Ao abrir o menu
 function menuOn() {
 	$('.nav-animacao').addClass('active');
 	//    $('.ulnav').css('right', '0 ');
@@ -36,14 +42,17 @@ function menuOn() {
 	$('.social-copy').addClass('.footernav');
 }
 
+// Retorna a diferença de altura do elemento ao topo
 function getSectionInicio(el) {
 	return $(el).offset().top - 50;
 }
 
+// Retorna a diferença de altura do elemento ao topo + o tamanho do elemento
 function getSectionFim(el) {
 	return $(el).offset().top + $(el).innerHeight() - 50;
 }
 
+// Verifica se o scroll está em cima de tal elemento
 function isOnEl(el) {
 	var posicaoScroll = $(document).scrollTop();
 	if (getSectionInicio(el) <= posicaoScroll && getSectionFim(el) >= posicaoScroll) {
@@ -53,15 +62,16 @@ function isOnEl(el) {
 	}
 }
 
-
+// Pega o valor de Z do html e utiliza para calcular o quanto pra baixo irá
 function parallax() {
 	posicaoScroll = $(document).scrollTop();
 
-	$('header .parallax').each(function () {
+	$('.parallax').each(function () {
 		var z = parseInt($(this).data("z"));
-		$(this).css('transform', 'translateY(' + (posicaoScroll * (z * 0.05)) + 'px)')
+		$(this).css('transform', 'translateY(' + (posicaoScroll * (z * 0.05)) + 'px)');
 	});
 }
+
 // Quando o site for carregado
 $(document).ready(function ($) {
 	// Alteração da cor do logo ao mudar o background
@@ -88,15 +98,13 @@ $(document).ready(function ($) {
 			menuOn();
 		}
 	});
-
-	$('nav ul li').click(function () {
+	$('nav ul li a').click(function () {
 		menuOff();
 	});
 
 	// Scroll suave no navbar
 	$('nav a').click(function () {
 		var target = $(this).attr('class');
-		console.log("." + target);
 		$('html,body').animate({
 			scrollTop: $("#" + target).offset().top - 60
 		}, 1000);
@@ -117,22 +125,10 @@ $(document).ready(function ($) {
 		}
 	});
 
-	// Interação swipe no portfolio
-	$('#portfolio #fotos, #portfolio #sites').on('swipeleft', function () {
-		console.log('swipeleft');
-		$(this).parent().addClass('active');
-	});
+
 
 	// Efeito Material Design no formulario
-	$('.formulario input').keyup(function () {
-		var msg = $(this).val();
-		if (msg != "") {
-			$(this).next().addClass('active');
-		} else {
-			$(this).next().removeClass('active');
-		}
-	});
-	$('.formulario textarea').keyup(function () {
+	$('.formulario input, .formulario textarea').keyup(function () {
 		var msg = $(this).val();
 		if (msg != "") {
 			$(this).next().addClass('active');
