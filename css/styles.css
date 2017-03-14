@@ -585,7 +585,8 @@ header {
     animation: 1s draw linear forwards; }
   header g .stroke, header g .fill {
     font-size: 40px;
-    font-weight: 100; }
+    font-weight: 100;
+    letter-spacing: 5px; }
   header g .stroke {
     stroke: #f4f5f6;
     stroke-width: .5px;
