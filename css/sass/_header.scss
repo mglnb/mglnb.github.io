@@ -287,9 +287,11 @@ header {
 
 
 
-    h3 {
+    .subtitle {
         margin-top: 40px;
         font-weight: 400;
+        fill: #fff;
+        font-size: 14px;
         @include animation(titleh3 0.7s);
         @include d(l) {
             font-size: 18px;

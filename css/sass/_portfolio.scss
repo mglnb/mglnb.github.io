@@ -95,6 +95,7 @@ section#portfolio {
 		}
 	}
 }
+
 @for $i from 1 through 6 {
 	.fotos:nth-of-type(#{$i}) {
 		background: url('../img/fotografias/#{$i}.jpg') center center no-repeat;

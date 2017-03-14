@@ -602,15 +602,17 @@ header {
     animation: fill_offset 5s;
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: forwards; }
-  header h3 {
+  header .subtitle {
     margin-top: 40px;
     font-weight: 400;
+    fill: #fff;
+    font-size: px;
     -webkit-animation: titleh3 0.7s;
     -moz-animation: titleh3 0.7s;
     -o-animation: titleh3 0.7s;
     animation: titleh3 0.7s; }
     @media screen and (min-width: 1200px) {
-      header h3 {
+      header .subtitle {
         font-size: 18px; } }
   header .mouse {
     margin: 150px auto 0;
