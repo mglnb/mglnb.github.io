@@ -5,7 +5,8 @@ window.onload = function () {
 };
 
 //Declarações de funções
-
+var draw = document.querySelector('.shape');
+console.log(draw.getTotalLength());
 // Função para opacidade sumir com o load quando for carregado
 function preload(el, interval) {
 	var op = 1;
@@ -23,8 +24,6 @@ function preload(el, interval) {
 // Ao fechar o menu
 function menuOff() {
 	$('.nav-animacao').removeClass('active');
-	//    $('.ulnav').css('right', '-200vw');
-	//    $('.nav-animacao').css('right', '-200vw');
 	$('nav ul li').removeClass('ativo');
 	$('.hamburguer').removeClass('active');
 	$('nav img').css('filter', 'invert(0)');
@@ -34,9 +33,7 @@ function menuOff() {
 // Ao abrir o menu
 function menuOn() {
 	$('.nav-animacao').addClass('active');
-	//    $('.ulnav').css('right', '0 ');
 	$('.hamburguer').addClass('active');
-	//    $('.nav-animacao').css('right', '0');
 	$('nav ul li').addClass('ativo');
 	$('nav img').css('filter', 'invert(45%)');
 	$('.social-copy').addClass('.footernav');
@@ -55,11 +52,7 @@ function getSectionFim(el) {
 // Verifica se o scroll está em cima de tal elemento
 function isOnEl(el) {
 	var posicaoScroll = $(document).scrollTop();
-	if (getSectionInicio(el) <= posicaoScroll && getSectionFim(el) >= posicaoScroll) {
-		return true;
-	} else {
-		return false;
-	}
+	return getSectionInicio(el) <= posicaoScroll && getSectionFim(el) >= posicaoScroll;
 }
 
 // Pega o valor de Z do html e utiliza para calcular o quanto pra baixo irá
@@ -111,7 +104,7 @@ $(document).ready(function ($) {
 	});
 
 	// Esconder e mostrar as fotos do portfolio
-	$('#portfolio .content ul li a').click(function (event) {
+	$('#portfolio').find('.content ul li a').click(function (event) {
 		if ($(this).is('#fotos')) {
 			$('.site').removeClass('active');
 			$('.site').addClass('hide');

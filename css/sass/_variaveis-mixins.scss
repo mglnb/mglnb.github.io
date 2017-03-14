@@ -9,6 +9,7 @@
 //$amareloHover: rgba(243, 156, 18, 1.0);
 //$vermelho: rgba(231, 76, 60, 1.0);
 //$vermelhoHover: rgba(192, 57, 43, 1.0);
+
 // Tons de cinza
 $cor-principal:#000;
 $cor-secundaria:#7F8C8D;
@@ -23,6 +24,12 @@ $cor-texto-claro2: #e6e6e6 ;//
 $l-device: 1200px;
 $m-device: 768px;
 $s-device: 480px;
+
+$backgroundColor: $cor-texto-claro1;
+$fontColor: $cor-texto-claro1;
+$initalGapSize: 400;
+$animationTime: 5s;
+
 // Mixins
 @mixin transition($s) {
     -webkit-transition: $s;
@@ -180,4 +187,40 @@ $s-device: 480px;
 	100% {
 		transform: scale(1,1);
 	}
+}
+
+@keyframes fill_offset {
+  0% {fill-opacity: 0;}
+  35% {fill-opacity: 0;}
+  50% {fill-opacity: 1;}
+  100% {fill-opacity: 1;}
+}
+
+@keyframes stroke_offset {
+  0% {
+    stroke-dasharray: 0 $initalGapSize;
+    stroke-opacity: 1;
+  }
+  50% {
+    stroke-dasharray: $initalGapSize 0;
+    stroke-opacity: .90;
+  }
+  100% {
+    stroke-dasharray: $initalGapSize 0;
+    stroke-opacity: 0;
+  }
+
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 940;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 940;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+  }
 }
