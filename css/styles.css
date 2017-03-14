@@ -121,7 +121,7 @@ table {
   100% {
     transform: scale(1, 1); } }
 @keyframes fill_offset {
-  25% {
+  0% {
     fill-opacity: 0; }
   35% {
     fill-opacity: 0; }
@@ -130,7 +130,7 @@ table {
   100% {
     fill-opacity: 1; } }
 @keyframes stroke_offset {
-  25% {
+  0% {
     stroke-dasharray: 0 400;
     stroke-opacity: 1; }
   50% {
@@ -583,23 +583,25 @@ header {
     stroke: #fff; }
   header g .shape.animate {
     -webkit-animation: 2s draw linear forwards;
-    animation: 2s draw linear forwards; }
+    animation: 1.5s draw linear forwards; }
   header g .stroke, header g .fill {
     font-size: 40px;
     font-weight: 100;
     letter-spacing: 5px; }
-  header g .stroke {
+  header g .stroke.animate {
     stroke: #f4f5f6;
     stroke-width: .5px;
     stroke-dasharray: 0 400;
     stroke-opacity: 1;
-    fill: none; }
-    header g .stroke.animate {
-      animation: stroke_offset 5s;
-      animation-fill-mode: forwards; }
-  header g .fill {
+    fill: none;
+    animation: stroke_offset 5s;
+    animation-fill-mode: forwards; }
+  header g .fill.animate {
     fill: #FFF;
-    fill-opacity: 0; }
+    fill-opacity: 0;
+    animation: fill_offset 5s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: forwards; }
   header h3 {
     margin-top: 40px;
     font-weight: 400;

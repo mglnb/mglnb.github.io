@@ -250,7 +250,7 @@ header {
         }
         .shape.animate {
             -webkit-animation: 2s draw linear forwards;
-            animation:2s draw linear forwards;
+            animation:1.5s draw linear forwards;
         }
         .stroke, .fill {
             font-size: 40px;
@@ -259,22 +259,25 @@ header {
         }
         .stroke {
 
-            stroke: lighten($fontColor, 20%);
-            stroke-width: .5px;
-            stroke-dasharray: 0 $initalGapSize;
-            stroke-opacity: 1;
-            fill: none;
+
 
             &.animate {
+                stroke: lighten($fontColor, 20%);
+                stroke-width: .5px;
+                stroke-dasharray: 0 $initalGapSize;
+                stroke-opacity: 1;
+                fill: none;
+
                 animation: stroke_offset $animationTime ;
                 animation-fill-mode: forwards;
             }
         }
         .fill {
-            fill: #FFF;
-            fill-opacity: 0;
+
 
             &.animate {
+                fill: #FFF;
+                fill-opacity: 0;
                 animation: fill_offset $animationTime ;
                 animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
                 animation-fill-mode: forwards;
