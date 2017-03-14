@@ -2,6 +2,7 @@
 window.onload = function () {
 	var div = document.getElementById('load');
 	preload(div, 30);
+    animateLoad();
 };
 
 //Declarações de funções
@@ -85,7 +86,7 @@ $(document).ready(function ($) {
 		}
 	});
 
-	animateLoad();
+
 
 	// Ativação do menu Hamburguer
 	$('.hamburguer').click(function () {
