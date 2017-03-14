@@ -580,7 +580,8 @@ header {
     stroke-dasharray: 140 540;
     stroke-dashoffset: -474;
     stroke-width: 4px;
-    stroke: #fff;
+    stroke: #fff; }
+  header g .shape.animate {
     -webkit-animation: 2s draw linear forwards;
     animation: 2s draw linear forwards; }
   header g .stroke, header g .fill {
@@ -592,15 +593,13 @@ header {
     stroke-width: .5px;
     stroke-dasharray: 0 400;
     stroke-opacity: 1;
-    fill: none;
-    animation: stroke_offset 5s;
-    animation-fill-mode: forwards; }
+    fill: none; }
+    header g .stroke.animate {
+      animation: stroke_offset 5s;
+      animation-fill-mode: forwards; }
   header g .fill {
     fill: #FFF;
-    fill-opacity: 0;
-    animation: fill_offset 5s;
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    animation-fill-mode: forwards; }
+    fill-opacity: 0; }
   header h3 {
     margin-top: 40px;
     font-weight: 400;

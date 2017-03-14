@@ -63,6 +63,10 @@ function parallax() {
 	});
 }
 
+function animateLoad() {
+	$('header .shape, header .stroke, header .fill').addClass('animate');
+}
+
 // Quando o site for carregado
 $(document).ready(function ($) {
 	// Alteração da cor do logo ao mudar o background
@@ -80,6 +84,8 @@ $(document).ready(function ($) {
 			$('.logo svg').css('fill', '#2a2a2a');
 		}
 	});
+
+	animateLoad();
 
 	// Ativação do menu Hamburguer
 	$('.hamburguer').click(function () {
