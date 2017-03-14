@@ -5,8 +5,6 @@ window.onload = function () {
 };
 
 //Declarações de funções
-var draw = document.querySelector('.shape');
-console.log(draw.getTotalLength());
 // Função para opacidade sumir com o load quando for carregado
 function preload(el, interval) {
 	var op = 1;

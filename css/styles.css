@@ -121,7 +121,7 @@ table {
   100% {
     transform: scale(1, 1); } }
 @keyframes fill_offset {
-  0% {
+  25% {
     fill-opacity: 0; }
   35% {
     fill-opacity: 0; }
@@ -130,7 +130,7 @@ table {
   100% {
     fill-opacity: 1; } }
 @keyframes stroke_offset {
-  0% {
+  25% {
     stroke-dasharray: 0 400;
     stroke-opacity: 1; }
   50% {
@@ -142,7 +142,7 @@ table {
 @keyframes draw {
   0% {
     stroke-dasharray: 140 940;
-    stroke-dashoffset: -474;
+    stroke-dashoffset: -704;
     stroke-width: 8px; }
   100% {
     stroke-dasharray: 940;
@@ -581,8 +581,8 @@ header {
     stroke-dashoffset: -474;
     stroke-width: 4px;
     stroke: #fff;
-    -webkit-animation: 1s draw linear forwards;
-    animation: 1s draw linear forwards; }
+    -webkit-animation: 2s draw linear forwards;
+    animation: 2s draw linear forwards; }
   header g .stroke, header g .fill {
     font-size: 40px;
     font-weight: 100;

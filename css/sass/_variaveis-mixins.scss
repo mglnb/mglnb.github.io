@@ -190,14 +190,14 @@ $animationTime: 5s;
 }
 
 @keyframes fill_offset {
-  0% {fill-opacity: 0;}
+  25% {fill-opacity: 0;}
   35% {fill-opacity: 0;}
   50% {fill-opacity: 1;}
   100% {fill-opacity: 1;}
 }
 
 @keyframes stroke_offset {
-  0% {
+  25% {
     stroke-dasharray: 0 $initalGapSize;
     stroke-opacity: 1;
   }
@@ -215,7 +215,7 @@ $animationTime: 5s;
 @keyframes draw {
   0% {
     stroke-dasharray: 140 940;
-    stroke-dashoffset: -474;
+    stroke-dashoffset: -704;
     stroke-width: 8px;
   }
   100% {
