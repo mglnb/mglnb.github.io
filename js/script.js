@@ -61,40 +61,52 @@ function parallax() {
 	$('.parallax').each(function () {
 		var z = parseInt($(this).data("z"));
 		$(this).css('transform', 'translateY(' + (posicaoScroll * (z * 0.05)) + 'px)');
+		$(this).css('opacity', (posicaoScroll * -0.0015) +1);
 	});
 }
 
 function animateLoad() {
 	$('header .shape, header .stroke, header .fill').addClass('animate');
 }
+function animateHeader () {
+    var mouseX, mouseY;
+    var ww = $( window ).width();
+    var wh = $( window ).height();
+    var traX, traY;
+    $(document).mousemove(function(e){
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        traX = ((4 * mouseX) / 470) + 70;
+        traY = ((4 * mouseY) / 470) + 70;
+        console.log(traX);
+        $(".title pattern image").css({"x": traX * -1 });
+        $(".title pattern image").css({"y": traY * -1});
+
+    });
+}
 
 // Quando o site for carregado
 $(document).ready(function ($) {
+    // var draw = document.querySelector('.shape');
+    // console.log(draw.getTotalLength());
 	// Alteração da cor do logo ao mudar o background
 	$(window).scroll(function () {
 		parallax();
-		if (isOnEl('header')) {
-			$('.logo svg').css('fill', '#c4c4c4');
-		} else if (isOnEl('#sobre')) {
-			$('.logo svg').css('fill', '#2a2a2a');
-		} else if (isOnEl('#servicos')) {
-			$('.logo svg').css('fill', '#c4c4c4');
-		} else if (isOnEl('footer')) {
+		if (isOnEl('header') || isOnEl('#servicos') || isOnEl('footer')) {
 			$('.logo svg').css('fill', '#c4c4c4');
 		} else {
 			$('.logo svg').css('fill', '#2a2a2a');
 		}
 	});
-
-
+	animateHeader();
 
 	// Ativação do menu Hamburguer
 	$('.hamburguer').click(function () {
-		if ($('.nav-animacao').hasClass('active')) {
-			menuOff();
-		} else {
-			menuOn();
-		}
+        if ($('.nav-animacao').hasClass('active')) {
+            menuOff();
+        } else {
+            menuOn();
+        }
 	});
 	$('nav ul li a').click(function () {
 		menuOff();
@@ -102,7 +114,8 @@ $(document).ready(function ($) {
 
 	// Scroll suave no navbar
 	$('nav a').click(function () {
-		var target = $(this).attr('class');
+        var target;
+        target = $(this).attr('class');
 		$('html,body').animate({
 			scrollTop: $("#" + target).offset().top - 60
 		}, 1000);
@@ -123,11 +136,12 @@ $(document).ready(function ($) {
 
 	// Efeito Material Design no formulario
 	$('.formulario input, .formulario textarea').keyup(function () {
-		var msg = $(this).val();
-		if (msg != "") {
-			$(this).next().addClass('active');
-		} else {
-			$(this).next().removeClass('active');
-		}
+        var msg;
+        msg = $(this).val();
+        if (msg == "") {
+            $(this).next().removeClass('active');
+        } else {
+            $(this).next().addClass('active');
+        }
 	});
 });

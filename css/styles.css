@@ -145,7 +145,7 @@ table {
     stroke-dashoffset: -704;
     stroke-width: 8px; }
   100% {
-    stroke-dasharray: 940;
+    stroke-dasharray: 1020;
     stroke-dashoffset: 0;
     stroke-width: 1px; } }
 *, *::after, *::before {
@@ -554,13 +554,14 @@ nav {
           transition: 0.25s; }
 
 header {
-  background: url(../img/bg2.jpg) fixed no-repeat center;
+  background: -webkit-linear-gradient(#ebece7, white);
+  background: linear-gradient(#ebece7, white);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
-  padding: 200px 0 330px;
+  padding: 120px 0 330px;
   text-align: center;
   height: 115%;
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -575,6 +576,11 @@ header {
       padding: 25vh 0 0; } }
   header .title {
     padding: 50px 80px 25px; }
+    header .title use.fill {
+      fill: url(#pattern); }
+    header .title text {
+      font-size: 60px;
+      font-weight: 900; }
     @media screen and (max-width: 767px) {
       header .title {
         padding: 50px 0 25px; } }
@@ -586,7 +592,7 @@ header {
     stroke-dasharray: 140 540;
     stroke-dashoffset: -474;
     stroke-width: 4px;
-    stroke: #fff;
+    stroke: url(#pattern);
     stroke-linecap: round;
     stroke-linejoin: round; }
   header g .shape.animate {
@@ -594,10 +600,10 @@ header {
     animation: 1.5s draw linear forwards; }
   header g .stroke, header g .fill {
     font-size: 40px;
-    font-weight: 100;
-    letter-spacing: 5px; }
+    font-weight: bold;
+    letter-spacing: 0px; }
   header g .stroke.animate {
-    stroke: #f4f5f6;
+    stroke: url(#pattern);
     stroke-width: .5px;
     stroke-dasharray: 0 400;
     stroke-opacity: 1;
@@ -605,7 +611,6 @@ header {
     animation: stroke_offset 5s;
     animation-fill-mode: forwards; }
   header g .fill.animate {
-    fill: #FFF;
     fill-opacity: 0;
     animation: fill_offset 5s;
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -621,22 +626,22 @@ header {
         padding: 0 20%; } }
     header .subtitle text {
       margin-top: 40px;
-      font-weight: 400;
-      fill: #fff; }
+      fill: #222;
+      font-weight: 400; }
   header .mouse {
     margin: 60px auto 0;
     display: block;
     width: 24px;
     height: 42px;
     border-radius: 14px;
-    border: 2px solid #fff; }
+    border: 2px solid #222; }
     @media screen and (max-width: 767px) {
       header .mouse {
         margin: 75px auto 0; } }
   header .scroll {
     display: block;
     margin: 5px auto;
-    background-color: #BDC3C7;
+    background-color: #222;
     position: relative;
     height: 4px;
     width: 4px;
@@ -651,8 +656,8 @@ header {
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
     margin: 0 auto;
     width: 16px;
     height: 16px; }

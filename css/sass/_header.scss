@@ -201,13 +201,15 @@ nav {
 }
 
 header {
-  background: url(../img/bg2.jpg) fixed no-repeat center;
+  background: -webkit-linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
-  padding: 200px 0 330px;
+  padding: 120px 0 330px;
   @include d(s) {
     padding: 25vh 0 0;
   }
@@ -217,8 +219,17 @@ header {
   clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   @include transition(1.5s);
   z-index: 1;
+
   .title {
     padding: 50px 80px 25px;
+    use.fill {
+      fill: url(#pattern);
+
+    }
+    text {
+      font-size: 60px;
+      font-weight:900;
+    }
     @include d(s) {
       padding: 50px 0 25px;
     }
@@ -232,7 +243,7 @@ header {
       stroke-dasharray: 140 540;
       stroke-dashoffset: -474;
       stroke-width: 4px;
-      stroke: #fff;
+      stroke: url(#pattern);
       stroke-linecap: round;
       stroke-linejoin: round;
     }
@@ -242,12 +253,12 @@ header {
     }
     .stroke, .fill {
       font-size: 40px;
-      font-weight: 100;
-      letter-spacing: 5px;
+      font-weight: bold;
+      letter-spacing: 0px;
     }
     .stroke {
       &.animate {
-        stroke: lighten($fontColor, 20%);
+        stroke: url(#pattern);
         stroke-width: .5px;
         stroke-dasharray: 0 $initalGapSize;
         stroke-opacity: 1;
@@ -258,7 +269,6 @@ header {
     }
     .fill {
       &.animate {
-        fill: #FFF;
         fill-opacity: 0;
         animation: fill_offset $animationTime;
         animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
@@ -270,17 +280,17 @@ header {
   .subtitle {
     font-family: $type2;
     @include d(s) {
-    padding: 0 15%;
+      padding: 0 15%;
     }
     @include d(m) {
       padding: 0 20%;
     }
-      padding: 0 30%;
+    padding: 0 30%;
 
     text {
       margin-top: 40px;
+      fill: $cor-titulo-escuro;
       font-weight: 400;
-      fill: #fff;
     }
   }
 
@@ -293,12 +303,12 @@ header {
     width: 24px;
     height: 42px;
     border-radius: 14px;
-    border: 2px solid #fff;
+    border: 2px solid $cor-titulo-escuro;
   }
   .scroll {
     display: block;
     margin: 5px auto;
-    background-color: $cor-texto-claro1;
+    background-color: $cor-titulo-escuro;
     position: relative;
     height: 4px;
     width: 4px;
@@ -308,8 +318,8 @@ header {
   .seta {
     display: block;
     @include transform(rotate(45deg));
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-right: 2px solid $cor-titulo-escuro;
+    border-bottom: 2px solid $cor-titulo-escuro;
     margin: 0 auto;
     width: 16px;
     height: 16px;
