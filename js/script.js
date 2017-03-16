@@ -92,7 +92,7 @@ $(document).ready(function ($) {
 	// Alteração da cor do logo ao mudar o background
 	$(window).scroll(function () {
 		parallax();
-		if (isOnEl('header') || isOnEl('#servicos') || isOnEl('footer')) {
+		if (isOnEl('#servicos') || isOnEl('footer')) {
 			$('.logo svg').css('fill', '#c4c4c4');
 		} else {
 			$('.logo svg').css('fill', '#2a2a2a');

@@ -21,7 +21,7 @@ nav {
     margin: 12px 50px 15px;
     height: auto;
     @include transition(.3s);
-    fill: #c4c4c4;
+    fill: #2a2a2a;
     position: fixed;
     z-index: 2000;
     @include d(s) {
@@ -221,7 +221,7 @@ header {
   z-index: 1;
 
   .title {
-    padding: 50px 80px 25px;
+    padding: 50px 20% 25px;
     use.fill {
       fill: url(#pattern);
 

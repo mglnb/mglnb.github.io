@@ -385,7 +385,7 @@ nav {
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    fill: #c4c4c4;
+    fill: #2a2a2a;
     position: fixed;
     z-index: 2000; }
   nav .hamburguer {
@@ -575,7 +575,7 @@ header {
     header {
       padding: 25vh 0 0; } }
   header .title {
-    padding: 50px 80px 25px; }
+    padding: 50px 20% 25px; }
     header .title use.fill {
       fill: url(#pattern); }
     header .title text {
