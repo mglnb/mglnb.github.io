@@ -573,14 +573,22 @@ header {
   @media screen and (max-width: 767px) {
     header {
       padding: 25vh 0 0; } }
-  header .content {
-    padding: 50px 0 25px; }
+  header .title {
+    padding: 50px 80px 25px; }
+    @media screen and (max-width: 767px) {
+      header .title {
+        padding: 50px 0 25px; } }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      header .title {
+        padding: 50px 5% 25px; } }
   header g .shape {
     fill: transparent;
     stroke-dasharray: 140 540;
     stroke-dashoffset: -474;
     stroke-width: 4px;
-    stroke: #fff; }
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round; }
   header g .shape.animate {
     -webkit-animation: 2s draw linear forwards;
     animation: 1.5s draw linear forwards; }
@@ -603,19 +611,19 @@ header {
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: forwards; }
   header .subtitle {
-    margin-top: 40px;
-    font-weight: 400;
-    fill: #fff;
-    font-size: px;
-    -webkit-animation: titleh3 0.7s;
-    -moz-animation: titleh3 0.7s;
-    -o-animation: titleh3 0.7s;
-    animation: titleh3 0.7s; }
-    @media screen and (min-width: 1200px) {
+    padding: 0 30%; }
+    @media screen and (max-width: 767px) {
       header .subtitle {
-        font-size: 18px; } }
+        padding: 0 15%; } }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      header .subtitle {
+        padding: 0 20%; } }
+    header .subtitle text {
+      margin-top: 40px;
+      font-weight: 400;
+      fill: #fff; }
   header .mouse {
-    margin: 150px auto 0;
+    margin: 60px auto 0;
     display: block;
     width: 24px;
     height: 42px;
