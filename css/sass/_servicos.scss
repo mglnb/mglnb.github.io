@@ -64,7 +64,9 @@ section#servicos {
     p {
         margin-top: 10px;
         color: $cor-texto-claro1;
-        line-height: 20px;
+        line-height: 17px;
+        font-family:$type2;
+        font-size: .85em;
     }
     .bg {
         height: 500px;

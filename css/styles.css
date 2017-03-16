@@ -304,7 +304,7 @@ table {
     transform: translate(45px, 150px) rotate(30deg);
     opacity: 1; } }
 body, html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Lato", sans-serif;
   height: 100%;
   margin: 0; }
 
@@ -611,6 +611,7 @@ header {
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     animation-fill-mode: forwards; }
   header .subtitle {
+    font-family: "Roboto Slab", serif;
     padding: 0 30%; }
     @media screen and (max-width: 767px) {
       header .subtitle {
@@ -780,7 +781,8 @@ section#sobre {
   section#sobre p {
     font-weight: 400;
     font-size: .8em;
-    line-height: 15px; }
+    line-height: 15px;
+    font-family: "Roboto Slab", serif; }
   section#sobre:after {
     content: "";
     display: block;
@@ -886,9 +888,10 @@ section#minhahistoria {
 
 p {
   color: #6a6a6a;
-  font-size: .9em;
-  line-height: 15px;
-  margin-bottom: 20px; }
+  font-size: .85em;
+  line-height: 17px;
+  margin-bottom: 20px;
+  font-family: "Roboto Slab", serif; }
 
 section#servicos {
   text-align: right;
@@ -993,7 +996,9 @@ section#servicos {
   section#servicos p {
     margin-top: 10px;
     color: #BDC3C7;
-    line-height: 20px; }
+    line-height: 17px;
+    font-family: "Roboto Slab", serif;
+    font-size: .85em; }
   section#servicos .bg {
     height: 500px;
     background: url(../img/bg2.jpg) no-repeat center;
@@ -1042,6 +1047,9 @@ section#portfolio .content {
     letter-spacing: 6px;
     font-weight: 700;
     margin: 50px 0 20px; }
+  section#portfolio .content p {
+    font-family: "Roboto Slab", serif;
+    font-size: .85em; }
   section#portfolio .content ul {
     text-transform: uppercase;
     margin-bottom: 25px; }
@@ -1350,6 +1358,7 @@ footer {
           filter: invert(98%); }
     footer .social-copy p {
       font-size: 10px;
-      color: #BDC3C7; }
+      color: #BDC3C7;
+      font-family: "Roboto Slab", serif; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -19,16 +19,24 @@ $cor-hover:#000;
 $cor-titulo-escuro: #222;
 $cor-texto-escuro: #6a6a6a;
 $cor-texto-claro1: #BDC3C7;
-$cor-texto-claro2: #e6e6e6 ;//
+$cor-texto-claro2: #e6e6e6 ;
 
+// Containers
 $l-device: 1200px;
 $m-device: 768px;
 $s-device: 480px;
 
+// Animation Header
 $backgroundColor: $cor-texto-claro1;
 $fontColor: $cor-texto-claro1;
 $initalGapSize: 400;
 $animationTime: 5s;
+
+// Tipografia
+$type1: 'Lato', sans-serif;
+$type2: 'Roboto Slab', serif;
+
+
 
 // Mixins
 @mixin transition($s) {
