@@ -153,10 +153,10 @@ table {
 
 @media screen and (max-width: 767px) {
   section#servicos .descricao {
-    margin-left: 0px; } }
+    margin-left: 0; } }
 .container-fluid {
   max-width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
   position: relative; }
   .container-fluid .row {
     margin: 0; }
@@ -167,7 +167,7 @@ table {
 
 .container {
   max-width: 1200px;
-  margin: 0px auto;
+  margin: 0 auto;
   position: relative; }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
@@ -188,8 +188,8 @@ table {
   margin-right: 10px; }
   @media screen and (max-width: 767px) {
     .row {
-      margin-left: 0px;
-      margin-right: 0px; } }
+      margin-left: 0;
+      margin-right: 0; } }
   .row::after, .row::before {
     content: '';
     display: table;
@@ -693,10 +693,7 @@ section#sobre {
       section#sobre .content {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (min-width: 1200px) {
       section#sobre .content {
         margin-bottom: 20px; } }
@@ -712,24 +709,20 @@ section#sobre {
     section#sobre .content {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
   section#sobre span.quadrado {
     display: block;
     width: 75px;
     height: 75px;
     border: 1px solid #BDC3C7;
-    margin: 0 auto;
     position: relative;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
     z-index: 2;
-    margin-bottom: 20px; }
+    margin: 0 auto 20px; }
     section#sobre span.quadrado:hover {
       -webkit-transform: rotate(135deg);
       -moz-transform: rotate(135deg);
@@ -812,10 +805,7 @@ section#minhahistoria {
       section#minhahistoria .imac {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (max-width: 767px) {
       section#minhahistoria .imac {
         width: 100%;
@@ -828,10 +818,7 @@ section#minhahistoria {
     section#minhahistoria .imac {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
     section#minhahistoria .imac img {
       width: 85%; }
@@ -846,10 +833,7 @@ section#minhahistoria {
       section#minhahistoria .historia {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (max-width: 767px) {
       section#minhahistoria .historia {
         width: 100%;
@@ -862,10 +846,7 @@ section#minhahistoria {
     section#minhahistoria .historia {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
   section#minhahistoria h2 {
     letter-spacing: 8px;
@@ -933,18 +914,12 @@ section#servicos {
       section#servicos .descricao {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (max-width: 767px) {
       section#servicos .descricao {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       section#servicos .descricao {
         width: 50%;
@@ -959,10 +934,7 @@ section#servicos {
     section#servicos .descricao {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
     @media screen and (max-width: 767px) {
       section#servicos .descricao {
@@ -976,10 +948,7 @@ section#servicos {
     section#servicos .descricao {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
   section#servicos .content {
     padding: 70px 0 70px;
@@ -1039,10 +1008,7 @@ section#servicos {
       section#servicos .bg {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (max-width: 767px) {
       section#servicos .bg {
         width: 100%;
@@ -1056,10 +1022,7 @@ section#servicos {
     section#servicos .bg {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
 section#portfolio .navport {
   width: 100%;
@@ -1072,10 +1035,7 @@ section#portfolio .navport {
     section#portfolio .navport {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 section#portfolio .content {
   text-align: center; }
   section#portfolio .content h2 {
@@ -1200,10 +1160,7 @@ section#contato {
       section#contato .titulo {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     section#contato .titulo h2 {
       margin: 10px 0 20px 0; }
   section#contato .form {
@@ -1218,10 +1175,7 @@ section#contato {
       section#contato .form {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
   section#contato form {
     width: 100%;
     margin: auto; }
@@ -1275,7 +1229,7 @@ section#contato {
     margin: 25px 0; }
   section#contato .content p {
     color: #6a6a6a;
-    padding: 0px; }
+    padding: 0; }
 
 footer {
   background: #444;
@@ -1298,10 +1252,7 @@ footer {
       footer .saiba {
         width: 100%;
         float: none;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 40px;
-        margin-bottom: 40px; } }
+        margin: 40px 0; } }
     @media screen and (max-width: 767px) {
       footer .inscrever,
       footer .posts,
@@ -1318,10 +1269,7 @@ footer {
     footer .saiba {
       width: 100%;
       float: none;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin: 40px 0; } }
 
     footer .inscrever h3,
     footer .posts h3,
@@ -1338,8 +1286,7 @@ footer {
     color: #BDC3C7;
     padding: 10px;
     width: 50%;
-    margin: 0;
-    margin-right: -3px;
+    margin: 0 -3px 0 0;
     font-size: 12px; }
     footer input:active, footer input:focus {
       outline: none; }
@@ -1380,10 +1327,7 @@ footer {
         footer .social-copy .social {
           width: 100%;
           float: none;
-          margin-left: 0px;
-          margin-right: 0px;
-          margin-top: 40px;
-          margin-bottom: 40px; } }
+          margin: 40px 0; } }
     footer .social-copy .icons {
       margin-top: 20px;
       padding-bottom: 10px; }

@@ -56,7 +56,7 @@ function isOnEl(el) {
 
 // Pega o valor de Z do html e utiliza para calcular o quanto pra baixo irá
 function parallax() {
-	posicaoScroll = $(document).scrollTop();
+	var posicaoScroll = $(document).scrollTop();
 
 	$('.parallax').each(function () {
 		var z = parseInt($(this).data("z"));
@@ -109,17 +109,13 @@ $(document).ready(function ($) {
 	});
 
 	// Esconder e mostrar as fotos do portfolio
-	$('#portfolio').find('.content ul li a').click(function (event) {
+	$('#portfolio').find('.content ul li a').click(function () {
 		if ($(this).is('#fotos')) {
-			$('.site').removeClass('active');
-			$('.site').addClass('hide');
-			$('.fotos').addClass('active');
-			$('.fotos').removeClass('hide');
+			$('.site').addClass('hide').removeClass('active');
+			$('.fotos').addClass('active').removeClass('hide');
 		} else if ($(this).is('#sites')) {
-			$('.site').addClass('active');
-			$('.site').removeClass('hide');
-			$('.fotos').removeClass('active');
-			$('.fotos').addClass('hide');
+			$('.site').addClass('active').removeClass('hide');
+			$('.fotos').addClass('hide').removeClass('active');
 		}
 	});
 

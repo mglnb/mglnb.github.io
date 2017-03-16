@@ -16,11 +16,10 @@ section#sobre {
         width: 75px;
         height: 75px;
         border: 1px solid $cor-texto-claro1;
-        margin: 0 auto;
         position: relative;
         @include transition(0.3s);
         z-index: 2;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
         &:hover {
             @include transform(rotate(135deg));
             @include transition(0.3s);
