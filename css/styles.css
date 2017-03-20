@@ -147,7 +147,7 @@ table {
   100% {
     stroke-dasharray: 1020;
     stroke-dashoffset: 0;
-    stroke-width: 1px; } }
+    stroke-width: 3px; } }
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -554,8 +554,7 @@ nav {
           transition: 0.25s; }
 
 header {
-  background: -webkit-linear-gradient(#ebece7, white);
-  background: linear-gradient(#ebece7, white);
+  background: url("../img/bg2.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

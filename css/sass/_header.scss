@@ -201,8 +201,7 @@ nav {
 }
 
 header {
-  background: -webkit-linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
-  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+  background: url("../img/bg2.jpg") center;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -228,7 +227,7 @@ header {
     }
     text {
       font-size: 60px;
-      font-weight:900;
+      font-weight: 900;
     }
     @include d(s) {
       padding: 50px 0 25px;
