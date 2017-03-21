@@ -54,6 +54,13 @@ function isOnEl(el) {
 	return getSectionInicio(el) <= posicaoScroll && getSectionFim(el) >= posicaoScroll;
 }
 
+function isOnScreen(el) {
+    var heightPag = $(window).height() + 90;
+    var posicaoScroll = $(document).scrollTop() - $(el).height()  ;
+    console.log(posicaoScroll + " " + heightPag + " ");
+    return posicaoScroll >= 0 && posicaoScroll <= heightPag;
+}
+
 // Pega o valor de Z do html e utiliza para calcular o quanto pra baixo irá
 function parallax() {
 	var posicaoScroll = $(document).scrollTop();
@@ -78,7 +85,6 @@ function animateHeader () {
         mouseY = e.pageY;
         traX = ((4 * mouseX) / 470) + 70;
         traY = ((4 * mouseY) / 470) + 70;
-        console.log(traX);
         $(".title pattern image").css({"x": traX * -1 });
         $(".title pattern image").css({"y": traY * -1});
 
@@ -97,8 +103,16 @@ $(document).ready(function ($) {
 		} else {
 			$('.logo svg').css('fill', '#2a2a2a');
 		}
+
+		if (isOnScreen('#sobre')) {
+			$('#sobre .idea, #sobre .design, #sobre .suport, #sobre .clean').addClass('animate');
+		}else {
+            $('#sobre .idea, #sobre .design, #sobre .suport, #sobre .clean').removeClass('animate');
+
+		}
 	});
 	animateHeader();
+
 
 	// Ativação do menu Hamburguer
 	$('.hamburguer').click(function () {

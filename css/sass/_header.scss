@@ -287,8 +287,8 @@ header {
     padding: 0 30%;
 
     text {
+      fill: url(#pattern);
       margin-top: 40px;
-      fill: $cor-titulo-escuro;
       font-weight: 400;
     }
   }

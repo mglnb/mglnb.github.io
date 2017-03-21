@@ -1,82 +1,64 @@
 section#sobre {
-    padding: 150px 0;
-    text-align: center;
-    color: $cor-texto-escuro;
-    .content {
-        @include grid(3);
-        @include d(l) {
-            margin-bottom: 20px;
-        }
-        @include d(s) {
-            @include grid(12);
-        }
+  padding: 150px 0;
+  text-align: center;
+  color: $cor-texto-escuro;
+  .content {
+    @include grid(3);
+    @include d(l) {
+      margin-bottom: 20px;
     }
-    span.quadrado {
-        display: block;
-        width: 75px;
-        height: 75px;
-        border: 1px solid $cor-texto-claro1;
-        position: relative;
-        @include transition(0.3s);
-        z-index: 2;
-        margin: 0 auto 20px;
-        &:hover {
-            @include transform(rotate(135deg));
-            @include transition(0.3s);
-            border-color: $cor-terciaria;
-        }
+    @include d(s) {
+      @include grid(12);
     }
-    span.icon {
-        display: block;
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin: 25px auto;
-        z-index: 1;
-        &.design {
-            background: url(../img/icons/design.png) center;
-            @include background-size(cover);
-        }
-        &.idea {
-            background: url(../img/icons/idea.png) no-repeat center;
-            @include background-size(cover);
-        }
-        &.clean {
-            background: url(../img/icons/clean.png) no-repeat center;
-            @include background-size(cover);
-        }
-        &.talk {
-            background: url(../img/icons/talk.png) no-repeat center;
-            @include background-size(cover);
-        }
+  }
+  span.icon {
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: 25px auto 50px;
+    z-index: 1;
+    fill-opacity: 0;
+    stroke: #000;
+    stroke-width: 6px;
+    fill: #222;
+    fill-rule: evenodd;
+    .idea.animate {
+      animation: stroke_offsetIdea 2.5s forwards;
     }
-    h4 {
-        font-weight: 700;
-        &:after {
-            content: "";
-            display: block;
-            margin: 15px auto 10px;
-            width: 20%;
-            height: 1px;
-            background: $cor-terciaria;
-        }
+    .design.animate {
+      animation: stroke_offsetDesign 2.5s forwards;
     }
-    p {
-        font-weight: 400;
-		font-size: .8em;
-		line-height: 15px;
-        font-family: $type2;
+    .suport.animate {
+      animation: stroke_offsetSuport 2.5s forwards;
     }
+    .clean.animate {
+      animation: stroke_offsetClean 2.5s forwards;
+    }
+
+  }
+  h4 {
+    font-weight: 700;
     &:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: $cor-secundaria;
-        margin: 80px 0 0;
+      content: "";
+      display: block;
+      margin: 15px auto 10px;
+      width: 20%;
+      height: 1px;
+      background: $cor-terciaria;
     }
+  }
+  p {
+    font-weight: 400;
+    font-size: .8em;
+    line-height: 15px;
+    font-family: $type2;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $cor-secundaria;
+    margin: 80px 0 0;
+  }
 }

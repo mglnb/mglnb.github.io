@@ -147,7 +147,59 @@ table {
   100% {
     stroke-dasharray: 1020;
     stroke-dashoffset: 0;
-    stroke-width: 3px; } }
+    stroke-width: 2px; } }
+@keyframes stroke_offsetDesign {
+  0% {
+    stroke-dasharray: 0 396.494;
+    stroke-opacity: 1;
+    fill-opacity: 0; }
+  50% {
+    stroke-dasharray: 396.494 0;
+    stroke-opacity: .90;
+    fill-opacity: 0; }
+  100% {
+    stroke-dasharray: 396.494 0;
+    stroke-opacity: 0;
+    fill-opacity: 1; } }
+@keyframes stroke_offsetClean {
+  0% {
+    stroke-dasharray: 0 732.438;
+    stroke-opacity: 1;
+    fill-opacity: 0; }
+  50% {
+    stroke-dasharray: 732.438 0;
+    stroke-opacity: .90;
+    fill-opacity: 0; }
+  100% {
+    stroke-dasharray: 732.438 0;
+    stroke-opacity: 0;
+    fill-opacity: 1; } }
+@keyframes stroke_offsetIdea {
+  0% {
+    stroke-dasharray: 0 792;
+    stroke-opacity: 1;
+    fill-opacity: 0; }
+  50% {
+    stroke-dasharray: 792 0;
+    stroke-opacity: .90;
+    fill-opacity: 0; }
+  100% {
+    stroke-dasharray: 792 0;
+    stroke-opacity: 0;
+    fill-opacity: 1; } }
+@keyframes stroke_offsetSuport {
+  0% {
+    stroke-dasharray: 0 612;
+    stroke-opacity: 1;
+    fill-opacity: 0; }
+  50% {
+    stroke-dasharray: 612 0;
+    stroke-opacity: .90;
+    fill-opacity: 0; }
+  100% {
+    stroke-dasharray: 612 0;
+    stroke-opacity: 0;
+    fill-opacity: 1; } }
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -624,8 +676,8 @@ header {
       header .subtitle {
         padding: 0 20%; } }
     header .subtitle text {
+      fill: url(#pattern);
       margin-top: 40px;
-      fill: #222;
       font-weight: 400; }
   header .mouse {
     margin: 60px auto 0;
@@ -716,63 +768,25 @@ section#sobre {
       float: none;
       margin: 40px 0; } }
 
-  section#sobre span.quadrado {
-    display: block;
-    width: 75px;
-    height: 75px;
-    border: 1px solid #BDC3C7;
-    position: relative;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    z-index: 2;
-    margin: 0 auto 20px; }
-    section#sobre span.quadrado:hover {
-      -webkit-transform: rotate(135deg);
-      -moz-transform: rotate(135deg);
-      -o-transform: rotate(135deg);
-      transform: rotate(135deg);
-      -webkit-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
-      border-color: #444; }
   section#sobre span.icon {
     display: block;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: 25px auto;
-    z-index: 1; }
-    section#sobre span.icon.design {
-      background: url(../img/icons/design.png) center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
-    section#sobre span.icon.idea {
-      background: url(../img/icons/idea.png) no-repeat center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
-    section#sobre span.icon.clean {
-      background: url(../img/icons/clean.png) no-repeat center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
-    section#sobre span.icon.talk {
-      background: url(../img/icons/talk.png) no-repeat center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
+    width: 110px;
+    height: 110px;
+    margin: 25px auto 50px;
+    z-index: 1;
+    fill-opacity: 0;
+    stroke: #000;
+    stroke-width: 6px;
+    fill: #222;
+    fill-rule: evenodd; }
+    section#sobre span.icon .idea.animate {
+      animation: stroke_offsetIdea 2.5s forwards; }
+    section#sobre span.icon .design.animate {
+      animation: stroke_offsetDesign 2.5s forwards; }
+    section#sobre span.icon .suport.animate {
+      animation: stroke_offsetSuport 2.5s forwards; }
+    section#sobre span.icon .clean.animate {
+      animation: stroke_offsetClean 2.5s forwards; }
   section#sobre h4 {
     font-weight: 700; }
     section#sobre h4:after {
