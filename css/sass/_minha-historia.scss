@@ -3,13 +3,20 @@ section#minhahistoria {
 	@include d(s) {
 		text-align: center;
 	}
-	.imac {
+	.laptop {
 		@include grid(7);
 		@include d(s) {
 			@include grid(12);
 		}
-		img {
-			width: 85%;
+		img	{
+			display: block;
+			margin: 0 auto;
+			border-radius: 50%;
+			width:85%;
+
+			@include d(l) {
+				width:55%;
+			}
 		}
 	}
 	.historia {

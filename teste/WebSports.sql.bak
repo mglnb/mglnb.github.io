@@ -1,0 +1,45 @@
+CREATE TABLE Clientes (
+ codCliente INT
+);
+
+
+CREATE TABLE Funcionarios (
+ codFuncionarios INT
+);
+
+
+CREATE TABLE Gerentes (
+ codGerente INT
+);
+
+
+CREATE TABLE Produtos (
+ codProduto INT,
+ valorCompra DOUBLE PRECISION,
+ valorVenda DOUBLE PRECISION,
+ quantidade INT
+);
+
+
+CREATE TABLE Quadras (
+ codQuadra INT,
+ valorLocacao DOUBLE PRECISION
+);
+
+
+CREATE TABLE String (
+);
+
+
+CREATE TABLE AcoesFuncionarios (
+);
+
+
+CREATE TABLE Cpf (
+);
+
+
+CREATE TABLE Date (
+);
+
+

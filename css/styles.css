@@ -814,7 +814,7 @@ section#minhahistoria {
   @media screen and (max-width: 767px) {
     section#minhahistoria {
       text-align: center; } }
-  section#minhahistoria .imac {
+  section#minhahistoria .laptop {
     width: 58.33333%;
     float: left;
     min-height: 1px;
@@ -822,12 +822,12 @@ section#minhahistoria {
     padding-right: 10px;
     position: relative; }
     @media screen and (max-width: 767px) {
-      section#minhahistoria .imac {
+      section#minhahistoria .laptop {
         width: 100%;
         float: none;
         margin: 40px 0; } }
     @media screen and (max-width: 767px) {
-      section#minhahistoria .imac {
+      section#minhahistoria .laptop {
         width: 100%;
         float: left;
         min-height: 1px;
@@ -835,13 +835,19 @@ section#minhahistoria {
         padding-right: 10px;
         position: relative; } }
   @media screen and (max-width: 767px) and (max-width: 767px) {
-    section#minhahistoria .imac {
+    section#minhahistoria .laptop {
       width: 100%;
       float: none;
       margin: 40px 0; } }
 
-    section#minhahistoria .imac img {
+    section#minhahistoria .laptop img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
       width: 85%; }
+      @media screen and (min-width: 1200px) {
+        section#minhahistoria .laptop img {
+          width: 55%; } }
   section#minhahistoria .historia {
     width: 41.66667%;
     float: left;
