@@ -798,7 +798,7 @@ section#sobre {
       background: #444; }
   section#sobre p {
     font-weight: 400;
-    font-size: .8em;
+    font-size: .75em;
     line-height: 15px;
     font-family: "Roboto Slab", serif; }
   section#sobre:after {
@@ -912,10 +912,11 @@ section#minhahistoria {
 
 p {
   color: #6a6a6a;
-  font-size: .85em;
+  font-size: .75em;
   line-height: 17px;
   margin-bottom: 20px;
-  font-family: "Roboto Slab", serif; }
+  font-family: "Roboto Slab", serif;
+  letter-spacing: .8px; }
 
 section#servicos {
   text-align: right;
@@ -1021,8 +1022,7 @@ section#servicos {
     margin-top: 10px;
     color: #BDC3C7;
     line-height: 17px;
-    font-family: "Roboto Slab", serif;
-    font-size: .85em; }
+    font-family: "Roboto Slab", serif; }
   section#servicos .bg {
     height: 500px;
     background: url(../img/bg2.jpg) no-repeat center;
@@ -1073,7 +1073,7 @@ section#portfolio .content {
     margin: 50px 0 20px; }
   section#portfolio .content p {
     font-family: "Roboto Slab", serif;
-    font-size: .85em; }
+    font-size: .75em; }
   section#portfolio .content ul {
     text-transform: uppercase;
     margin-bottom: 25px; }
@@ -1310,7 +1310,8 @@ footer {
     footer .inscrever .title,
     footer .posts .title,
     footer .saiba .title {
-      margin-bottom: 10px; }
+      display: block;
+      margin-bottom: 5px; }
   footer input {
     background: #1a1a1a;
     box-shadow: none;
