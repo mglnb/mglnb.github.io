@@ -292,9 +292,13 @@ header {
       font-weight: 400;
     }
   }
-
+  .ms {
+    @include d(s) {
+      transform: scale(0.7);
+    }
+  }
   .mouse {
-    margin: 60px auto 0;
+    margin: 25vh auto 0;
     @include d(s) {
       margin: 75px auto 0;
     }

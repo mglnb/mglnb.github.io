@@ -53,14 +53,42 @@ function isOnEl(el) {
 	var posicaoScroll = $(document).scrollTop();
 	return getSectionInicio(el) <= posicaoScroll && getSectionFim(el) >= posicaoScroll;
 }
+(function ($) {
+    $.fn.isOnScreen = function(){
+        var height = this.outerHeight();
+        var width = this.outerWidth();
 
-function isOnScreen(el) {
-    var heightPag = $(window).height() + 90;
-    var posicaoScroll = $(document).scrollTop() - $(el).height()  ;
-    console.log(posicaoScroll + " " + heightPag + " ");
-    return posicaoScroll >= 0 && posicaoScroll <= heightPag;
-}
+        if(!width || !height){
+            return false;
+        }
 
+        var win = $(window);
+
+        var viewport = {
+            top : win.scrollTop(),
+            left : win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+
+        var bounds = this.offset();
+        bounds.right = bounds.left + width;
+        bounds.bottom = bounds.top + height;
+
+        var deltas = {
+            top : viewport.bottom - bounds.top,
+            left: viewport.right - bounds.left,
+            bottom: bounds.bottom - viewport.top,
+            right: bounds.right - viewport.left
+        };
+        return deltas.top > 0
+            && deltas.left > 0
+            && deltas.right > 0
+            && deltas.bottom > 0;
+    };
+
+
+})(jQuery);
 // Pega o valor de Z do html e utiliza para calcular o quanto pra baixo irá
 function parallax() {
 	var posicaoScroll = $(document).scrollTop();
@@ -70,6 +98,14 @@ function parallax() {
 		$(this).css('transform', 'translateY(' + (posicaoScroll * (z * 0.05)) + 'px)');
 		$(this).css('opacity', (posicaoScroll * -0.0015) +1);
 	});
+}
+function parallax2(el) {
+    var posicaoScroll = $(document).scrollTop() - ($(el).offset().top - 800);
+	if ($(el).isOnScreen()) {
+		if (el == "#servicos") {
+            $('#servicos').css('background-position-y', (posicaoScroll * 0.055) + '%');
+		}
+	}
 }
 
 function animateLoad() {
@@ -96,19 +132,18 @@ $(document).ready(function ($) {
     // var draw = document.querySelector('.shape');
     // console.log(draw.getTotalLength());
 	// Alteração da cor do logo ao mudar o background
+
 	$(window).scroll(function () {
 		parallax();
+		parallax2('#servicos');
 		if (isOnEl('#servicos') || isOnEl('footer')) {
 			$('.logo svg').css('fill', '#c4c4c4');
 		} else {
 			$('.logo svg').css('fill', '#2a2a2a');
 		}
 
-		if (isOnScreen('#sobre')) {
+		if ($('#sobre').isOnScreen()) {
 			$('#sobre .idea, #sobre .design, #sobre .suport, #sobre .clean').addClass('animate');
-		}else {
-            $('#sobre .idea, #sobre .design, #sobre .suport, #sobre .clean').removeClass('animate');
-
 		}
 	});
 	animateHeader();
