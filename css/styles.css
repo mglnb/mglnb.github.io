@@ -644,9 +644,11 @@ header {
     stroke-linecap: round;
     stroke-linejoin: round; }
   header g .shape.animate {
-    -webkit-animation: 2s draw linear forwards;
+    -webkit-animation: 1.5s draw linear forwards;
+    -moz-animation: 1.5s draw linear fowards;
     animation: 1.5s draw linear forwards; }
-  header g .stroke, header g .fill {
+  header g .stroke,
+  header g .fill {
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 0px; }
@@ -656,13 +658,14 @@ header {
     stroke-dasharray: 0 400;
     stroke-opacity: 1;
     fill: none;
-    animation: stroke_offset 5s;
-    animation-fill-mode: forwards; }
+    animation: stroke_offset 5s fowards;
+    -moz-animation: stroke_offset 5s fowards;
+    -webkit-animation: stroke_offset 5s fowards; }
   header g .fill.animate {
     fill-opacity: 0;
-    animation: fill_offset 5s;
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    animation-fill-mode: forwards; }
+    animation: fill_offset 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    -moz-animation: fill_offset 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    -webkit-animation: fill_offset 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
   header .subtitle {
     font-family: "Roboto Slab", serif;
     padding: 0 30%; }
@@ -928,7 +931,11 @@ section#servicos {
       text-align: center; } }
   section#servicos .descricao {
     padding: 70px 0;
-    color: #000; }
+    background: url("../img/bg-text.jpg") no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-position-y: 0%; }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       section#servicos .descricao {
         margin-left: 0;
