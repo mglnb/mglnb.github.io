@@ -10,14 +10,15 @@ const SVGKeyframes = keyframes`
         transform: scale(1);
         opacity: .9;
     }
-    80% {
+    60% {
         transform: scale(1);
         opacity: .9;
+        margin-bottom: -5vh;
  
     }
     100% {
-        margin-top: -10vh;
-        transform: scale(1);
+        transform: scale(1) translateY(-10vh);
+        margin-bottom: -10vh;
         opacity: .9;
     }
 `
@@ -84,10 +85,6 @@ const G1Line = styled.line`
     stroke-width: 2;
     stroke: #FFF;
 `
-
-
-
-
 
 const Name = () => (
     <>
