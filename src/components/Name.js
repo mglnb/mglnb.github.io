@@ -93,7 +93,7 @@ const Name = () => (
             <TextName xmlSpace="preserve" text-anchor="start" y="132.5" x="175.14063">MIGUEL</TextName>
             <TextName xmlSpace="preserve" text-anchor="start" y="257.5" x="153.60938">NOVACK</TextName>
         </SVG>
-        <SVGLines preserveAspectRatio="xMidYMid meet" viewBox="0 0 998 288">
+        <SVGLines preserveAspectRatio="xMidYMid meet" viewBox="0 0 998 220">
             <g>
                 <G1Line x1="497.38435" y1="-1.48784" x2="497.38435" y2="228.04401" />
             </g>
@@ -106,6 +106,11 @@ const Name = () => (
                 <G2Line2 x1="880.20164" y1="156" x2="880.20164" y2="226.83869" />
             </g>
         </SVGLines>
+        <svg height="0" width="0">
+            <filter id="blur">
+                <feGaussianBlur stdDeviation="5" />
+            </filter>
+        </svg>
     </>
 )
 

@@ -3,28 +3,30 @@ import styled, { keyframes } from 'styled-components'
 
 const BackgroundAnimation = keyframes`
     0% {
-		background-position: 0% 50%
+		background-position: 0% 45%;
 	}
-	50% {
-		background-position: 100% 50%
-	}
+    50% {
+		background-position: 0% 55%;
+
+    }
 	100% {
-		background-position: 0% 50%
+		background-position: 0% 45%;
 	}
 
 `
 
 
 const Container = styled.div`
-    background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400%;
+    background-image: url('/imgs/bg.jpg');
+    background-size: 100% 200%;
+    background-position: 0% 45%;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: ${BackgroundAnimation} 45s ease infinite;
+    animation: ${BackgroundAnimation} 10s ease infinite;
 `
 
 
